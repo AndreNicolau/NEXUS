@@ -51,7 +51,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1131, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1200, 27);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -65,7 +65,7 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(89, 28);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(89, 24);
             this.toolStripDropDownButton1.Text = "Aplicação";
             // 
             // sairToolStripMenuItem
@@ -97,7 +97,7 @@
             // novoClienteToolStripMenuItem
             // 
             this.novoClienteToolStripMenuItem.Name = "novoClienteToolStripMenuItem";
-            this.novoClienteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.novoClienteToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
             this.novoClienteToolStripMenuItem.Text = "Novo cliente";
             // 
             // tsbTickets
@@ -115,22 +115,22 @@
             // novoTicketToolStripMenuItem
             // 
             this.novoTicketToolStripMenuItem.Name = "novoTicketToolStripMenuItem";
-            this.novoTicketToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.novoTicketToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
             this.novoTicketToolStripMenuItem.Text = "Novo ticket";
             // 
             // mainPanel
             // 
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 31);
+            this.mainPanel.Location = new System.Drawing.Point(0, 27);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1131, 753);
+            this.mainPanel.Size = new System.Drawing.Size(1200, 573);
             this.mainPanel.TabIndex = 1;
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1131, 784);
+            this.ClientSize = new System.Drawing.Size(1200, 600);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
