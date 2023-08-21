@@ -47,14 +47,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvClients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClients.Location = new System.Drawing.Point(358, 0);
+            this.dgvClients.Location = new System.Drawing.Point(340, 0);
             this.dgvClients.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvClients.Name = "dgvClients";
             this.dgvClients.ReadOnly = true;
             this.dgvClients.RowHeadersWidth = 51;
             this.dgvClients.RowTemplate.Height = 24;
             this.dgvClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClients.Size = new System.Drawing.Size(842, 858);
+            this.dgvClients.Size = new System.Drawing.Size(940, 720);
             this.dgvClients.TabIndex = 4;
             // 
             // btnNewClient
@@ -113,6 +113,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnOpenClientFile);
             this.Controls.Add(this.txtSearcBar);
@@ -122,7 +123,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Clients";
-            this.Size = new System.Drawing.Size(1200, 600);
+            this.Size = new System.Drawing.Size(1280, 720);
             this.Load += new System.EventHandler(this.Clients_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
