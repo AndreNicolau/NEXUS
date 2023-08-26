@@ -18,9 +18,16 @@ namespace NEXUS
             string password = txtPassword.Text;
 
             if (username == "")
+            {
                 MessageBox.Show("É necessário preencher o nome de utilizador.", "Utilizador em branco.");
-            if (password == "")
+                return;
+            }
+            else if (password == "")
+            {
                 MessageBox.Show("É necessário preencher a password.", "Password em branco");
+                return;
+            }
+
 
             SqlConnection connection = new SqlConnection("Data Source=LENOVO\\SQLEXPRESS;Initial Catalog=nexus;Integrated Security=True");
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter($"SELECT * FROM login WHERE username = '{username}'", connection);
