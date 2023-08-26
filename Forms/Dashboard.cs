@@ -1,4 +1,4 @@
-﻿using NEXUS.Controls.Clients;
+﻿using NEXUS.Forms;
 using System;
 using System.Windows.Forms;
 
@@ -45,9 +45,8 @@ namespace NEXUS
 
         private void OpenClientSearch(object sender, EventArgs e)
         {
-            ClientSearch clientsearch = new ClientSearch();
-            mainPanel.Controls.Add(clientsearch);
-            clientsearch.Show();
+            ClientSearch clientSearch = new ClientSearch();
+            clientSearch.Show(); 
         }
     }
 }

@@ -203,10 +203,10 @@
     <Compile Include="Controls\Clients\ClientsMain.Designer.cs">
       <DependentUpon>ClientsMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Clients\ClientSearch.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Forms\ClientSearch.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controls\Clients\ClientSearch.Designer.cs">
+    <Compile Include="Forms\ClientSearch.Designer.cs">
       <DependentUpon>ClientSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Dashboard.cs">
@@ -246,7 +246,7 @@
     <EmbeddedResource Include="Controls\Clients\ClientsMain.resx">
       <DependentUpon>ClientsMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Clients\ClientSearch.resx">
+    <EmbeddedResource Include="Forms\ClientSearch.resx">
       <DependentUpon>ClientSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard.resx">

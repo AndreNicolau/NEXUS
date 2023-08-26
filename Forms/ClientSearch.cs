@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NEXUS.Controls.Clients
+namespace NEXUS.Forms
 {
-    public partial class ClientSearch : UserControl
+    public partial class ClientSearch : Form
     {
         public ClientSearch()
         {
