@@ -30,12 +30,9 @@
         {
             this.dgvClients = new System.Windows.Forms.DataGridView();
             this.btnNewClient = new System.Windows.Forms.Button();
-            this.txtSearcBar = new System.Windows.Forms.TextBox();
             this.btnOpenClientFile = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvClients
@@ -67,16 +64,6 @@
             this.btnNewClient.Text = "Novo cliente";
             this.btnNewClient.UseVisualStyleBackColor = true;
             // 
-            // txtSearcBar
-            // 
-            this.txtSearcBar.Location = new System.Drawing.Point(32, 11);
-            this.txtSearcBar.Name = "txtSearcBar";
-            this.txtSearcBar.Size = new System.Drawing.Size(298, 30);
-            this.txtSearcBar.TabIndex = 0;
-            this.txtSearcBar.Text = "Nome, email, telemóvel, contribuinte";
-            this.txtSearcBar.Enter += new System.EventHandler(this.txtSearcBar_Enter);
-            this.txtSearcBar.Leave += new System.EventHandler(this.txtSearcBar_Leave);
-            // 
             // btnOpenClientFile
             // 
             this.btnOpenClientFile.Location = new System.Drawing.Point(4, 91);
@@ -99,36 +86,22 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::NEXUS.Properties.Resources.search;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(22, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // Clients
+            // ClientsMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnOpenClientFile);
-            this.Controls.Add(this.txtSearcBar);
             this.Controls.Add(this.btnNewClient);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dgvClients);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "Clients";
+            this.Name = "ClientsMain";
             this.Size = new System.Drawing.Size(1280, 720);
             this.Load += new System.EventHandler(this.Clients_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -137,8 +110,6 @@
         private System.Windows.Forms.DataGridView dgvClients;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnNewClient;
-        private System.Windows.Forms.TextBox txtSearcBar;
         private System.Windows.Forms.Button btnOpenClientFile;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
