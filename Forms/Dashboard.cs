@@ -32,7 +32,6 @@ namespace NEXUS
             {
                 return;
             }
-
         }
 
         private void OpenClientsMain(object sender, EventArgs e)
@@ -46,7 +45,7 @@ namespace NEXUS
         private void OpenClientSearch(object sender, EventArgs e)
         {
             ClientSearch clientSearch = new ClientSearch();
-            clientSearch.Show(); 
+            clientSearch.Show();
         }
     }
 }
