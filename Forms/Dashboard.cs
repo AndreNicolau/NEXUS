@@ -10,14 +10,14 @@ namespace NEXUS
             InitializeComponent();
         }
 
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitApplication(object sender, EventArgs e)
         {
             Login login = new Login();
             login.Show();
             this.Dispose();
         }
 
-        private void encerrarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ShutdownApplication(object sender, EventArgs e)
         {
             DialogResult dialogResult = new DialogResult();
 
@@ -32,26 +32,6 @@ namespace NEXUS
                 return;
             }
 
-        }
-
-        private void tsbClients_Click(object sender, EventArgs e)
-        {
-            mainPanel.Controls.Clear();
-            
-            Clients clients = new Clients();
-            clients.Dock = DockStyle.Fill;
-            mainPanel.Controls.Add(clients);
-            clients.Show();
-        }
-
-        private void tsbTickets_Click(object sender, EventArgs e)
-        {
-            mainPanel.Controls.Clear();
-
-            Tickets tickets = new Tickets();
-            tickets.Dock = DockStyle.Fill;
-            mainPanel.Controls.Add(tickets);
-            tickets.Show();
         }
     }
 }

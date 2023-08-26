@@ -33,26 +33,19 @@ namespace NEXUS
 
         private void Clients_Load(object sender, EventArgs e)
         {
-            /*
-            SqlConnection connection = new SqlConnection("Data Source=LENOVO\\SQLEXPRESS;Initial Catalog=nexus;Persist Security Info=True;User ID=sa;Password=SystemAdmin");
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter($"SELECT * FROM clients", connection);
-
-            DataSet dataSet = new DataSet();
-            sqlDataAdapter.Fill(dataSet);
-            dataGridView1.DataSource = dataSet;
-
-            */
-
+           
             string fetchClientsCommand = "SELECT * FROM clients";
 
             try
             {
-                SqlConnection connection = new SqlConnection("Data Source=LENOVO\\SQLEXPRESS;Initial Catalog=nexus;Persist Security Info=True;User ID=sa;Password=SystemAdmin");
+                SqlConnection connection = new SqlConnection("Data Source=LENOVO\\SQLEXPRESS;Initial Catalog=nexus;Integrated Security=True");
                 SqlDataAdapter adapter = new SqlDataAdapter(fetchClientsCommand, connection);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
 
                 dgvClients.DataSource = dataTable;
+
+              
             }
             catch (Exception ex)
             {

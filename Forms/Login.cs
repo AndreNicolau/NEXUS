@@ -22,7 +22,7 @@ namespace NEXUS
             if (password == "")
                 MessageBox.Show("É necessário preencher a password.", "Password em branco");
 
-            SqlConnection connection = new SqlConnection("Data Source=LENOVO\\SQLEXPRESS;Initial Catalog=nexus;Persist Security Info=True;User ID=sa;Password=SystemAdmin");
+            SqlConnection connection = new SqlConnection("Data Source=LENOVO\\SQLEXPRESS;Initial Catalog=nexus;Integrated Security=True");
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter($"SELECT * FROM login WHERE username = '{username}'", connection);
 
             DataTable dataTable = new DataTable();
