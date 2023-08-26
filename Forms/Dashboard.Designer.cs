@@ -33,18 +33,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonTicketsClosed = new System.Windows.Forms.Button();
+            this.buttonTicketsOpened = new System.Windows.Forms.Button();
+            this.buttonTicketsNew = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.buttonShutdown = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonClientsSearch = new System.Windows.Forms.Button();
+            this.buttonClientsNew = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.buttonClientsGeneral = new System.Windows.Forms.Button();
+            this.buttonTicketsGeneral = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -104,51 +104,51 @@
             this.panel1.AutoSize = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.LightBlue;
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.buttonTicketsGeneral);
+            this.panel1.Controls.Add(this.buttonTicketsClosed);
+            this.panel1.Controls.Add(this.buttonTicketsOpened);
+            this.panel1.Controls.Add(this.buttonTicketsNew);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(0, 144);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(158, 171);
             this.panel1.TabIndex = 12;
             // 
-            // button5
+            // buttonTicketsClosed
             // 
-            this.button5.BackColor = System.Drawing.Color.Blue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(5, 138);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(150, 30);
-            this.button5.TabIndex = 19;
-            this.button5.Text = "Fechados";
-            this.button5.UseVisualStyleBackColor = false;
+            this.buttonTicketsClosed.BackColor = System.Drawing.Color.Blue;
+            this.buttonTicketsClosed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTicketsClosed.ForeColor = System.Drawing.Color.White;
+            this.buttonTicketsClosed.Location = new System.Drawing.Point(5, 138);
+            this.buttonTicketsClosed.Name = "buttonTicketsClosed";
+            this.buttonTicketsClosed.Size = new System.Drawing.Size(150, 30);
+            this.buttonTicketsClosed.TabIndex = 19;
+            this.buttonTicketsClosed.Text = "Fechados";
+            this.buttonTicketsClosed.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // buttonTicketsOpened
             // 
-            this.button4.BackColor = System.Drawing.Color.Blue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(5, 103);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(150, 30);
-            this.button4.TabIndex = 18;
-            this.button4.Text = "Abertos";
-            this.button4.UseVisualStyleBackColor = false;
+            this.buttonTicketsOpened.BackColor = System.Drawing.Color.Blue;
+            this.buttonTicketsOpened.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTicketsOpened.ForeColor = System.Drawing.Color.White;
+            this.buttonTicketsOpened.Location = new System.Drawing.Point(5, 103);
+            this.buttonTicketsOpened.Name = "buttonTicketsOpened";
+            this.buttonTicketsOpened.Size = new System.Drawing.Size(150, 30);
+            this.buttonTicketsOpened.TabIndex = 18;
+            this.buttonTicketsOpened.Text = "Abertos";
+            this.buttonTicketsOpened.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // buttonTicketsNew
             // 
-            this.button3.BackColor = System.Drawing.Color.Blue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(5, 68);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 30);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Novo";
-            this.button3.UseVisualStyleBackColor = false;
+            this.buttonTicketsNew.BackColor = System.Drawing.Color.Blue;
+            this.buttonTicketsNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTicketsNew.ForeColor = System.Drawing.Color.White;
+            this.buttonTicketsNew.Location = new System.Drawing.Point(5, 68);
+            this.buttonTicketsNew.Name = "buttonTicketsNew";
+            this.buttonTicketsNew.Size = new System.Drawing.Size(150, 30);
+            this.buttonTicketsNew.TabIndex = 17;
+            this.buttonTicketsNew.Text = "Novo";
+            this.buttonTicketsNew.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -158,39 +158,39 @@
             this.panel2.AutoSize = true;
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel2.BackColor = System.Drawing.Color.Bisque;
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.buttonShutdown);
+            this.panel2.Controls.Add(this.buttonExit);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(0, 323);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(156, 103);
             this.panel2.TabIndex = 13;
             // 
-            // button7
+            // buttonShutdown
             // 
-            this.button7.BackColor = System.Drawing.Color.Orange;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(3, 70);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(150, 30);
-            this.button7.TabIndex = 19;
-            this.button7.Text = "Encerrar";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.ShutdownApplication);
+            this.buttonShutdown.BackColor = System.Drawing.Color.Orange;
+            this.buttonShutdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonShutdown.ForeColor = System.Drawing.Color.White;
+            this.buttonShutdown.Location = new System.Drawing.Point(3, 70);
+            this.buttonShutdown.Name = "buttonShutdown";
+            this.buttonShutdown.Size = new System.Drawing.Size(150, 30);
+            this.buttonShutdown.TabIndex = 19;
+            this.buttonShutdown.Text = "Encerrar";
+            this.buttonShutdown.UseVisualStyleBackColor = false;
+            this.buttonShutdown.Click += new System.EventHandler(this.ShutdownApplication);
             // 
-            // button6
+            // buttonExit
             // 
-            this.button6.BackColor = System.Drawing.Color.Orange;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(3, 34);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(150, 30);
-            this.button6.TabIndex = 18;
-            this.button6.Text = "Sair";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.ExitApplication);
+            this.buttonExit.BackColor = System.Drawing.Color.Orange;
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.ForeColor = System.Drawing.Color.White;
+            this.buttonExit.Location = new System.Drawing.Point(3, 34);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(150, 30);
+            this.buttonExit.TabIndex = 18;
+            this.buttonExit.Text = "Sair";
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.ExitApplication);
             // 
             // panel3
             // 
@@ -200,9 +200,9 @@
             this.panel3.AutoSize = true;
             this.panel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel3.BackColor = System.Drawing.Color.LightGreen;
-            this.panel3.Controls.Add(this.button8);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.buttonClientsGeneral);
+            this.panel3.Controls.Add(this.buttonClientsSearch);
+            this.panel3.Controls.Add(this.buttonClientsNew);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.flowLayoutPanel1);
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -210,29 +210,29 @@
             this.panel3.Size = new System.Drawing.Size(156, 136);
             this.panel3.TabIndex = 14;
             // 
-            // button2
+            // buttonClientsSearch
             // 
-            this.button2.BackColor = System.Drawing.Color.Green;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(3, 103);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 30);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Procurar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttonClientsSearch.BackColor = System.Drawing.Color.Green;
+            this.buttonClientsSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClientsSearch.ForeColor = System.Drawing.Color.White;
+            this.buttonClientsSearch.Location = new System.Drawing.Point(3, 103);
+            this.buttonClientsSearch.Name = "buttonClientsSearch";
+            this.buttonClientsSearch.Size = new System.Drawing.Size(150, 30);
+            this.buttonClientsSearch.TabIndex = 16;
+            this.buttonClientsSearch.Text = "Procurar";
+            this.buttonClientsSearch.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // buttonClientsNew
             // 
-            this.button1.BackColor = System.Drawing.Color.Green;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(3, 68);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 30);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Novo";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonClientsNew.BackColor = System.Drawing.Color.Green;
+            this.buttonClientsNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClientsNew.ForeColor = System.Drawing.Color.White;
+            this.buttonClientsNew.Location = new System.Drawing.Point(3, 68);
+            this.buttonClientsNew.Name = "buttonClientsNew";
+            this.buttonClientsNew.Size = new System.Drawing.Size(150, 30);
+            this.buttonClientsNew.TabIndex = 15;
+            this.buttonClientsNew.Text = "Novo";
+            this.buttonClientsNew.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
@@ -247,29 +247,29 @@
             this.panel4.Size = new System.Drawing.Size(158, 600);
             this.panel4.TabIndex = 15;
             // 
-            // button8
+            // buttonClientsGeneral
             // 
-            this.button8.BackColor = System.Drawing.Color.Green;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(3, 33);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(150, 30);
-            this.button8.TabIndex = 17;
-            this.button8.Text = "Geral";
-            this.button8.UseVisualStyleBackColor = false;
+            this.buttonClientsGeneral.BackColor = System.Drawing.Color.Green;
+            this.buttonClientsGeneral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClientsGeneral.ForeColor = System.Drawing.Color.White;
+            this.buttonClientsGeneral.Location = new System.Drawing.Point(3, 33);
+            this.buttonClientsGeneral.Name = "buttonClientsGeneral";
+            this.buttonClientsGeneral.Size = new System.Drawing.Size(150, 30);
+            this.buttonClientsGeneral.TabIndex = 17;
+            this.buttonClientsGeneral.Text = "Geral";
+            this.buttonClientsGeneral.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // buttonTicketsGeneral
             // 
-            this.button9.BackColor = System.Drawing.Color.Blue;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(4, 33);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(150, 30);
-            this.button9.TabIndex = 20;
-            this.button9.Text = "Geral";
-            this.button9.UseVisualStyleBackColor = false;
+            this.buttonTicketsGeneral.BackColor = System.Drawing.Color.Blue;
+            this.buttonTicketsGeneral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTicketsGeneral.ForeColor = System.Drawing.Color.White;
+            this.buttonTicketsGeneral.Location = new System.Drawing.Point(4, 33);
+            this.buttonTicketsGeneral.Name = "buttonTicketsGeneral";
+            this.buttonTicketsGeneral.Size = new System.Drawing.Size(150, 30);
+            this.buttonTicketsGeneral.TabIndex = 20;
+            this.buttonTicketsGeneral.Text = "Geral";
+            this.buttonTicketsGeneral.UseVisualStyleBackColor = false;
             // 
             // mainPanel
             // 
@@ -317,15 +317,15 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button buttonClientsSearch;
+        private System.Windows.Forms.Button buttonClientsNew;
+        private System.Windows.Forms.Button buttonTicketsClosed;
+        private System.Windows.Forms.Button buttonTicketsOpened;
+        private System.Windows.Forms.Button buttonTicketsNew;
+        private System.Windows.Forms.Button buttonShutdown;
+        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Button buttonTicketsGeneral;
+        private System.Windows.Forms.Button buttonClientsGeneral;
         private System.Windows.Forms.Panel mainPanel;
     }
 }
