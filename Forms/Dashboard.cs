@@ -33,5 +33,13 @@ namespace NEXUS
             }
 
         }
+
+        private void OpenClientsMain(object sender, EventArgs e)
+        {
+            ClientsMain clientsMain = new ClientsMain();
+            mainPanel.Controls.Add(clientsMain);
+            clientsMain.Dock = DockStyle.Fill;
+            clientsMain.Show();
+        }
     }
 }

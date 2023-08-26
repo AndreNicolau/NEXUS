@@ -197,11 +197,11 @@
     <Compile Include="Controls\ClientFile.Designer.cs">
       <DependentUpon>ClientFile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Clients.cs">
+    <Compile Include="Controls\ClientsMain.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\Clients.Designer.cs">
-      <DependentUpon>Clients.cs</DependentUpon>
+    <Compile Include="Controls\ClientsMain.Designer.cs">
+      <DependentUpon>ClientsMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Dashboard.cs">
       <SubType>Form</SubType>
@@ -237,8 +237,8 @@
     <EmbeddedResource Include="Controls\ClientFile.resx">
       <DependentUpon>ClientFile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Clients.resx">
-      <DependentUpon>Clients.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\ClientsMain.resx">
+      <DependentUpon>ClientsMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
