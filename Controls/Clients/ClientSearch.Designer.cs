@@ -1,6 +1,6 @@
 ﻿namespace NEXUS.Controls.Clients
 {
-    partial class SearchClient
+    partial class ClientSearch
     {
         /// <summary> 
         /// Required designer variable.

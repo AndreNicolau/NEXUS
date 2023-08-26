@@ -59,16 +59,6 @@ namespace NEXUS
             }
         }
 
-        private void txtSearcBar_Enter(object sender, EventArgs e)
-        {
-            if (txtSearcBar.Text == "Nome, email, telemóvel, contribuinte")
-                txtSearcBar.Clear();
-        }
-
-        private void txtSearcBar_Leave(object sender, EventArgs e)
-        {
-            if (txtSearcBar.Text == "")
-                txtSearcBar.Text = "Nome, email, telemóvel, contribuinte";
-        }
+      
     }
 }

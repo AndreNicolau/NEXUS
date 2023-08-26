@@ -259,6 +259,7 @@
             this.buttonClientsSearch.TabIndex = 2;
             this.buttonClientsSearch.Text = "Procurar";
             this.buttonClientsSearch.UseVisualStyleBackColor = false;
+            this.buttonClientsSearch.Click += new System.EventHandler(this.OpenClientSearch);
             // 
             // buttonClientsNew
             // 

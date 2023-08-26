@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NEXUS.Controls.Clients
 {
-    public partial class SearchClient : UserControl
+    public partial class ClientSearch : UserControl
     {
-        public SearchClient()
+        public ClientSearch()
         {
             InitializeComponent();
         }

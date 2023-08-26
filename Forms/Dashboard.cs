@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NEXUS.Controls.Clients;
+using System;
 using System.Windows.Forms;
 
 namespace NEXUS
@@ -40,6 +41,13 @@ namespace NEXUS
             mainPanel.Controls.Add(clientsMain);
             clientsMain.Dock = DockStyle.Fill;
             clientsMain.Show();
+        }
+
+        private void OpenClientSearch(object sender, EventArgs e)
+        {
+            ClientSearch clientsearch = new ClientSearch();
+            mainPanel.Controls.Add(clientsearch);
+            clientsearch.Show();
         }
     }
 }
