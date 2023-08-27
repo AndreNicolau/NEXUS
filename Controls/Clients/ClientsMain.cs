@@ -34,14 +34,13 @@ namespace NEXUS
 
             try
             {
-                SqlConnection connection = new SqlConnection("Data Source=LENOVO\\SQLEXPRESS;Initial Catalog=nexus;Integrated Security=True");
+                SqlConnection connection = new SqlConnection(Properties.Resources.ConnectionString);
                 SqlDataAdapter adapter = new SqlDataAdapter(fetchClientsCommand, connection);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
 
                 dgvClients.DataSource = dataTable;
-
-              
+  
             }
             catch (Exception ex)
             {

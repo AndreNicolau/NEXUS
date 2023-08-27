@@ -71,6 +71,15 @@ namespace NEXUS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Data Source=LENOVO\SQLEXPRESS;Initial Catalog=nexus;Integrated Security=True.
+        /// </summary>
+        internal static string ConnectionString {
+            get {
+                return ResourceManager.GetString("ConnectionString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap search {

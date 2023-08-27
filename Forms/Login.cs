@@ -28,8 +28,8 @@ namespace NEXUS
                 return;
             }
 
+            SqlConnection connection = new SqlConnection(Properties.Resources.ConnectionString);
 
-            SqlConnection connection = new SqlConnection("Data Source=LENOVO\\SQLEXPRESS;Initial Catalog=nexus;Integrated Security=True");
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter($"SELECT * FROM login WHERE username = '{username}'", connection);
 
             DataTable dataTable = new DataTable();
