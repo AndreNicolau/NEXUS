@@ -227,6 +227,9 @@
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="nexusDataSet.cs">
+      <DependentUpon>nexusDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="nexusDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -1,4 +1,5 @@
 ﻿using NEXUS.Forms;
+using NEXUS.nexusDataSetTableAdapters;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +28,7 @@ namespace NEXUS
             clientSearch.Show();
         }
 
-        private void Clients_Load(object sender, EventArgs e)
+        private void Load_Clients(object sender, EventArgs e)
         {
            
             string fetchClientsCommand = "SELECT * FROM clients";
@@ -40,7 +41,6 @@ namespace NEXUS
                 adapter.Fill(dataTable);
 
                 dgvClients.DataSource = dataTable;
-  
             }
             catch (Exception ex)
             {
@@ -52,8 +52,13 @@ namespace NEXUS
 
                 result = MessageBox.Show(message, caption, buttons);
             }
-        }
 
-      
+            dgvClients.Columns[0].Visible = false;
+            dgvClients.Columns[1].HeaderText = "Primeiro nome";
+            dgvClients.Columns[2].HeaderText = "Último nome";
+            dgvClients.Columns[3].HeaderText = "Número telemóvel";
+            dgvClients.Columns[4].HeaderText = "Email";
+            dgvClients.Columns[5].HeaderText = "Número contribuinte";
+        }
     }
 }
