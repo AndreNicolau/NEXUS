@@ -16,5 +16,10 @@ namespace NEXUS.Forms
         {
             InitializeComponent();
         }
+
+        private void CloseClientSearch(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
