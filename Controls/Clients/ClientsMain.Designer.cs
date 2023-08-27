@@ -56,34 +56,46 @@
             // 
             // btnNewClient
             // 
-            this.btnNewClient.Location = new System.Drawing.Point(4, 134);
+            this.btnNewClient.BackColor = System.Drawing.Color.Green;
+            this.btnNewClient.FlatAppearance.BorderSize = 0;
+            this.btnNewClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewClient.ForeColor = System.Drawing.Color.White;
+            this.btnNewClient.Location = new System.Drawing.Point(4, 91);
             this.btnNewClient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnNewClient.Name = "btnNewClient";
             this.btnNewClient.Size = new System.Drawing.Size(326, 36);
             this.btnNewClient.TabIndex = 3;
             this.btnNewClient.Text = "Novo cliente";
-            this.btnNewClient.UseVisualStyleBackColor = true;
+            this.btnNewClient.UseVisualStyleBackColor = false;
             // 
             // btnOpenClientFile
             // 
-            this.btnOpenClientFile.Location = new System.Drawing.Point(4, 91);
+            this.btnOpenClientFile.BackColor = System.Drawing.Color.Green;
+            this.btnOpenClientFile.FlatAppearance.BorderSize = 0;
+            this.btnOpenClientFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenClientFile.ForeColor = System.Drawing.Color.White;
+            this.btnOpenClientFile.Location = new System.Drawing.Point(4, 48);
             this.btnOpenClientFile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnOpenClientFile.Name = "btnOpenClientFile";
             this.btnOpenClientFile.Size = new System.Drawing.Size(326, 36);
             this.btnOpenClientFile.TabIndex = 2;
             this.btnOpenClientFile.Text = "Abrir ficha de cliente";
-            this.btnOpenClientFile.UseVisualStyleBackColor = true;
+            this.btnOpenClientFile.UseVisualStyleBackColor = false;
             // 
             // buttonSearch
             // 
+            this.buttonSearch.BackColor = System.Drawing.Color.Green;
+            this.buttonSearch.FlatAppearance.BorderSize = 0;
+            this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearch.ForeColor = System.Drawing.Color.White;
             this.buttonSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSearch.Location = new System.Drawing.Point(4, 48);
+            this.buttonSearch.Location = new System.Drawing.Point(4, 5);
             this.buttonSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(326, 36);
             this.buttonSearch.TabIndex = 1;
             this.buttonSearch.Text = "Pesquisar";
-            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.UseVisualStyleBackColor = false;
             this.buttonSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // ClientsMain
@@ -91,6 +103,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.LightGreen;
             this.Controls.Add(this.btnOpenClientFile);
             this.Controls.Add(this.btnNewClient);
             this.Controls.Add(this.buttonSearch);
