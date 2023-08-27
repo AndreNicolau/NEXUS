@@ -31,7 +31,7 @@
             this.dgvClients = new System.Windows.Forms.DataGridView();
             this.btnNewClient = new System.Windows.Forms.Button();
             this.btnOpenClientFile = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.buttonSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,17 +74,17 @@
             this.btnOpenClientFile.Text = "Abrir ficha de cliente";
             this.btnOpenClientFile.UseVisualStyleBackColor = true;
             // 
-            // btnSearch
+            // buttonSearch
             // 
-            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(4, 48);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(326, 36);
-            this.btnSearch.TabIndex = 1;
-            this.btnSearch.Text = "Pesquisar";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.buttonSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSearch.Location = new System.Drawing.Point(4, 48);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(326, 36);
+            this.buttonSearch.TabIndex = 1;
+            this.buttonSearch.Text = "Pesquisar";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // ClientsMain
             // 
@@ -93,7 +93,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.btnOpenClientFile);
             this.Controls.Add(this.btnNewClient);
-            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.dgvClients);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -108,7 +108,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvClients;
-        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Button btnNewClient;
         private System.Windows.Forms.Button btnOpenClientFile;
     }

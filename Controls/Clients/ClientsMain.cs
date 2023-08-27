@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NEXUS.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,13 +23,8 @@ namespace NEXUS
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            foreach (Control control in this.Controls)
-            {
-                if (control.Tag == "search")
-                {
-                    control.Enabled = true;
-                }
-            }
+            ClientSearch clientSearch = new ClientSearch();
+            clientSearch.Show();
         }
 
         private void Clients_Load(object sender, EventArgs e)
