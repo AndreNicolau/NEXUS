@@ -310,6 +310,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\sign-in_icon_white_24px.png" />
     <None Include="Resources\sign-out_icon_32px.png" />
     <None Include="Resources\user_icon_32px.png" />
     <None Include="Resources\memo_icon_32px.png" />

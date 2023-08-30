@@ -19,22 +19,6 @@ namespace NEXUS
             this.Dispose();
         }
 
-        private void ShutdownApplication(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = new DialogResult();
-
-            dialogResult = MessageBox.Show("De certeza que deseja mesmo encerrar a aplicação por completo?", "Encerrar aplicação", MessageBoxButtons.YesNo);
-
-            if (dialogResult == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-            else
-            {
-                return;
-            }
-        }
-
         private void OpenClientsMain(object sender, EventArgs e)
         {
             ClientsMain clientsMain = new ClientsMain();
