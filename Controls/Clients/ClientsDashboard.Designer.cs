@@ -66,8 +66,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvClients.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvClients.GridColor = System.Drawing.Color.Green;
-            this.dgvClients.Location = new System.Drawing.Point(173, 0);
-            this.dgvClients.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvClients.Location = new System.Drawing.Point(165, 0);
+            this.dgvClients.Margin = new System.Windows.Forms.Padding(0);
             this.dgvClients.Name = "dgvClients";
             this.dgvClients.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -88,7 +88,7 @@
             this.dgvClients.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Green;
             this.dgvClients.RowTemplate.Height = 24;
             this.dgvClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClients.Size = new System.Drawing.Size(1107, 720);
+            this.dgvClients.Size = new System.Drawing.Size(1115, 720);
             this.dgvClients.TabIndex = 4;
             // 
             // btnNewClient
@@ -100,7 +100,7 @@
             this.btnNewClient.Image = global::NEXUS.Properties.Resources.user_add_icon_24px;
             this.btnNewClient.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnNewClient.Location = new System.Drawing.Point(0, 134);
-            this.btnNewClient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnNewClient.Margin = new System.Windows.Forms.Padding(0);
             this.btnNewClient.Name = "btnNewClient";
             this.btnNewClient.Size = new System.Drawing.Size(165, 57);
             this.btnNewClient.TabIndex = 3;
@@ -117,7 +117,7 @@
             this.btnOpenClientFile.Image = global::NEXUS.Properties.Resources.document_icon_24px;
             this.btnOpenClientFile.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnOpenClientFile.Location = new System.Drawing.Point(0, 67);
-            this.btnOpenClientFile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnOpenClientFile.Margin = new System.Windows.Forms.Padding(0);
             this.btnOpenClientFile.Name = "btnOpenClientFile";
             this.btnOpenClientFile.Size = new System.Drawing.Size(165, 57);
             this.btnOpenClientFile.TabIndex = 2;
@@ -135,7 +135,7 @@
             this.buttonSearch.Image = global::NEXUS.Properties.Resources.search_icon_24px;
             this.buttonSearch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonSearch.Location = new System.Drawing.Point(0, 0);
-            this.buttonSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(0);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(165, 57);
             this.buttonSearch.TabIndex = 1;
