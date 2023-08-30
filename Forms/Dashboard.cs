@@ -1,5 +1,6 @@
 ﻿using NEXUS.Forms;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace NEXUS
@@ -47,5 +48,7 @@ namespace NEXUS
             ClientSearch clientSearch = new ClientSearch();
             clientSearch.Show();
         }
+
+       
     }
 }
