@@ -82,6 +82,16 @@ namespace NEXUS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap document_icon_24px {
+            get {
+                object obj = ResourceManager.GetObject("document_icon_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lock_icon_24px {
             get {
                 object obj = ResourceManager.GetObject("lock_icon_24px", resourceCulture);
@@ -102,6 +112,16 @@ namespace NEXUS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap search_icon_24px {
+            get {
+                object obj = ResourceManager.GetObject("search_icon_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sign_in_icon_white_24px {
             get {
                 object obj = ResourceManager.GetObject("sign-in_icon_white_24px", resourceCulture);
@@ -115,6 +135,16 @@ namespace NEXUS.Properties {
         internal static System.Drawing.Bitmap sign_out_icon_32px {
             get {
                 object obj = ResourceManager.GetObject("sign-out_icon_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_add_icon_24px {
+            get {
+                object obj = ResourceManager.GetObject("user-add_icon_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

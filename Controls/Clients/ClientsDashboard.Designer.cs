@@ -47,7 +47,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvClients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvClients.BackgroundColor = System.Drawing.Color.LightGreen;
+            this.dgvClients.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Green;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -66,7 +66,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvClients.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvClients.GridColor = System.Drawing.Color.Green;
-            this.dgvClients.Location = new System.Drawing.Point(340, 0);
+            this.dgvClients.Location = new System.Drawing.Point(173, 0);
             this.dgvClients.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvClients.Name = "dgvClients";
             this.dgvClients.ReadOnly = true;
@@ -88,66 +88,75 @@
             this.dgvClients.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Green;
             this.dgvClients.RowTemplate.Height = 24;
             this.dgvClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClients.Size = new System.Drawing.Size(940, 720);
+            this.dgvClients.Size = new System.Drawing.Size(1107, 720);
             this.dgvClients.TabIndex = 4;
             // 
             // btnNewClient
             // 
-            this.btnNewClient.BackColor = System.Drawing.Color.Green;
+            this.btnNewClient.BackColor = System.Drawing.Color.Transparent;
             this.btnNewClient.FlatAppearance.BorderSize = 0;
             this.btnNewClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNewClient.ForeColor = System.Drawing.Color.White;
-            this.btnNewClient.Location = new System.Drawing.Point(4, 91);
+            this.btnNewClient.ForeColor = System.Drawing.Color.Black;
+            this.btnNewClient.Image = global::NEXUS.Properties.Resources.user_add_icon_24px;
+            this.btnNewClient.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnNewClient.Location = new System.Drawing.Point(0, 134);
             this.btnNewClient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnNewClient.Name = "btnNewClient";
-            this.btnNewClient.Size = new System.Drawing.Size(326, 36);
+            this.btnNewClient.Size = new System.Drawing.Size(165, 57);
             this.btnNewClient.TabIndex = 3;
             this.btnNewClient.Text = "Novo cliente";
+            this.btnNewClient.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNewClient.UseVisualStyleBackColor = false;
             // 
             // btnOpenClientFile
             // 
-            this.btnOpenClientFile.BackColor = System.Drawing.Color.Green;
+            this.btnOpenClientFile.BackColor = System.Drawing.Color.Transparent;
             this.btnOpenClientFile.FlatAppearance.BorderSize = 0;
             this.btnOpenClientFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpenClientFile.ForeColor = System.Drawing.Color.White;
-            this.btnOpenClientFile.Location = new System.Drawing.Point(4, 48);
+            this.btnOpenClientFile.ForeColor = System.Drawing.Color.Black;
+            this.btnOpenClientFile.Image = global::NEXUS.Properties.Resources.document_icon_24px;
+            this.btnOpenClientFile.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnOpenClientFile.Location = new System.Drawing.Point(0, 67);
             this.btnOpenClientFile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnOpenClientFile.Name = "btnOpenClientFile";
-            this.btnOpenClientFile.Size = new System.Drawing.Size(326, 36);
+            this.btnOpenClientFile.Size = new System.Drawing.Size(165, 57);
             this.btnOpenClientFile.TabIndex = 2;
-            this.btnOpenClientFile.Text = "Abrir ficha de cliente";
+            this.btnOpenClientFile.Text = "Ficha de cliente";
+            this.btnOpenClientFile.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnOpenClientFile.UseVisualStyleBackColor = false;
             // 
             // buttonSearch
             // 
-            this.buttonSearch.BackColor = System.Drawing.Color.Green;
+            this.buttonSearch.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.buttonSearch.BackColor = System.Drawing.Color.Transparent;
             this.buttonSearch.FlatAppearance.BorderSize = 0;
             this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSearch.ForeColor = System.Drawing.Color.White;
-            this.buttonSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSearch.Location = new System.Drawing.Point(4, 5);
+            this.buttonSearch.ForeColor = System.Drawing.Color.Black;
+            this.buttonSearch.Image = global::NEXUS.Properties.Resources.search_icon_24px;
+            this.buttonSearch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonSearch.Location = new System.Drawing.Point(0, 0);
             this.buttonSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(326, 36);
+            this.buttonSearch.Size = new System.Drawing.Size(165, 57);
             this.buttonSearch.TabIndex = 1;
-            this.buttonSearch.Text = "Pesquisar";
+            this.buttonSearch.Text = "Procurar";
+            this.buttonSearch.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonSearch.UseVisualStyleBackColor = false;
             this.buttonSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // ClientsMain
+            // ClientsDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.LightGreen;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.btnOpenClientFile);
             this.Controls.Add(this.btnNewClient);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.dgvClients);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "ClientsMain";
+            this.Name = "ClientsDashboard";
             this.Size = new System.Drawing.Size(1280, 720);
             this.Load += new System.EventHandler(this.Load_Clients);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).EndInit();
