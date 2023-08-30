@@ -21,7 +21,7 @@ namespace NEXUS
 
         private void OpenClientsMain(object sender, EventArgs e)
         {
-            ClientsMain clientsMain = new ClientsMain();
+            ClientsDashboard clientsMain = new ClientsDashboard();
             mainPanel.Controls.Add(clientsMain);
             clientsMain.Dock = DockStyle.Fill;
             clientsMain.Show();

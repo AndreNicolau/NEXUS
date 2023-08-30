@@ -15,9 +15,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace NEXUS
 {
-    public partial class ClientsMain : UserControl
+    public partial class ClientsDashboard : UserControl
     {
-        public ClientsMain()
+        public ClientsDashboard()
         {
             InitializeComponent();
         }

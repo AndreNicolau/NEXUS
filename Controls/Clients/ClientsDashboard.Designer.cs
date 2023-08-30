@@ -1,6 +1,6 @@
 ﻿namespace NEXUS
 {
-    partial class ClientsMain
+    partial class ClientsDashboard
     {
         /// <summary> 
         /// Required designer variable.
