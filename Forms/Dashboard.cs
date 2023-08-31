@@ -22,7 +22,10 @@ namespace NEXUS
         private void OpenClientsMain(object sender, EventArgs e)
         {
             ClientsDashboard clientsMain = new ClientsDashboard();
+
+            mainPanel.Controls.Clear();
             mainPanel.Controls.Add(clientsMain);
+
             clientsMain.Dock = DockStyle.Fill;
             clientsMain.Show();
         }
@@ -33,6 +36,15 @@ namespace NEXUS
             clientSearch.Show();
         }
 
-       
+        private void OpenTicketsDashboard(object sender, EventArgs e)
+        {
+            TicketsDasboard ticketsDasboard = new TicketsDasboard();
+
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(ticketsDasboard);
+
+            ticketsDasboard.Dock = DockStyle.Fill;
+            ticketsDasboard.Show();
+        }
     }
 }

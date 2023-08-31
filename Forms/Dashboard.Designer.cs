@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.sidePanel = new System.Windows.Forms.Panel();
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonTickets = new System.Windows.Forms.Button();
             this.buttonClients = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.panel4.SuspendLayout();
+            this.sidePanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel4
+            // sidePanel
             // 
-            this.panel4.AutoSize = true;
-            this.panel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel4.BackColor = System.Drawing.SystemColors.Control;
-            this.panel4.Controls.Add(this.buttonExit);
-            this.panel4.Controls.Add(this.buttonTickets);
-            this.panel4.Controls.Add(this.buttonClients);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(98, 600);
-            this.panel4.TabIndex = 40;
+            this.sidePanel.AutoSize = true;
+            this.sidePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.sidePanel.BackColor = System.Drawing.SystemColors.Control;
+            this.sidePanel.Controls.Add(this.buttonExit);
+            this.sidePanel.Controls.Add(this.buttonTickets);
+            this.sidePanel.Controls.Add(this.buttonClients);
+            this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sidePanel.Location = new System.Drawing.Point(0, 0);
+            this.sidePanel.Name = "sidePanel";
+            this.sidePanel.Size = new System.Drawing.Size(98, 600);
+            this.sidePanel.TabIndex = 40;
             // 
             // buttonExit
             // 
@@ -82,6 +82,7 @@
             this.buttonTickets.Text = "Tickets";
             this.buttonTickets.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonTickets.UseVisualStyleBackColor = false;
+            this.buttonTickets.Click += new System.EventHandler(this.OpenTicketsDashboard);
             // 
             // buttonClients
             // 
@@ -116,7 +117,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 600);
             this.Controls.Add(this.mainPanel);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.sidePanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -125,14 +126,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.panel4.ResumeLayout(false);
+            this.sidePanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel sidePanel;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Button buttonClients;
         private System.Windows.Forms.Button buttonExit;

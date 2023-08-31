@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NEXUS
 {
-    public partial class Tickets : UserControl
+    public partial class TicketsDasboard : UserControl
     {
-        public Tickets()
+        public TicketsDasboard()
         {
             InitializeComponent();
         }

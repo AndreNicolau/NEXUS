@@ -121,34 +121,46 @@
   <data name="memo_icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\memo_icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sign-out_icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sign-out_icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lock_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lock_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user_icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user_icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="sign-in_icon_white_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sign-in_icon_white_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="document_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\document_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ConnectionString" xml:space="preserve">
     <value>Data Source=LENOVO\SQLEXPRESS;Initial Catalog=nexus;Integrated Security=True</value>
   </data>
-  <data name="configuration" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="assept-document_icon_24px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\assept-document_icon_24px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sign-out_icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sign-out_icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="document_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user-add_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-add_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lock_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lock_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="file_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\file_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="configuration_icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\configuration.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user-add_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user-add_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="filter_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\filter_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
