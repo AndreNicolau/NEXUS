@@ -41,7 +41,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 73);
+            this.label1.Location = new System.Drawing.Point(359, 176);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 25);
@@ -66,7 +66,7 @@
             // 
             // textBoxServerName
             // 
-            this.textBoxServerName.Location = new System.Drawing.Point(13, 103);
+            this.textBoxServerName.Location = new System.Drawing.Point(359, 206);
             this.textBoxServerName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxServerName.Name = "textBoxServerName";
             this.textBoxServerName.Size = new System.Drawing.Size(215, 30);
@@ -75,7 +75,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 138);
+            this.label2.Location = new System.Drawing.Point(359, 241);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 25);
@@ -84,7 +84,7 @@
             // 
             // textBoxDatabaseName
             // 
-            this.textBoxDatabaseName.Location = new System.Drawing.Point(13, 168);
+            this.textBoxDatabaseName.Location = new System.Drawing.Point(359, 271);
             this.textBoxDatabaseName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxDatabaseName.Name = "textBoxDatabaseName";
             this.textBoxDatabaseName.Size = new System.Drawing.Size(215, 30);
