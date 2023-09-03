@@ -83,6 +83,16 @@ namespace NEXUS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap circle_close_icon_24px {
+            get {
+                object obj = ResourceManager.GetObject("circle-close_icon_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap configuration_icon_32px {
             get {
                 object obj = ResourceManager.GetObject("configuration_icon_32px", resourceCulture);
@@ -102,9 +112,29 @@ namespace NEXUS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap disk_icon_24px {
+            get {
+                object obj = ResourceManager.GetObject("disk_icon_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap document_icon_24px {
             get {
                 object obj = ResourceManager.GetObject("document_icon_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap file_edit_icon_24px {
+            get {
+                object obj = ResourceManager.GetObject("file-edit_icon_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

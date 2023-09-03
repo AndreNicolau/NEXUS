@@ -1,6 +1,6 @@
 ﻿namespace NEXUS.Forms
 {
-    partial class ClientSearch
+    partial class CustomerSearch
     {
         /// <summary>
         /// Required designer variable.

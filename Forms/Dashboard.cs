@@ -1,4 +1,6 @@
-﻿using NEXUS.Forms;
+﻿
+using NEXUS.Forms;
+using NEXUS.Forms.Tickets;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -19,32 +21,49 @@ namespace NEXUS
             this.Dispose();
         }
 
-        private void OpenClientsMain(object sender, EventArgs e)
+        public void OpenCustomersDashboard()
         {
-            ClientsDashboard clientsMain = new ClientsDashboard();
+            CustomersDashboard customersDashboard = new CustomersDashboard();
+            customersDashboard.TopLevel = false;
 
             mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(clientsMain);
+            mainPanel.Controls.Add(customersDashboard);
 
-            clientsMain.Dock = DockStyle.Fill;
-            clientsMain.Show();
+            customersDashboard.Dock = DockStyle.Fill;
+            customersDashboard.Show();
         }
 
         private void OpenClientSearch(object sender, EventArgs e)
         {
-            ClientSearch clientSearch = new ClientSearch();
+            CustomerSearch clientSearch = new CustomerSearch();
             clientSearch.Show();
         }
 
-        private void OpenTicketsDashboard(object sender, EventArgs e)
+        public void OpenTicketsDashboard()
         {
             TicketsDasboard ticketsDasboard = new TicketsDasboard();
+            ticketsDasboard.TopLevel = false;
 
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(ticketsDasboard);
 
             ticketsDasboard.Dock = DockStyle.Fill;
             ticketsDasboard.Show();
+        }
+
+        private void buttonClients_Click(object sender, EventArgs e)
+        {
+            OpenCustomersDashboard();
+        }
+
+        private void buttonTickets_Click(object sender, EventArgs e)
+        {
+            OpenTicketsDashboard();
+        }
+
+        private void mainPanel_ControlRemoved(object sender, ControlEventArgs e)
+        {
+            
         }
     }
 }

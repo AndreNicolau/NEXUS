@@ -39,7 +39,7 @@ namespace NEXUS
             {
                 MessageBox.Show("Utilizador não encontrado.", "Utilizador inválido.");
             }
-            else if (dataTable.Rows[0][1].ToString() != password)
+            else if (dataTable.Rows[0][2].ToString() != password)
             {
                 MessageBox.Show("Password errada!", "Password inválida");
             }

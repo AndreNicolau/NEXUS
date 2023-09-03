@@ -191,23 +191,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\Clients\ClientFile.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\Clients\ClientFile.Designer.cs">
-      <DependentUpon>ClientFile.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\Clients\ClientsDashboard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\Clients\ClientsDashboard.Designer.cs">
-      <DependentUpon>ClientsDashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\ClientSearch.cs">
+    <Compile Include="Forms\Customers\CustomerFile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ClientSearch.Designer.cs">
-      <DependentUpon>ClientSearch.cs</DependentUpon>
+    <Compile Include="Forms\Customers\CustomerFile.Designer.cs">
+      <DependentUpon>CustomerFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customers\CustomerSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customers\CustomerSearch.Designer.cs">
+      <DependentUpon>CustomerSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customers\CustomersDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customers\CustomersDashboard.Designer.cs">
+      <DependentUpon>CustomersDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Dashboard.cs">
       <SubType>Form</SubType>
@@ -227,6 +227,12 @@
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Tickets\TicketsDasboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tickets\TicketsDasboard.Designer.cs">
+      <DependentUpon>TicketsDasboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="nexusDataSet.cs">
       <DependentUpon>nexusDataSet.xsd</DependentUpon>
     </Compile>
@@ -237,26 +243,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Controls\Tickets\TicketsDasboard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\Tickets\TicketsDasboard.Designer.cs">
-      <DependentUpon>TicketsDasboard.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Controls\Clients\ClientFile.resx">
-      <DependentUpon>ClientFile.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Customers\CustomerFile.resx">
+      <DependentUpon>CustomerFile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Clients\ClientsDashboard.resx">
-      <DependentUpon>ClientsDashboard.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Customers\CustomerSearch.resx">
+      <DependentUpon>CustomerSearch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ClientSearch.resx">
-      <DependentUpon>ClientSearch.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Customers\CustomersDashboard.resx">
+      <DependentUpon>CustomersDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tickets\TicketsDasboard.resx">
+      <DependentUpon>TicketsDasboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -271,9 +274,7 @@
     <EmbeddedResource Include="Forms\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Tickets\TicketsDasboard.resx">
-      <DependentUpon>TicketsDasboard.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include=".editorconfig" />
     <None Include="nexusDataSet.xsc">
       <DependentUpon>nexusDataSet.xsd</DependentUpon>
     </None>
@@ -310,6 +311,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\disk_icon_24px.png" />
+    <None Include="Resources\file-edit_icon_24px.png" />
+    <None Include="Resources\circle-close_icon_24px.png" />
     <None Include="Resources\filter_icon_24px.png" />
     <None Include="Resources\assept-document_icon_24px1.png" />
     <None Include="Resources\assept-document_icon_24px.png" />

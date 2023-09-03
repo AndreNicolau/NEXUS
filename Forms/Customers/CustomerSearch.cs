@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NEXUS
+namespace NEXUS.Forms
 {
-    public partial class TicketsDasboard : UserControl
+    public partial class CustomerSearch : Form
     {
-        public TicketsDasboard()
+        public CustomerSearch()
         {
             InitializeComponent();
+        }
+
+        private void CloseClientSearch(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

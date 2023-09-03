@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NEXUS.Controls
+namespace NEXUS.Forms.Tickets
 {
-    public partial class ClientFile : UserControl
+    public partial class TicketsDasboard : Form
     {
-        public ClientFile()
+        public TicketsDasboard()
         {
             InitializeComponent();
         }

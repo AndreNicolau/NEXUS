@@ -82,7 +82,7 @@
             this.buttonTickets.Text = "Tickets";
             this.buttonTickets.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonTickets.UseVisualStyleBackColor = false;
-            this.buttonTickets.Click += new System.EventHandler(this.OpenTicketsDashboard);
+            this.buttonTickets.Click += new System.EventHandler(this.buttonTickets_Click);
             // 
             // buttonClients
             // 
@@ -99,7 +99,7 @@
             this.buttonClients.Text = "Clientes";
             this.buttonClients.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonClients.UseVisualStyleBackColor = false;
-            this.buttonClients.Click += new System.EventHandler(this.OpenClientsMain);
+            this.buttonClients.Click += new System.EventHandler(this.buttonClients_Click);
             // 
             // mainPanel
             // 
