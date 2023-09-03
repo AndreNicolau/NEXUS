@@ -1,6 +1,6 @@
 ﻿namespace NEXUS.Forms.Customers
 {
-    partial class InsertCustomer
+    partial class RegisterNewCustomer
     {
         /// <summary>
         /// Required designer variable.

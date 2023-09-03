@@ -53,7 +53,7 @@ namespace NEXUS.Forms
 
         private void NewCustomer()
         {
-            InsertCustomer insertCustomer = new InsertCustomer();
+            RegisterNewCustomer insertCustomer = new RegisterNewCustomer();
             insertCustomer.Show();
         }
 

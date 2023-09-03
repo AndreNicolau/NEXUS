@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace NEXUS.Forms.Customers
 {
-    public partial class InsertCustomer : Form
+    public partial class RegisterNewCustomer : Form
     {
-        public InsertCustomer()
+        public RegisterNewCustomer()
         {
             InitializeComponent();
         }
