@@ -49,8 +49,6 @@ namespace NEXUS
                 dashboard.Show();
                 this.Hide();
             }
-
-
         }
 
         private void Login_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
