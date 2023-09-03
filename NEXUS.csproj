@@ -320,6 +320,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\refresh_icon_24px.png" />
     <None Include="Resources\disk_icon_24px.png" />
     <None Include="Resources\file-edit_icon_24px.png" />
     <None Include="Resources\circle-close_icon_24px.png" />

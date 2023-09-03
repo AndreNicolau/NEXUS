@@ -88,7 +88,7 @@
             this.textBoxEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(304, 30);
-            this.textBoxEmail.TabIndex = 5;
+            this.textBoxEmail.TabIndex = 3;
             this.textBoxEmail.Tag = "customerData";
             // 
             // label4
@@ -110,7 +110,7 @@
             this.textBoxPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
             this.textBoxPhoneNumber.Size = new System.Drawing.Size(304, 30);
-            this.textBoxPhoneNumber.TabIndex = 7;
+            this.textBoxPhoneNumber.TabIndex = 2;
             this.textBoxPhoneNumber.Tag = "customerData";
             // 
             // label5
@@ -132,7 +132,7 @@
             this.textBoxTaxPayerNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxTaxPayerNumber.Name = "textBoxTaxPayerNumber";
             this.textBoxTaxPayerNumber.Size = new System.Drawing.Size(304, 30);
-            this.textBoxTaxPayerNumber.TabIndex = 9;
+            this.textBoxTaxPayerNumber.TabIndex = 4;
             this.textBoxTaxPayerNumber.Tag = "customerData";
             // 
             // buttonEditCustomerData
@@ -197,7 +197,7 @@
             this.textBoxAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(304, 30);
-            this.textBoxAddress.TabIndex = 13;
+            this.textBoxAddress.TabIndex = 5;
             this.textBoxAddress.Tag = "customerData";
             // 
             // label2

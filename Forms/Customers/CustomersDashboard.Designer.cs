@@ -33,6 +33,7 @@
             this.btnNewClient = new System.Windows.Forms.Button();
             this.buttonOpenCustomerFile = new System.Windows.Forms.Button();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).BeginInit();
             this.topPanel.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +50,7 @@
             this.dgvClients.Location = new System.Drawing.Point(0, 70);
             this.dgvClients.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvClients.Name = "dgvClients";
+            this.dgvClients.ReadOnly = true;
             this.dgvClients.RowHeadersWidth = 51;
             this.dgvClients.RowTemplate.Height = 24;
             this.dgvClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -113,6 +115,7 @@
             // topPanel
             // 
             this.topPanel.BackColor = System.Drawing.Color.White;
+            this.topPanel.Controls.Add(this.buttonRefresh);
             this.topPanel.Controls.Add(this.buttonSearch);
             this.topPanel.Controls.Add(this.btnNewClient);
             this.topPanel.Controls.Add(this.buttonOpenCustomerFile);
@@ -123,6 +126,24 @@
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1280, 70);
             this.topPanel.TabIndex = 7;
+            // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.BackColor = System.Drawing.Color.Transparent;
+            this.buttonRefresh.FlatAppearance.BorderSize = 0;
+            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefresh.ForeColor = System.Drawing.Color.Black;
+            this.buttonRefresh.Image = global::NEXUS.Properties.Resources.refresh_icon_24px;
+            this.buttonRefresh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonRefresh.Location = new System.Drawing.Point(385, 8);
+            this.buttonRefresh.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(100, 55);
+            this.buttonRefresh.TabIndex = 4;
+            this.buttonRefresh.Text = "Atualizar";
+            this.buttonRefresh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonRefresh.UseVisualStyleBackColor = false;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // CustomersDashboard
             // 
@@ -148,5 +169,6 @@
         private System.Windows.Forms.Button btnNewClient;
         private System.Windows.Forms.Button buttonOpenCustomerFile;
         private System.Windows.Forms.Panel topPanel;
+        private System.Windows.Forms.Button buttonRefresh;
     }
 }

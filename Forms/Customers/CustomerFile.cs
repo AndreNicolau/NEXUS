@@ -8,10 +8,11 @@ namespace NEXUS.Forms.Customers
     {
         private bool editing = false;
 
-        public CustomerFile(string name, string phoneNumber, string email, string taxPayerNmber, string address)
+        public CustomerFile(string customerId, string name, string phoneNumber, string email, string taxPayerNmber, string address)
         {
             InitializeComponent();
 
+            labelCustomerId.Text = customerId;
             textBoxName.Text = name;
             textBoxPhoneNumber.Text = phoneNumber;
             textBoxEmail.Text = email;

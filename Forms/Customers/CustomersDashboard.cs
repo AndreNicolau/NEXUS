@@ -41,13 +41,14 @@ namespace NEXUS.Forms
 
         private void OpenCustomerFile()
         {
+            string customerId = dgvClients.CurrentRow.Cells[0].Value.ToString();
             string name = dgvClients.CurrentRow.Cells[1].Value.ToString();
             string phoneNumber = dgvClients.CurrentRow.Cells[2].Value.ToString();
             string email = dgvClients.CurrentRow.Cells[3].Value.ToString();
             string taxPayerNumber = dgvClients.CurrentRow.Cells[4].Value.ToString();
             string address = dgvClients.CurrentRow.Cells[5].Value.ToString();
 
-            CustomerFile customerFile = new CustomerFile(name, phoneNumber, email, taxPayerNumber, address);
+            CustomerFile customerFile = new CustomerFile(customerId, name, phoneNumber, email, taxPayerNumber, address);
             customerFile.Show();
         }
 
@@ -71,6 +72,11 @@ namespace NEXUS.Forms
         private void btnNewClient_Click(object sender, EventArgs e)
         {
             NewCustomer();
+        }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            LoadCustomers();
         }
     }
 }
