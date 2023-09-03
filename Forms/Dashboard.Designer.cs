@@ -47,7 +47,7 @@
             this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidePanel.Location = new System.Drawing.Point(0, 0);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(98, 600);
+            this.sidePanel.Size = new System.Drawing.Size(98, 720);
             this.sidePanel.TabIndex = 40;
             // 
             // buttonExit
@@ -58,7 +58,7 @@
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Image = global::NEXUS.Properties.Resources.sign_out_icon_32px;
             this.buttonExit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonExit.Location = new System.Drawing.Point(0, 533);
+            this.buttonExit.Location = new System.Drawing.Point(0, 653);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(98, 67);
             this.buttonExit.TabIndex = 35;
@@ -107,7 +107,7 @@
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(98, 0);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1102, 600);
+            this.mainPanel.Size = new System.Drawing.Size(1182, 720);
             this.mainPanel.TabIndex = 41;
             // 
             // Dashboard
@@ -115,7 +115,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1200, 600);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.sidePanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

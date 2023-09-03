@@ -53,7 +53,8 @@ namespace NEXUS.Forms
 
         private void NewCustomer()
         {
-
+            InsertCustomer insertCustomer = new InsertCustomer();
+            insertCustomer.Show();
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
