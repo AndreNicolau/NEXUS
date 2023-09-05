@@ -175,11 +175,7 @@
   <data name="refresh_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\refresh_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DatabaseName" xml:space="preserve">
-    <value>nexus</value>
+  <data name="OdbcConnectionString" xml:space="preserve">
+    <value>Driver={SQL Server};Server=(local);Trusted_Connection=Yes;Database=nexus;</value>
   </data>
-  <data name="ServerName" xml:space="preserve">
-    <value>LENOVO\SQLEXPRESS</value>
-  </data>
-
 </root>

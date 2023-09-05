@@ -28,26 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.buttonSave = new System.Windows.Forms.Button();
-            this.textBoxServerName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxDatabaseName = new System.Windows.Forms.TextBox();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(359, 176);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Servidor";
             // 
             // buttonSave
             // 
@@ -64,32 +52,6 @@
             this.buttonSave.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
-            // 
-            // textBoxServerName
-            // 
-            this.textBoxServerName.Location = new System.Drawing.Point(359, 206);
-            this.textBoxServerName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBoxServerName.Name = "textBoxServerName";
-            this.textBoxServerName.Size = new System.Drawing.Size(215, 30);
-            this.textBoxServerName.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(359, 241);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Base de dados";
-            // 
-            // textBoxDatabaseName
-            // 
-            this.textBoxDatabaseName.Location = new System.Drawing.Point(359, 271);
-            this.textBoxDatabaseName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBoxDatabaseName.Name = "textBoxDatabaseName";
-            this.textBoxDatabaseName.Size = new System.Drawing.Size(215, 30);
-            this.textBoxDatabaseName.TabIndex = 4;
             // 
             // buttonCancel
             // 
@@ -109,6 +71,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.buttonSave);
             this.panel1.Controls.Add(this.buttonCancel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -117,25 +80,33 @@
             this.panel1.Size = new System.Drawing.Size(932, 70);
             this.panel1.TabIndex = 6;
             // 
-            // richTextBox1
+            // dataGridView1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(359, 320);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(340, 112);
-            this.richTextBox1.TabIndex = 7;
-            this.richTextBox1.Text = "";
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(37, 102);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(867, 337);
+            this.dataGridView1.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(208, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(244, 53);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Carregar clientes";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 476);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBoxDatabaseName);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxServerName);
-            this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -145,20 +116,16 @@
             this.TopMost = true;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Settings_FormClosed);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonSave;
-        private System.Windows.Forms.TextBox textBoxServerName;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxDatabaseName;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
     }
 }

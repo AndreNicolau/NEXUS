@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Odbc;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -44,12 +45,15 @@ namespace NEXUS.Forms.Customers
             string address = textBoxAddress.Text;
             string query = $"UPDATE customers SET customer_name = '{name}',phone_number = '{phoneNumber}',[email] = '{email}', taxpayer_number = '{taxpayerNumber}',address = '{address}' WHERE customer_id = '{customerId}'";
 
-            SqlConnection connection = new SqlConnection(Properties.Resources.ConnectionString);
-            SqlCommand sqlCommand = new SqlCommand(query, connection);
+            //SqlConnection connection = new SqlConnection(Properties.Resources.ConnectionString);
+            OdbcConnection odbcConnection = new OdbcConnection("DSN=NEXUS");
 
-            connection.Open();
-            sqlCommand.ExecuteNonQuery();
-            connection.Close();
+            //SqlCommand sqlCommand = new SqlCommand(query, connection);
+            OdbcCommand odbcCommand = new OdbcCommand(query, odbcConnection);
+
+            odbcConnection.Open();
+            odbcCommand.ExecuteNonQuery();
+            odbcConnection.Close();
 
             if (editing)
             {

@@ -110,15 +110,6 @@ namespace NEXUS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to nexus.
-        /// </summary>
-        internal static string DatabaseName {
-            get {
-                return ResourceManager.GetString("DatabaseName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap disk_icon_24px {
@@ -189,6 +180,15 @@ namespace NEXUS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Driver={SQL Server};Server=(local);Trusted_Connection=Yes;Database=nexus;.
+        /// </summary>
+        internal static string OdbcConnectionString {
+            get {
+                return ResourceManager.GetString("OdbcConnectionString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap refresh_icon_24px {
@@ -205,15 +205,6 @@ namespace NEXUS.Properties {
             get {
                 object obj = ResourceManager.GetObject("search_icon_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to LENOVO\SQLEXPRESS.
-        /// </summary>
-        internal static string ServerName {
-            get {
-                return ResourceManager.GetString("ServerName", resourceCulture);
             }
         }
         

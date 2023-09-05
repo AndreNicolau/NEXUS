@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Data.Odbc;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -28,12 +29,15 @@ namespace NEXUS
                 return;
             }
 
-            SqlConnection connection = new SqlConnection(Properties.Resources.ConnectionString);
+            //SqlConnection connection = new SqlConnection(Properties.Resources.ConnectionString);
+            OdbcConnection odbcConnection = new OdbcConnection("DSN=NEXUS");
 
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter($"SELECT * FROM login WHERE username = '{username}'", connection);
+            //SqlDataAdapter sqlDataAdapter = new SqlDataAdapter($"SELECT * FROM login WHERE username = '{username}'", connection);
+            OdbcDataAdapter odbcDataAdapter = new OdbcDataAdapter($"SELECT * FROM login WHERE username = '{username}'", odbcConnection);
 
             DataTable dataTable = new DataTable();
-            sqlDataAdapter.Fill(dataTable);
+            //sqlDataAdapter.Fill(dataTable);
+            odbcDataAdapter.Fill(dataTable);
 
             if (dataTable.Rows.Count == 0)
             {

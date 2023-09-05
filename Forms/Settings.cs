@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Data.Odbc;
+using System.Data;
 
 namespace NEXUS
 {
@@ -8,12 +10,30 @@ namespace NEXUS
         public Settings()
         {
             InitializeComponent();
-            LoadSettings();
         }
 
         private void LoadSettings()
         {
+            string query = "SELECT * FROM customers";
 
+            DataTable dataTable = new DataTable();
+
+            using (OdbcConnection odbcConnection = new OdbcConnection("DSN=NEXUS"))
+            {
+               
+                try
+                {
+                    odbcConnection.Open();
+                    OdbcDataAdapter adapter = new OdbcDataAdapter(query, odbcConnection);
+                    adapter.Fill(dataTable);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            dataGridView1.DataSource = dataTable;
         }
 
         private void SaveChanges()
@@ -35,6 +55,11 @@ namespace NEXUS
         {
             Login login = new Login();
             login.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LoadSettings();
         }
     }
 }

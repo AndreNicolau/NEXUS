@@ -37,6 +37,8 @@ namespace NEXUS.Forms
             dgvClients.Columns[3].HeaderText = "Email";
             dgvClients.Columns[4].HeaderText = "Número contribuinte";
             dgvClients.Columns[5].HeaderText = "Morada";
+
+            dgvClients.Sort(dgvClients.Columns[1], ListSortDirection.Ascending);
         }
 
         private void OpenCustomerFile()
