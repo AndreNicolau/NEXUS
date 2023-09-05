@@ -239,14 +239,6 @@
     <Compile Include="Forms\Tickets\TicketsDasboard.Designer.cs">
       <DependentUpon>TicketsDasboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="nexusDataSet.cs">
-      <DependentUpon>nexusDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="nexusDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>nexusDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Customers\CustomerFile.resx">
@@ -284,17 +276,6 @@
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
     <None Include=".editorconfig" />
-    <None Include="nexusDataSet.xsc">
-      <DependentUpon>nexusDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="nexusDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>nexusDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="nexusDataSet.xss">
-      <DependentUpon>nexusDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -26,8 +26,7 @@ namespace NEXUS.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LENOVO\\SQLEXPRESS;Initial Catalog=nexus;Persist Security Info=True;Us" +
-            "er ID=sa")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LENOVO\\SQLEXPRESS;Initial Catalog=nexus;Integrated Security=True")]
         public string nexusConnectionString {
             get {
                 return ((string)(this["nexusConnectionString"]));
@@ -36,11 +35,19 @@ namespace NEXUS.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LENOVO\\SQLEXPRESS;Initial Catalog=nexus;Integrated Security=True")]
-        public string nexusConnectionString1 {
+        [global::System.Configuration.DefaultSettingValueAttribute("LENOVO\\SQLEXPRESS")]
+        public string serverName {
             get {
-                return ((string)(this["nexusConnectionString1"]));
+                return ((string)(this["serverName"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("nexus")]
+        public string databaseName {
+            get {
+                return ((string)(this["databaseName"]));
             }
         }
     }

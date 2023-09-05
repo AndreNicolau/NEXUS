@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NEXUS
@@ -20,8 +13,7 @@ namespace NEXUS
 
         private void LoadSettings()
         {
-            textBoxServerName.Text = Properties.Resources.ServerName;
-            textBoxDatabaseName.Text = Properties.Resources.DatabaseName;
+
         }
 
         private void SaveChanges()
@@ -36,7 +28,7 @@ namespace NEXUS
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-
+            SaveChanges();
         }
 
         private void Settings_FormClosed(object sender, FormClosedEventArgs e)
