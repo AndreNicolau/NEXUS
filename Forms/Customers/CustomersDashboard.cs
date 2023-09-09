@@ -1,13 +1,10 @@
 ﻿using NEXUS.Forms.Customers;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Odbc;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NEXUS.Forms
@@ -23,11 +20,11 @@ namespace NEXUS.Forms
 
         private void LoadCustomers()
         {
-            SqlConnection connection = new SqlConnection(Properties.Resources.ConnectionString);
-            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM customers", connection);
+            OdbcConnection odbcConnection = new OdbcConnection("DSN=NEXUS");
+            OdbcDataAdapter odbcDataAdapter = new OdbcDataAdapter("SELECT * FROM customers", odbcConnection);
 
             DataTable dataTable = new DataTable();
-            dataAdapter.Fill(dataTable);
+            odbcDataAdapter.Fill(dataTable);
 
             dgvClients.DataSource = dataTable;
 
@@ -39,7 +36,7 @@ namespace NEXUS.Forms
             dgvClients.Columns[5].HeaderText = "Morada";
 
             dgvClients.Sort(dgvClients.Columns[1], ListSortDirection.Ascending);
-            
+
             DataGridViewCellStyle style = dgvClients.ColumnHeadersDefaultCellStyle;
             style.Font = new Font(dgvClients.Font, FontStyle.Bold);
         }

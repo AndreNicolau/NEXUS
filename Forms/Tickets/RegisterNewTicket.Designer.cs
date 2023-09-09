@@ -33,12 +33,16 @@
             this.buttonRmoveCustomer = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonAssociateCustomer = new System.Windows.Forms.Button();
-            this.buttonInsertCustomer = new System.Windows.Forms.Button();
+            this.buttonInsertTicket = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.labelDate = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.labelAssociatedCustomer = new System.Windows.Forms.Label();
+            this.comboBoxEquipment = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBoxBrand = new System.Windows.Forms.ComboBox();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +52,7 @@
             this.panelTop.Controls.Add(this.buttonRmoveCustomer);
             this.panelTop.Controls.Add(this.label2);
             this.panelTop.Controls.Add(this.buttonAssociateCustomer);
-            this.panelTop.Controls.Add(this.buttonInsertCustomer);
+            this.panelTop.Controls.Add(this.buttonInsertTicket);
             this.panelTop.Controls.Add(this.buttonClose);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
@@ -99,21 +103,20 @@
             this.buttonAssociateCustomer.UseVisualStyleBackColor = true;
             this.buttonAssociateCustomer.Click += new System.EventHandler(this.buttonAssociateCustomer_Click);
             // 
-            // buttonInsertCustomer
+            // buttonInsertTicket
             // 
-            this.buttonInsertCustomer.FlatAppearance.BorderSize = 0;
-            this.buttonInsertCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonInsertCustomer.Image = global::NEXUS.Properties.Resources.assept_document_icon_24px1;
-            this.buttonInsertCustomer.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonInsertCustomer.Location = new System.Drawing.Point(0, 5);
-            this.buttonInsertCustomer.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonInsertCustomer.Name = "buttonInsertCustomer";
-            this.buttonInsertCustomer.Size = new System.Drawing.Size(85, 60);
-            this.buttonInsertCustomer.TabIndex = 12;
-            this.buttonInsertCustomer.Text = "Inserir";
-            this.buttonInsertCustomer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonInsertCustomer.UseVisualStyleBackColor = true;
-            this.buttonInsertCustomer.Click += new System.EventHandler(this.buttonInsertCustomer_Click);
+            this.buttonInsertTicket.FlatAppearance.BorderSize = 0;
+            this.buttonInsertTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonInsertTicket.Image = global::NEXUS.Properties.Resources.assept_document_icon_24px1;
+            this.buttonInsertTicket.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonInsertTicket.Location = new System.Drawing.Point(0, 5);
+            this.buttonInsertTicket.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonInsertTicket.Name = "buttonInsertTicket";
+            this.buttonInsertTicket.Size = new System.Drawing.Size(85, 60);
+            this.buttonInsertTicket.TabIndex = 12;
+            this.buttonInsertTicket.Text = "Inserir";
+            this.buttonInsertTicket.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonInsertTicket.UseVisualStyleBackColor = true;
             // 
             // buttonClose
             // 
@@ -145,7 +148,7 @@
             // 
             this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.Location = new System.Drawing.Point(12, 163);
+            this.richTextBox1.Location = new System.Drawing.Point(12, 211);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(1224, 213);
             this.richTextBox1.TabIndex = 2;
@@ -154,7 +157,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 135);
+            this.label1.Location = new System.Drawing.Point(12, 181);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 25);
             this.label1.TabIndex = 3;
@@ -163,12 +166,46 @@
             // labelAssociatedCustomer
             // 
             this.labelAssociatedCustomer.AutoSize = true;
-            this.labelAssociatedCustomer.Location = new System.Drawing.Point(12, 107);
+            this.labelAssociatedCustomer.Location = new System.Drawing.Point(12, 106);
             this.labelAssociatedCustomer.Margin = new System.Windows.Forms.Padding(3);
             this.labelAssociatedCustomer.Name = "labelAssociatedCustomer";
             this.labelAssociatedCustomer.Size = new System.Drawing.Size(407, 25);
             this.labelAssociatedCustomer.TabIndex = 4;
             this.labelAssociatedCustomer.Text = "Cliente associado: Nenhum cliente associado";
+            // 
+            // comboBoxEquipment
+            // 
+            this.comboBoxEquipment.FormattingEnabled = true;
+            this.comboBoxEquipment.Location = new System.Drawing.Point(214, 136);
+            this.comboBoxEquipment.Name = "comboBoxEquipment";
+            this.comboBoxEquipment.Size = new System.Drawing.Size(205, 33);
+            this.comboBoxEquipment.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 139);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(196, 25);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Tipo de equipamento";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(425, 139);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 25);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Marca";
+            // 
+            // comboBoxBrand
+            // 
+            this.comboBoxBrand.FormattingEnabled = true;
+            this.comboBoxBrand.Location = new System.Drawing.Point(498, 136);
+            this.comboBoxBrand.Name = "comboBoxBrand";
+            this.comboBoxBrand.Size = new System.Drawing.Size(205, 33);
+            this.comboBoxBrand.TabIndex = 7;
             // 
             // RegisterNewTicket
             // 
@@ -176,6 +213,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.comboBoxBrand);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.comboBoxEquipment);
             this.Controls.Add(this.labelAssociatedCustomer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox1);
@@ -199,7 +240,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panelTop;
-        private System.Windows.Forms.Button buttonInsertCustomer;
+        private System.Windows.Forms.Button buttonInsertTicket;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.RichTextBox richTextBox1;
@@ -208,5 +249,9 @@
         private System.Windows.Forms.Label labelAssociatedCustomer;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonRmoveCustomer;
+        private System.Windows.Forms.ComboBox comboBoxEquipment;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBoxBrand;
     }
 }

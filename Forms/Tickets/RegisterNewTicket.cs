@@ -21,23 +21,29 @@ namespace NEXUS.Forms.Tickets
         {
             InitializeComponent();
 
+            labelDate.Text = $"Data: {DateTime.Today.ToString("yyyy/MM/dd")}";
 
-            LoadData();
+            LoadDataFromTable("equipments_types", comboBoxEquipment);
+            LoadDataFromTable("brands", comboBoxBrand);
         }
 
-        private void LoadData()
+        private void LoadDataFromTable(string tableName, ComboBox comboBoxName)
         {
-            labelDate.Text = $"Data: {DateTime.Today.ToString("yyyy/MM/dd")}";
+            string equipmentQuery = $"SELECT * FROM {tableName}";
+
+            OdbcConnection odbcConnection = new OdbcConnection("DSN=NEXUS");
+            OdbcDataAdapter odbcDataAdapter = new OdbcDataAdapter(equipmentQuery, odbcConnection);
+
+            DataTable dataTable = new DataTable();
+            odbcDataAdapter.Fill(dataTable);
+
+            comboBoxName.DataSource = dataTable;
+            comboBoxName.DisplayMember = dataTable.Columns[0].ColumnName;
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void buttonInsertCustomer_Click(object sender, EventArgs e)
-        {
-           
         }
 
         private void buttonAssociateCustomer_Click(object sender, EventArgs e)
