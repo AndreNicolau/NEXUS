@@ -39,6 +39,9 @@ namespace NEXUS.Forms
             dgvClients.Columns[5].HeaderText = "Morada";
 
             dgvClients.Sort(dgvClients.Columns[1], ListSortDirection.Ascending);
+            
+            DataGridViewCellStyle style = dgvClients.ColumnHeadersDefaultCellStyle;
+            style.Font = new Font(dgvClients.Font, FontStyle.Bold);
         }
 
         private void OpenCustomerFile()

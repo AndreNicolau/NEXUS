@@ -62,6 +62,7 @@
             this.buttonInsertCustomer.Image = global::NEXUS.Properties.Resources.assept_document_icon_24px1;
             this.buttonInsertCustomer.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonInsertCustomer.Location = new System.Drawing.Point(3, 5);
+            this.buttonInsertCustomer.Margin = new System.Windows.Forms.Padding(0);
             this.buttonInsertCustomer.Name = "buttonInsertCustomer";
             this.buttonInsertCustomer.Size = new System.Drawing.Size(85, 60);
             this.buttonInsertCustomer.TabIndex = 10;
@@ -77,6 +78,7 @@
             this.buttonClose.Image = global::NEXUS.Properties.Resources.circle_close_icon_24px;
             this.buttonClose.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonClose.Location = new System.Drawing.Point(94, 5);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(0);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(100, 60);
             this.buttonClose.TabIndex = 11;

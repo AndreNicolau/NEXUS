@@ -117,71 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="memo_icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\memo_icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sign-in_icon_white_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sign-in_icon_white_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="circle-close_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\circle-close_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ConnectionString" xml:space="preserve">
-    <value>Data Source=LENOVO\SQLEXPRESS;Initial Catalog=nexus;Integrated Security=True</value>
-  </data>
-  <data name="file-edit_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\file-edit_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="assept-document_icon_24px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\assept-document_icon_24px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sign-out_icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sign-out_icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="refresh_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refresh_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="document_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\document_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="disk_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\disk_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user_icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user_icon_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="filter_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\filter_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user-add_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user-add_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lock_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lock_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="add_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="file_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\file_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="configuration_icon_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\configuration.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user-remove_icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user-remove_icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="OdbcConnectionString" xml:space="preserve">
-    <value>Driver={SQL Server};Server=(local);Trusted_Connection=Yes;Database=nexus;</value>
-  </data>
-  <data name="delete_user__icon_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete-user__icon_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonRmoveCustomer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAALAAAACwARRqq2kAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAABw0lEQVRIS62Vu05VQRSGj4FAwSXhEgpogYYCeQBs1Ccw0JMYNSE+gfgg4htAbWwICAkoClhQQGxI
+        6DSABGwJft/OXgnunNnHAf7ky5w1s9aay5rZp5FQG7yCVTiHE9go+9rhThqCPbhOsAXDcCt1wDcw0TE8
+        gx4YKH8fgmObcKudPIdI3m9HRU70A/R5YUeuXJnBrjalWdDHmmTLYhrssaTkzvT5VViZugSDPYqU+kCf
+        34WVqS9gcN0RzYA+K4WVqddgsLel2S48niPQ56UdueqE72ACb4sF9UgGwZVH8q/gYwx9hB3wDSnbXfhQ
+        WBWNQEzSjG1wwpsyuWP7MFG22r6ppvLBzYOv9gLiUzEHjlXliiPpVdlqx47uRa48kttq35uyd/AU3oO3
+        6U/JASzCE6jKgkbSmzWwNv9oHNbBwTo+wRiEvC0WNFZsa/LPhVXqEZyBCX7CG3gIXSVTsACO6aPvNPyX
+        XHkkX4K6b5Fjy6DvKYxCS8WxmPyBHS2kT0yyZkedLKiObr1u5VX1gl9UYx/bkZK3RSfPPFdvwdh3hZVQ
+        /A1OFlaeLLyxXuGk4j+gu7Dy5JEaa46kLFLLQtWoJr7R+AtgeJC5tLN8UwAAAABJRU5ErkJggg==
+</value>
   </data>
 </root>

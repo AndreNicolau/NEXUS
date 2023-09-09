@@ -94,21 +94,8 @@
       <HintPath>packages\Avalonia.11.0.4\lib\net461\Avalonia.OpenGL.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Avalonia.Remote.Protocol, Version=11.0.4.0, Culture=neutral, PublicKeyToken=7ecde292c616a9f3, processorArchitecture=MSIL">
-      <HintPath>packages\Avalonia.Remote.Protocol.11.0.4\lib\netstandard2.0\Avalonia.Remote.Protocol.dll</HintPath>
-    </Reference>
     <Reference Include="DotNetZip, Version=1.16.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
       <HintPath>packages\DotNetZip.1.16.0\lib\net40\DotNetZip.dll</HintPath>
-    </Reference>
-    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="MicroCom.Runtime, Version=0.11.0.0, Culture=neutral, PublicKeyToken=b30be05a5f7688e9, processorArchitecture=MSIL">
       <HintPath>packages\MicroCom.Runtime.0.11.0\lib\netstandard2.0\MicroCom.Runtime.dll</HintPath>
@@ -251,6 +238,18 @@
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Tickets\AssociateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tickets\AssociateCustomer.Designer.cs">
+      <DependentUpon>AssociateCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tickets\RegisterNewTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tickets\RegisterNewTicket.Designer.cs">
+      <DependentUpon>RegisterNewTicket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Tickets\TicketsDasboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -276,6 +275,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tickets\AssociateCustomer.resx">
+      <DependentUpon>AssociateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tickets\RegisterNewTicket.resx">
+      <DependentUpon>RegisterNewTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tickets\TicketsDasboard.resx">
       <DependentUpon>TicketsDasboard.cs</DependentUpon>
@@ -318,8 +323,9 @@
     <None Include="Resources\search1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MetroFramework.txt" />
     <Content Include="NEXUS_logo.ico" />
+    <None Include="Resources\delete-user__icon_24px.png" />
+    <None Include="Resources\user-remove_icon_24px.png" />
     <None Include="Resources\refresh_icon_24px.png" />
     <None Include="Resources\disk_icon_24px.png" />
     <None Include="Resources\file-edit_icon_24px.png" />
@@ -350,12 +356,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="packages\Avalonia.BuildServices.0.0.29\build\Avalonia.BuildServices.targets" Condition="Exists('packages\Avalonia.BuildServices.0.0.29\build\Avalonia.BuildServices.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('packages\Avalonia.BuildServices.0.0.29\build\Avalonia.BuildServices.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Avalonia.BuildServices.0.0.29\build\Avalonia.BuildServices.targets'))" />
     <Error Condition="!Exists('packages\Avalonia.11.0.4\build\Avalonia.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Avalonia.11.0.4\build\Avalonia.targets'))" />
     <Error Condition="!Exists('packages\Avalonia.11.0.4\build\Avalonia.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Avalonia.11.0.4\build\Avalonia.props'))" />
   </Target>

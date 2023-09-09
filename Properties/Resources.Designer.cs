@@ -112,6 +112,16 @@ namespace NEXUS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_user__icon_24px {
+            get {
+                object obj = ResourceManager.GetObject("delete_user__icon_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap disk_icon_24px {
             get {
                 object obj = ResourceManager.GetObject("disk_icon_24px", resourceCulture);
@@ -254,6 +264,16 @@ namespace NEXUS.Properties {
         internal static System.Drawing.Bitmap user_icon_32px {
             get {
                 object obj = ResourceManager.GetObject("user_icon_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_remove_icon_24px {
+            get {
+                object obj = ResourceManager.GetObject("user-remove_icon_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
