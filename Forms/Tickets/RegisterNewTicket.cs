@@ -86,8 +86,8 @@ namespace NEXUS.Forms.Tickets
         private void buttonRmoveCustomer_Click(object sender, EventArgs e)
         {
             labelAssociatedCustomer.Text = "Cliente associado: Nenhum cliente associado";
-            CustomerId = string.Empty;
-            CustomerName = string.Empty;
+            CustomerId = "";
+            CustomerName = "";
         }
 
         private void comboBoxBrand_SelectedIndexChanged(object sender, EventArgs e)
@@ -98,6 +98,19 @@ namespace NEXUS.Forms.Tickets
 
         private void buttonInsertTicket_Click(object sender, EventArgs e)
         {
+            foreach (Control control in this.Controls)
+            {
+                if (control.Text == null)
+                {
+                    control.Text = "";
+                }
+            }
+
+            if (CustomerId == null)
+            { 
+                CustomerId = "0";
+            }
+
             string query = $"INSERT INTO tickets (open_date, associated_customer, equipment_brand, equipment_type, equipment_model, description) VALUES ('{DateTime.Today.ToString("yyyy / MM / dd")}',  '{Int32.Parse(CustomerId)}',  '{comboBoxBrand.Text}',  '{comboBoxEquipment.Text}',  '{comboBoxModel.Text}',  '{richTextBoxDescription.Text}')";
 
             OdbcConnection odbcConnection = new OdbcConnection("DSN=NEXUS");
