@@ -22,7 +22,7 @@ namespace NEXUS.Forms.Tickets
 
         private void LoadTickets()
         {
-            string query = "SELECT TOP 50 * FROM tickets";
+            string query = "SELECT TOP (100) [ticket_number], [state], [open_date], [close_date], [equipment_type]  FROM [nexus].[dbo].[tickets]";
 
             DataTable dataTable = new DataTable();
 
@@ -36,7 +36,7 @@ namespace NEXUS.Forms.Tickets
             dgvtickets.Columns[1].HeaderText = "Estado";
             dgvtickets.Columns[2].HeaderText = "Data de abertura";
             dgvtickets.Columns[3].HeaderText = "Data de fecho";
-            dgvtickets.Columns[4].HeaderText = "Cliente associado";
+            dgvtickets.Columns[4].HeaderText = "Tipo de equipamento";
 
             dgvtickets.Sort(dgvtickets.Columns[0], ListSortDirection.Descending);
 
