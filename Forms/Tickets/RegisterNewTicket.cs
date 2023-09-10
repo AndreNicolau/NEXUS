@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.Odbc;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NEXUS.Forms.Tickets
@@ -23,13 +16,27 @@ namespace NEXUS.Forms.Tickets
 
             labelDate.Text = $"Data: {DateTime.Today.ToString("yyyy/MM/dd")}";
 
-            LoadDataFromTable("equipments_types", comboBoxEquipment);
-            LoadDataFromTable("brands", comboBoxBrand);
+            LoadBrands();
+            LoadEquipments();
         }
 
-        private void LoadDataFromTable(string tableName, ComboBox comboBoxName)
+        private void LoadBrands()
         {
-            string equipmentQuery = $"SELECT * FROM {tableName}";
+            string brandQuery = $"SELECT * FROM brands";
+
+            OdbcConnection odbcConnection = new OdbcConnection("DSN=NEXUS");
+            OdbcDataAdapter odbcDataAdapter = new OdbcDataAdapter(brandQuery, odbcConnection);
+
+            DataTable dataTable = new DataTable();
+            odbcDataAdapter.Fill(dataTable);
+
+            comboBoxBrand.DataSource = dataTable;
+            comboBoxBrand.DisplayMember = dataTable.Columns[0].ColumnName;
+        }
+
+        private void LoadEquipments()
+        {
+            string equipmentQuery = $"SELECT * FROM brand_equipment WHERE brand = '{comboBoxBrand.Text}'";
 
             OdbcConnection odbcConnection = new OdbcConnection("DSN=NEXUS");
             OdbcDataAdapter odbcDataAdapter = new OdbcDataAdapter(equipmentQuery, odbcConnection);
@@ -37,9 +44,24 @@ namespace NEXUS.Forms.Tickets
             DataTable dataTable = new DataTable();
             odbcDataAdapter.Fill(dataTable);
 
-            comboBoxName.DataSource = dataTable;
-            comboBoxName.DisplayMember = dataTable.Columns[0].ColumnName;
+            comboBoxEquipment.DataSource = dataTable;
+            comboBoxEquipment.DisplayMember = ("equipment_type");
         }
+
+        private void LoadModels()
+        {
+            string modelsQuery = $"SELECT * FROM models WHERE brand = '{comboBoxBrand.Text}' AND equipment_type = '{comboBoxEquipment.Text}'";
+
+            OdbcConnection odbcConnection = new OdbcConnection("DSN=NEXUS");
+            OdbcDataAdapter odbcDataAdapter = new OdbcDataAdapter(modelsQuery, odbcConnection);
+
+            DataTable dataTable = new DataTable();
+            odbcDataAdapter.Fill(dataTable);
+
+            comboBoxModel.DataSource = dataTable;
+            comboBoxModel.DisplayMember = "model_name";
+        }
+
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
@@ -66,6 +88,35 @@ namespace NEXUS.Forms.Tickets
             labelAssociatedCustomer.Text = "Cliente associado: Nenhum cliente associado";
             CustomerId = string.Empty;
             CustomerName = string.Empty;
+        }
+
+        private void comboBoxBrand_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadEquipments();
+            LoadModels();
+        }
+
+        private void buttonInsertTicket_Click(object sender, EventArgs e)
+        {
+            string query = $"INSERT INTO tickets (open_date, associated_customer, equipment_brand, equipment_type, equipment_model, description) VALUES ('{DateTime.Today.ToString("yyyy / MM / dd")}',  '{Int32.Parse(CustomerId)}',  '{comboBoxBrand.Text}',  '{comboBoxEquipment.Text}',  '{comboBoxModel.Text}',  '{richTextBoxDescription.Text}')";
+
+            OdbcConnection odbcConnection = new OdbcConnection("DSN=NEXUS");
+            OdbcCommand odbcCommand = new OdbcCommand(query, odbcConnection);
+
+            try
+            {
+                odbcConnection.Open();
+                odbcCommand.ExecuteNonQuery();
+                odbcConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Não foi possível inserir o ticket devido ao erro {ex.Message}");
+                return;
+            }
+
+            MessageBox.Show("Ticket inserido");
+            this.Close();
         }
     }
 }

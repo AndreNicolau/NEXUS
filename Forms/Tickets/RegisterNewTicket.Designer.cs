@@ -36,13 +36,15 @@
             this.buttonInsertTicket = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.labelDate = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxDescription = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.labelAssociatedCustomer = new System.Windows.Forms.Label();
             this.comboBoxEquipment = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxBrand = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBoxModel = new System.Windows.Forms.ComboBox();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -117,6 +119,7 @@
             this.buttonInsertTicket.Text = "Inserir";
             this.buttonInsertTicket.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonInsertTicket.UseVisualStyleBackColor = true;
+            this.buttonInsertTicket.Click += new System.EventHandler(this.buttonInsertTicket_Click);
             // 
             // buttonClose
             // 
@@ -144,15 +147,15 @@
             this.labelDate.TabIndex = 1;
             this.labelDate.Text = "Data: 2023/12/31";
             // 
-            // richTextBox1
+            // richTextBoxDescription
             // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.richTextBoxDescription.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.Location = new System.Drawing.Point(12, 211);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1224, 213);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
+            this.richTextBoxDescription.Location = new System.Drawing.Point(12, 211);
+            this.richTextBoxDescription.Name = "richTextBoxDescription";
+            this.richTextBoxDescription.Size = new System.Drawing.Size(1224, 213);
+            this.richTextBoxDescription.TabIndex = 2;
+            this.richTextBoxDescription.Text = "";
             // 
             // label1
             // 
@@ -175,16 +178,22 @@
             // 
             // comboBoxEquipment
             // 
-            this.comboBoxEquipment.FormattingEnabled = true;
-            this.comboBoxEquipment.Location = new System.Drawing.Point(214, 136);
+            this.comboBoxEquipment.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxEquipment.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxEquipment.BackColor = System.Drawing.SystemColors.Control;
+            this.comboBoxEquipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxEquipment.Location = new System.Drawing.Point(498, 140);
+            this.comboBoxEquipment.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxEquipment.Name = "comboBoxEquipment";
             this.comboBoxEquipment.Size = new System.Drawing.Size(205, 33);
+            this.comboBoxEquipment.Sorted = true;
             this.comboBoxEquipment.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 139);
+            this.label3.Location = new System.Drawing.Point(296, 143);
+            this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(196, 25);
             this.label3.TabIndex = 6;
@@ -193,7 +202,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(425, 139);
+            this.label4.Location = new System.Drawing.Point(12, 143);
+            this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 25);
             this.label4.TabIndex = 8;
@@ -201,11 +211,40 @@
             // 
             // comboBoxBrand
             // 
-            this.comboBoxBrand.FormattingEnabled = true;
-            this.comboBoxBrand.Location = new System.Drawing.Point(498, 136);
+            this.comboBoxBrand.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxBrand.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxBrand.BackColor = System.Drawing.SystemColors.Control;
+            this.comboBoxBrand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxBrand.Location = new System.Drawing.Point(85, 140);
+            this.comboBoxBrand.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxBrand.Name = "comboBoxBrand";
             this.comboBoxBrand.Size = new System.Drawing.Size(205, 33);
+            this.comboBoxBrand.Sorted = true;
             this.comboBoxBrand.TabIndex = 7;
+            this.comboBoxBrand.SelectedIndexChanged += new System.EventHandler(this.comboBoxBrand_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(709, 143);
+            this.label5.Margin = new System.Windows.Forms.Padding(0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 25);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Modelo";
+            // 
+            // comboBoxModel
+            // 
+            this.comboBoxModel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxModel.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxModel.BackColor = System.Drawing.SystemColors.Control;
+            this.comboBoxModel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxModel.Location = new System.Drawing.Point(792, 140);
+            this.comboBoxModel.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBoxModel.Name = "comboBoxModel";
+            this.comboBoxModel.Size = new System.Drawing.Size(205, 33);
+            this.comboBoxModel.Sorted = true;
+            this.comboBoxModel.TabIndex = 10;
             // 
             // RegisterNewTicket
             // 
@@ -213,13 +252,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.comboBoxModel);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBoxBrand);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxEquipment);
             this.Controls.Add(this.labelAssociatedCustomer);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.richTextBoxDescription);
             this.Controls.Add(this.labelDate);
             this.Controls.Add(this.panelTop);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -228,7 +269,6 @@
             this.Name = "RegisterNewTicket";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterNewTicket";
-            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
@@ -243,7 +283,7 @@
         private System.Windows.Forms.Button buttonInsertTicket;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Label labelDate;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBoxDescription;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonAssociateCustomer;
         private System.Windows.Forms.Label labelAssociatedCustomer;
@@ -253,5 +293,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBoxBrand;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBoxModel;
     }
 }
