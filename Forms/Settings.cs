@@ -34,6 +34,7 @@ namespace NEXUS
             }
 
             dataGridView1.DataSource = dataTable;
+            kryptonDataGridView1.DataSource = dataTable;
         }
 
         private void SaveChanges()
