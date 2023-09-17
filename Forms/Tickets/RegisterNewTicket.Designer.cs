@@ -188,6 +188,7 @@
             this.comboBoxEquipment.Size = new System.Drawing.Size(205, 33);
             this.comboBoxEquipment.Sorted = true;
             this.comboBoxEquipment.TabIndex = 5;
+            this.comboBoxEquipment.SelectedIndexChanged += new System.EventHandler(this.comboBoxEquipment_SelectedIndexChanged);
             // 
             // label3
             // 

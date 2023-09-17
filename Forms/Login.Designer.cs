@@ -57,7 +57,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(151, 30);
             this.txtUsername.TabIndex = 1;
-            this.txtUsername.Text = "Anicolau";
+            this.txtUsername.Text = "ANicolau";
             this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Login_KeyDown);
             // 
             // label2

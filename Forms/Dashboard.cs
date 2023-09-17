@@ -1,8 +1,8 @@
-﻿
-using NEXUS.Forms;
+﻿using NEXUS.Forms;
 using NEXUS.Forms.Tickets;
 using System;
-using System.Drawing;
+using System.Data;
+using System.Data.Odbc;
 using System.Windows.Forms;
 
 namespace NEXUS
@@ -63,7 +63,7 @@ namespace NEXUS
 
         private void mainPanel_ControlRemoved(object sender, ControlEventArgs e)
         {
-            
+
         }
     }
 }

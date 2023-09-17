@@ -85,9 +85,9 @@ namespace NEXUS.Forms.Tickets
 
         private void buttonRmoveCustomer_Click(object sender, EventArgs e)
         {
-            labelAssociatedCustomer.Text = "Cliente associado: Nenhum cliente associado";
-            CustomerId = "";
-            CustomerName = "";
+            labelAssociatedCustomer.Text = "Cliente associado: N/A";
+            CustomerId = "1";
+            CustomerName = "N/A";
         }
 
         private void comboBoxBrand_SelectedIndexChanged(object sender, EventArgs e)
@@ -98,17 +98,9 @@ namespace NEXUS.Forms.Tickets
 
         private void buttonInsertTicket_Click(object sender, EventArgs e)
         {
-            foreach (Control control in this.Controls)
-            {
-                if (control.Text == null)
-                {
-                    control.Text = "";
-                }
-            }
-
             if (CustomerId == null)
             { 
-                CustomerId = "0";
+                CustomerId = "1";
             }
 
             string query = $"INSERT INTO tickets (open_date, associated_customer, equipment_brand, equipment_type, equipment_model, description) VALUES ('{DateTime.Today.ToString("yyyy / MM / dd")}',  '{Int32.Parse(CustomerId)}',  '{comboBoxBrand.Text}',  '{comboBoxEquipment.Text}',  '{comboBoxModel.Text}',  '{richTextBoxDescription.Text}')";
@@ -130,6 +122,11 @@ namespace NEXUS.Forms.Tickets
 
             MessageBox.Show("Ticket inserido");
             this.Close();
+        }
+
+        private void comboBoxEquipment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadModels();
         }
     }
 }
