@@ -30,5 +30,10 @@ namespace NEXUS.Forms.Tickets
             labelModel.Text = $"Modelo: {Model}";
             labelEquipmentType.Text = $"Tipo de equipamento: {EquipmentType}";
         }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

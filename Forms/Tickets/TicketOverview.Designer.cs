@@ -35,10 +35,14 @@
             this.labelEquipmentType = new System.Windows.Forms.Label();
             this.labelBrand = new System.Windows.Forms.Label();
             this.labelModel = new System.Windows.Forms.Label();
+            this.buttonClose = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.buttonClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -105,10 +109,27 @@
             this.labelModel.TabIndex = 6;
             this.labelModel.Text = "Modelo: Ideapad 5";
             // 
+            // buttonClose
+            // 
+            this.buttonClose.FlatAppearance.BorderSize = 0;
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.Image = global::NEXUS.Properties.Resources.circle_close_icon_24px;
+            this.buttonClose.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonClose.Location = new System.Drawing.Point(0, 5);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(100, 60);
+            this.buttonClose.TabIndex = 14;
+            this.buttonClose.Text = "Cancelar";
+            this.buttonClose.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
             // TicketOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Controls.Add(this.labelModel);
             this.Controls.Add(this.labelBrand);
@@ -122,6 +143,8 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "TicketOverview";
             this.Text = "TicketOverview";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,5 +159,6 @@
         private System.Windows.Forms.Label labelEquipmentType;
         private System.Windows.Forms.Label labelBrand;
         private System.Windows.Forms.Label labelModel;
+        private System.Windows.Forms.Button buttonClose;
     }
 }

@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Odbc;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Media.TextFormatting;
 
 namespace NEXUS.Forms.Tickets
 {
@@ -30,19 +25,19 @@ namespace NEXUS.Forms.Tickets
             OdbcDataAdapter odbcDataAdapter = new OdbcDataAdapter(query, odbcConnection);
             odbcDataAdapter.Fill(dataTable);
 
-            dgvtickets.DataSource = dataTable;
+            dataGridViewTickets.DataSource = dataTable;
 
-            dgvtickets.Columns[0].HeaderText = "Número do ticket";
-            dgvtickets.Columns[1].HeaderText = "Estado";
-            dgvtickets.Columns[2].HeaderText = "Data de abertura";
-            dgvtickets.Columns[3].HeaderText = "Data de fecho";
-            dgvtickets.Columns[4].HeaderText = "Tipo de equipamento";
-            dgvtickets.Columns[5].HeaderText = "Descrição";
+            dataGridViewTickets.Columns[0].HeaderText = "Número do ticket";
+            dataGridViewTickets.Columns[1].HeaderText = "Estado";
+            dataGridViewTickets.Columns[2].HeaderText = "Data de abertura";
+            dataGridViewTickets.Columns[3].HeaderText = "Data de fecho";
+            dataGridViewTickets.Columns[4].HeaderText = "Tipo de equipamento";
+            dataGridViewTickets.Columns[5].HeaderText = "Descrição";
 
-            dgvtickets.Sort(dgvtickets.Columns[0], ListSortDirection.Descending);
+            dataGridViewTickets.Sort(dataGridViewTickets.Columns[0], ListSortDirection.Descending);
 
-            DataGridViewCellStyle style = dgvtickets.ColumnHeadersDefaultCellStyle;
-            style.Font = new Font(dgvtickets.Font, FontStyle.Bold);
+            DataGridViewCellStyle style = dataGridViewTickets.ColumnHeadersDefaultCellStyle;
+            style.Font = new Font(dataGridViewTickets.Font, FontStyle.Bold);
         }
 
         private void buttonRefresh_Click(object sender, EventArgs e)
@@ -54,6 +49,29 @@ namespace NEXUS.Forms.Tickets
         {
             RegisterNewTicket newTicket = new RegisterNewTicket();
             newTicket.Show();
+        }
+
+        private void OverviewTicket(object sender, DataGridViewCellEventArgs e)
+        {
+            string ticketNumber = dataGridViewTickets.CurrentRow.Cells[0].Value.ToString();
+
+            string query = $"SELECT * FROM tickets WHERE ticket_number = '{ticketNumber}'";
+
+            OdbcConnection odbcConnection = new OdbcConnection("DSN=NEXUS");
+            OdbcDataAdapter dataAdapter = new OdbcDataAdapter(query, odbcConnection);
+
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+
+            string customerId = dataTable.Rows[0][4].ToString();
+            string openDate = dataTable.Rows[0][2].ToString();
+            string brand = dataTable.Rows[0][5].ToString();
+            string model = dataTable.Rows[0][7].ToString();
+            string equipmentType = dataTable.Rows[0][6].ToString();
+
+            TicketOverview ticketOverview = new TicketOverview(ticketNumber, customerId, openDate, brand, model, equipmentType);
+            ticketOverview.TopLevel = true;
+            ticketOverview.Show();
         }
     }
 }

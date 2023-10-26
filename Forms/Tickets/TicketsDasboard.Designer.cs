@@ -38,10 +38,10 @@
             this.radioButtonOpened = new System.Windows.Forms.RadioButton();
             this.buttonNewTicket = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.dgvtickets = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTickets = new System.Windows.Forms.DataGridView();
             this.topPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvtickets)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
@@ -109,25 +109,25 @@
             // 
             // mainPanel
             // 
-            this.mainPanel.Controls.Add(this.dgvtickets);
+            this.mainPanel.Controls.Add(this.dataGridViewTickets);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 70);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1200, 633);
             this.mainPanel.TabIndex = 1;
             // 
-            // dgvtickets
+            // dataGridViewTickets
             // 
-            this.dgvtickets.AllowUserToAddRows = false;
-            this.dgvtickets.AllowUserToDeleteRows = false;
-            this.dgvtickets.AllowUserToOrderColumns = true;
-            this.dgvtickets.AllowUserToResizeRows = false;
+            this.dataGridViewTickets.AllowUserToAddRows = false;
+            this.dataGridViewTickets.AllowUserToDeleteRows = false;
+            this.dataGridViewTickets.AllowUserToOrderColumns = true;
+            this.dataGridViewTickets.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
-            this.dgvtickets.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvtickets.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvtickets.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvtickets.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridViewTickets.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewTickets.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewTickets.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewTickets.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -135,8 +135,8 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvtickets.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvtickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTickets.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -144,12 +144,12 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvtickets.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvtickets.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvtickets.Location = new System.Drawing.Point(0, 0);
-            this.dgvtickets.Name = "dgvtickets";
-            this.dgvtickets.ReadOnly = true;
-            this.dgvtickets.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridViewTickets.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewTickets.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewTickets.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewTickets.Name = "dataGridViewTickets";
+            this.dataGridViewTickets.ReadOnly = true;
+            this.dataGridViewTickets.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -157,15 +157,16 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvtickets.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvtickets.RowHeadersVisible = false;
-            this.dgvtickets.RowHeadersWidth = 51;
+            this.dataGridViewTickets.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewTickets.RowHeadersVisible = false;
+            this.dataGridViewTickets.RowHeadersWidth = 51;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Black;
-            this.dgvtickets.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvtickets.RowTemplate.Height = 24;
-            this.dgvtickets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvtickets.Size = new System.Drawing.Size(1200, 633);
-            this.dgvtickets.TabIndex = 0;
+            this.dataGridViewTickets.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewTickets.RowTemplate.Height = 24;
+            this.dataGridViewTickets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewTickets.Size = new System.Drawing.Size(1200, 633);
+            this.dataGridViewTickets.TabIndex = 0;
+            this.dataGridViewTickets.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OverviewTicket);
             // 
             // TicketsDasboard
             // 
@@ -182,7 +183,7 @@
             this.Text = "TicketsDashboard";
             this.topPanel.ResumeLayout(false);
             this.mainPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvtickets)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -193,7 +194,7 @@
         private System.Windows.Forms.Button buttonNewTicket;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.RadioButton radioButtonOpened;
-        private System.Windows.Forms.DataGridView dgvtickets;
+        private System.Windows.Forms.DataGridView dataGridViewTickets;
         private System.Windows.Forms.Button buttonRefresh;
     }
 }
