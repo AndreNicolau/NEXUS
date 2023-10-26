@@ -63,11 +63,11 @@ namespace NEXUS.Forms.Tickets
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);
 
-            string customerId = dataTable.Rows[0][4].ToString();
             string openDate = dataTable.Rows[0][2].ToString();
+            string customerId = dataTable.Rows[0][4].ToString();
             string brand = dataTable.Rows[0][5].ToString();
-            string model = dataTable.Rows[0][7].ToString();
             string equipmentType = dataTable.Rows[0][6].ToString();
+            string model = dataTable.Rows[0][7].ToString();
 
             TicketOverview ticketOverview = new TicketOverview(ticketNumber, customerId, openDate, brand, model, equipmentType);
             ticketOverview.TopLevel = true;
