@@ -60,10 +60,5 @@ namespace NEXUS
         {
             OpenTicketsDashboard();
         }
-
-        private void mainPanel_ControlRemoved(object sender, ControlEventArgs e)
-        {
-
-        }
     }
 }

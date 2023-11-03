@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonClose = new System.Windows.Forms.Button();
             this.labelTicketNumber = new System.Windows.Forms.Label();
@@ -37,8 +39,12 @@
             this.labelBrand = new System.Windows.Forms.Label();
             this.labelModel = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.dataGridViewActions = new System.Windows.Forms.DataGridView();
+            this.richTextBoxActions = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActions)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -70,17 +76,17 @@
             // labelTicketNumber
             // 
             this.labelTicketNumber.AutoSize = true;
-            this.labelTicketNumber.Location = new System.Drawing.Point(3, 3);
+            this.labelTicketNumber.Location = new System.Drawing.Point(173, 3);
             this.labelTicketNumber.Margin = new System.Windows.Forms.Padding(3);
             this.labelTicketNumber.Name = "labelTicketNumber";
-            this.labelTicketNumber.Size = new System.Drawing.Size(180, 25);
+            this.labelTicketNumber.Size = new System.Drawing.Size(23, 25);
             this.labelTicketNumber.TabIndex = 1;
-            this.labelTicketNumber.Text = "Número do ticket: 0";
+            this.labelTicketNumber.Text = "0";
             // 
             // labelOpenDate
             // 
             this.labelOpenDate.AutoSize = true;
-            this.labelOpenDate.Location = new System.Drawing.Point(189, 3);
+            this.labelOpenDate.Location = new System.Drawing.Point(202, 3);
             this.labelOpenDate.Margin = new System.Windows.Forms.Padding(3);
             this.labelOpenDate.Name = "labelOpenDate";
             this.labelOpenDate.Size = new System.Drawing.Size(268, 25);
@@ -90,7 +96,7 @@
             // labelCustomerId
             // 
             this.labelCustomerId.AutoSize = true;
-            this.labelCustomerId.Location = new System.Drawing.Point(463, 3);
+            this.labelCustomerId.Location = new System.Drawing.Point(476, 3);
             this.labelCustomerId.Margin = new System.Windows.Forms.Padding(3);
             this.labelCustomerId.Name = "labelCustomerId";
             this.labelCustomerId.Size = new System.Drawing.Size(189, 25);
@@ -110,7 +116,7 @@
             // labelBrand
             // 
             this.labelBrand.AutoSize = true;
-            this.labelBrand.Location = new System.Drawing.Point(658, 3);
+            this.labelBrand.Location = new System.Drawing.Point(671, 3);
             this.labelBrand.Margin = new System.Windows.Forms.Padding(3);
             this.labelBrand.Name = "labelBrand";
             this.labelBrand.Size = new System.Drawing.Size(143, 25);
@@ -120,7 +126,7 @@
             // labelModel
             // 
             this.labelModel.AutoSize = true;
-            this.labelModel.Location = new System.Drawing.Point(807, 3);
+            this.labelModel.Location = new System.Drawing.Point(820, 3);
             this.labelModel.Margin = new System.Windows.Forms.Padding(3);
             this.labelModel.Name = "labelModel";
             this.labelModel.Size = new System.Drawing.Size(175, 25);
@@ -129,6 +135,9 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.Controls.Add(this.label1);
             this.flowLayoutPanel1.Controls.Add(this.labelTicketNumber);
             this.flowLayoutPanel1.Controls.Add(this.labelOpenDate);
             this.flowLayoutPanel1.Controls.Add(this.labelCustomerId);
@@ -137,8 +146,57 @@
             this.flowLayoutPanel1.Controls.Add(this.labelEquipmentType);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 76);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1238, 165);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1238, 94);
             this.flowLayoutPanel1.TabIndex = 7;
+            // 
+            // dataGridViewActions
+            // 
+            this.dataGridViewActions.AllowUserToAddRows = false;
+            this.dataGridViewActions.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Empty;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
+            this.dataGridViewActions.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewActions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewActions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewActions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewActions.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewActions.Location = new System.Drawing.Point(12, 176);
+            this.dataGridViewActions.Name = "dataGridViewActions";
+            this.dataGridViewActions.ReadOnly = true;
+            this.dataGridViewActions.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridViewActions.RowHeadersVisible = false;
+            this.dataGridViewActions.RowHeadersWidth = 51;
+            this.dataGridViewActions.RowTemplate.Height = 24;
+            this.dataGridViewActions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewActions.Size = new System.Drawing.Size(1238, 178);
+            this.dataGridViewActions.TabIndex = 8;
+            // 
+            // richTextBoxActions
+            // 
+            this.richTextBoxActions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxActions.Location = new System.Drawing.Point(12, 360);
+            this.richTextBoxActions.Name = "richTextBoxActions";
+            this.richTextBoxActions.Size = new System.Drawing.Size(1238, 230);
+            this.richTextBoxActions.TabIndex = 9;
+            this.richTextBoxActions.Text = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 25);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Número do ticket:";
             // 
             // TicketOverview
             // 
@@ -146,6 +204,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.richTextBoxActions);
+            this.Controls.Add(this.dataGridViewActions);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -157,6 +217,7 @@
             this.panel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActions)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -172,5 +233,8 @@
         private System.Windows.Forms.Label labelModel;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.DataGridView dataGridViewActions;
+        private System.Windows.Forms.RichTextBox richTextBoxActions;
+        private System.Windows.Forms.Label label1;
     }
 }

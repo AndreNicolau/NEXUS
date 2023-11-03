@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Odbc;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,21 +20,41 @@ namespace NEXUS.Forms.Tickets
         public string Model;
         public string EquipmentType;
 
-        public TicketOverview(string TicketNumber, string CustomerId, string OpenDate, string Brand, string Model, string EquipmentType)
+        public TicketOverview(string ticketNumber, string customerId, string openDate, string brand, string model, string equipmentType)
         {
             InitializeComponent();
 
-            labelTicketNumber.Text = $"Número do ticekt: {TicketNumber}";
-            labelCustomerId.Text = $"Cliente associado: {CustomerId}";
-            labelOpenDate.Text = $"Data de abertura: {OpenDate}";
-            labelBrand.Text = $"Marca: {Brand}";
-            labelModel.Text = $"Modelo: {Model}";
-            labelEquipmentType.Text = $"Tipo de equipamento: {EquipmentType}";
+            labelTicketNumber.Text = $"Número do ticket: {ticketNumber}";
+            labelCustomerId.Text = $"Cliente associado: {customerId}";
+            labelOpenDate.Text = $"Data de abertura: {openDate}";
+            labelBrand.Text = $"Marca: {brand}";
+            labelModel.Text = $"Modelo: {model}";
+            labelEquipmentType.Text = $"Tipo de equipamento: {equipmentType}";
+
+            TicketNumber = ticketNumber;
+
+
+            LoadTicketActions();
+        }
+
+        private void LoadTicketActions()
+        {
+            string brandQuery = $"SELECT * FROM ticket_actions WHERE associated_ticket_number = '{TicketNumber}'";
+
+            OdbcConnection odbcConnection = new OdbcConnection("DSN=NEXUS");
+            OdbcDataAdapter odbcDataAdapter = new OdbcDataAdapter(brandQuery, odbcConnection);
+
+            DataTable dataTable = new DataTable();
+            odbcDataAdapter.Fill(dataTable);
+
+            dataGridViewActions.DataSource = dataTable;
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        
     }
 }
