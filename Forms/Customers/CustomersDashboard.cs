@@ -23,7 +23,7 @@ namespace NEXUS.Forms
             Customer customer = new Customer();
             dgvClients.DataSource = customer.CustomersDataTable();
 
-            dgvClients.Sort(dgvClients.Columns[0], ListSortDirection.Ascending);
+            dgvClients.Sort(dgvClients.Columns[1], ListSortDirection.Ascending);
 
             DataGridViewCellStyle style = dgvClients.ColumnHeadersDefaultCellStyle;
             style.Font = new Font(dgvClients.Font, FontStyle.Bold);
@@ -32,14 +32,9 @@ namespace NEXUS.Forms
         private void OpenCustomerFile()
         {
             string customerId = dgvClients.CurrentRow.Cells[0].Value.ToString();
-            string name = dgvClients.CurrentRow.Cells[1].Value.ToString();
-            string phoneNumber = dgvClients.CurrentRow.Cells[2].Value.ToString();
-            string email = dgvClients.CurrentRow.Cells[3].Value.ToString();
-            string taxPayerNumber = dgvClients.CurrentRow.Cells[4].Value.ToString();
-            string address = dgvClients.CurrentRow.Cells[5].Value.ToString();
-
-            CustomerFile customerFile = new CustomerFile(customerId, name, phoneNumber, email, taxPayerNumber, address);
-            customerFile.Show();
+            
+            Customer customer = new Customer();
+            customer.ViewCustomerFile(customerId);
         }
 
         private void NewCustomer()

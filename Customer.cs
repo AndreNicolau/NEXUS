@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NEXUS.Forms.Customers;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Odbc;
@@ -45,7 +46,7 @@ namespace NEXUS
         {
             DataTable dataTable = new DataTable();
 
-            string query = "SELECT customer_name AS Nome, phone_number AS 'Número telemóvel', email AS Email FROM customers";
+            string query = "SELECT customer_id AS 'Número de cliente', customer_name AS Nome, phone_number AS 'Número telemóvel', email AS Email FROM customers";
             OdbcDataAdapter dataAdapter = new OdbcDataAdapter(query, connection);
 
             try
@@ -56,7 +57,26 @@ namespace NEXUS
             {
                 MessageBox.Show(ex.Message);
             }
+
             return dataTable;
+        }
+
+        public void ViewCustomerFile(string CustomerId)
+        {
+            string query = $"SELECT * FROM customers WHERE customer_id = '{CustomerId}'";
+            OdbcDataAdapter dataAdapter = new OdbcDataAdapter(query, connection);
+            DataTable dataTable = new DataTable();
+
+            dataAdapter.Fill(dataTable);
+
+            string name = dataTable.Rows[0][1].ToString();
+            string phoneNumber = dataTable.Rows[0][2].ToString();
+            string email = dataTable.Rows[0][3].ToString();
+            string taxpayerNumber = dataTable.Rows[0][4].ToString();
+            string address = dataTable.Rows[0][5].ToString();
+
+            CustomerFile customerFile = new CustomerFile(CustomerId, name, phoneNumber, email, taxpayerNumber, address);
+            customerFile.Show();
         }
     }
 }
