@@ -20,22 +20,10 @@ namespace NEXUS.Forms
 
         private void LoadCustomers()
         {
-            OdbcConnection odbcConnection = new OdbcConnection("DSN=NEXUS");
-            OdbcDataAdapter odbcDataAdapter = new OdbcDataAdapter("SELECT * FROM customers", odbcConnection);
+            Customer customer = new Customer();
+            dgvClients.DataSource = customer.CustomersDataTable();
 
-            DataTable dataTable = new DataTable();
-            odbcDataAdapter.Fill(dataTable);
-
-            dgvClients.DataSource = dataTable;
-
-            dgvClients.Columns[0].Visible = false;
-            dgvClients.Columns[1].HeaderText = "Nome";
-            dgvClients.Columns[2].HeaderText = "Número telemóvel";
-            dgvClients.Columns[3].HeaderText = "Email";
-            dgvClients.Columns[4].HeaderText = "Número contribuinte";
-            dgvClients.Columns[5].HeaderText = "Morada";
-
-            dgvClients.Sort(dgvClients.Columns[1], ListSortDirection.Ascending);
+            dgvClients.Sort(dgvClients.Columns[0], ListSortDirection.Ascending);
 
             DataGridViewCellStyle style = dgvClients.ColumnHeadersDefaultCellStyle;
             style.Font = new Font(dgvClients.Font, FontStyle.Bold);

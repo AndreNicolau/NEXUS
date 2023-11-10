@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.Odbc;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NEXUS.Forms.Tickets
@@ -19,6 +13,8 @@ namespace NEXUS.Forms.Tickets
         public string Brand;
         public string Model;
         public string EquipmentType;
+
+        private bool AddingAction = false;
 
         public TicketOverview(string ticketNumber, string customerId, string openDate, string brand, string model, string equipmentType)
         {
@@ -39,7 +35,7 @@ namespace NEXUS.Forms.Tickets
 
         private void LoadTicketActions()
         {
-            string brandQuery = $"SELECT * FROM ticket_actions WHERE associated_ticket_number = '{TicketNumber}'";
+            string brandQuery = $"SELECT description, date FROM ticket_actions WHERE associated_ticket_number = '{TicketNumber}'";
 
             OdbcConnection odbcConnection = new OdbcConnection("DSN=NEXUS");
             OdbcDataAdapter odbcDataAdapter = new OdbcDataAdapter(brandQuery, odbcConnection);
@@ -50,11 +46,47 @@ namespace NEXUS.Forms.Tickets
             dataGridViewActions.DataSource = dataTable;
         }
 
+        private void UpdateRichTextBox()
+        {
+            richTextBoxActions.Text = dataGridViewActions.CurrentRow.Cells[0].Value.ToString();
+        }
+
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        
+        private void AddAction()
+        {
+            if (AddingAction == false)
+            {
+                richTextBoxActions.Clear();
+                richTextBoxActions.Focus();
+                buttonAddAction.Text = "Inserir";
+                buttonAddAction.Image = Properties.Resources.disk_icon_24px;
+                dataGridViewActions.Enabled = false;
+                AddingAction = true;
+            }
+            else
+            {
+                LoadTicketActions();
+                buttonAddAction.Text = "Adicionar ação";
+                buttonAddAction.Image = Properties.Resources.add_icon_24px;
+                dataGridViewActions.Enabled = true;
+                dataGridViewActions.Focus();
+                UpdateRichTextBox();
+                AddingAction = false;
+            }
+        }
+
+        private void dataGridViewActions_SelectionChanged(object sender, EventArgs e)
+        {
+            UpdateRichTextBox();
+        }
+
+        private void buttonAddAction_Click(object sender, EventArgs e)
+        {
+            AddAction();
+        }
     }
 }

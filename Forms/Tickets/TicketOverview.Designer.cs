@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonClose = new System.Windows.Forms.Button();
             this.labelTicketNumber = new System.Windows.Forms.Label();
@@ -39,9 +39,10 @@
             this.labelBrand = new System.Windows.Forms.Label();
             this.labelModel = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewActions = new System.Windows.Forms.DataGridView();
             this.richTextBoxActions = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.buttonAddAction = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActions)).BeginInit();
@@ -50,6 +51,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.buttonAddAction);
             this.panel1.Controls.Add(this.buttonClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -149,25 +151,33 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1238, 94);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 25);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Número do ticket:";
+            // 
             // dataGridViewActions
             // 
             this.dataGridViewActions.AllowUserToAddRows = false;
             this.dataGridViewActions.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Empty;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
-            this.dataGridViewActions.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Black;
+            this.dataGridViewActions.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewActions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewActions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewActions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewActions.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewActions.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewActions.Location = new System.Drawing.Point(12, 176);
             this.dataGridViewActions.Name = "dataGridViewActions";
             this.dataGridViewActions.ReadOnly = true;
@@ -178,6 +188,7 @@
             this.dataGridViewActions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewActions.Size = new System.Drawing.Size(1238, 178);
             this.dataGridViewActions.TabIndex = 8;
+            this.dataGridViewActions.SelectionChanged += new System.EventHandler(this.dataGridViewActions_SelectionChanged);
             // 
             // richTextBoxActions
             // 
@@ -189,14 +200,21 @@
             this.richTextBoxActions.TabIndex = 9;
             this.richTextBoxActions.Text = "";
             // 
-            // label1
+            // buttonAddAction
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 25);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Número do ticket:";
+            this.buttonAddAction.FlatAppearance.BorderSize = 0;
+            this.buttonAddAction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddAction.Image = global::NEXUS.Properties.Resources.add_icon_24px;
+            this.buttonAddAction.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonAddAction.Location = new System.Drawing.Point(100, 5);
+            this.buttonAddAction.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonAddAction.Name = "buttonAddAction";
+            this.buttonAddAction.Size = new System.Drawing.Size(151, 60);
+            this.buttonAddAction.TabIndex = 15;
+            this.buttonAddAction.Text = "Adicionar ação";
+            this.buttonAddAction.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonAddAction.UseVisualStyleBackColor = true;
+            this.buttonAddAction.Click += new System.EventHandler(this.buttonAddAction_Click);
             // 
             // TicketOverview
             // 
@@ -236,5 +254,6 @@
         private System.Windows.Forms.DataGridView dataGridViewActions;
         private System.Windows.Forms.RichTextBox richTextBoxActions;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonAddAction;
     }
 }

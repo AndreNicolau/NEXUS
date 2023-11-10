@@ -251,6 +251,7 @@
     <Compile Include="Forms\Tickets\AssociateCustomer.Designer.cs">
       <DependentUpon>AssociateCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer.cs" />
     <Compile Include="Forms\Tickets\RegisterNewTicket.cs">
       <SubType>Form</SubType>
     </Compile>
