@@ -9,6 +9,8 @@ namespace NEXUS.Forms.Tickets
 {
     public partial class TicketsDasboard : Form
     {
+        Ticket _Ticket = new Ticket();
+
         public TicketsDasboard()
         {
             InitializeComponent();
@@ -17,24 +19,7 @@ namespace NEXUS.Forms.Tickets
 
         private void LoadTickets()
         {
-            string query = "SELECT TOP (100) [ticket_number], [state], [open_date], [close_date], [equipment_type], [description]  FROM [nexus].[dbo].[tickets]";
-
-            DataTable dataTable = new DataTable();
-
-            OdbcConnection odbcConnection = new OdbcConnection("DSN=NEXUS");
-            OdbcDataAdapter odbcDataAdapter = new OdbcDataAdapter(query, odbcConnection);
-            odbcDataAdapter.Fill(dataTable);
-
-            dataGridViewTickets.DataSource = dataTable;
-
-            dataGridViewTickets.Columns[0].HeaderText = "Número do ticket";
-            dataGridViewTickets.Columns[1].HeaderText = "Estado";
-            dataGridViewTickets.Columns[2].HeaderText = "Data de abertura";
-            dataGridViewTickets.Columns[3].HeaderText = "Data de fecho";
-            dataGridViewTickets.Columns[4].HeaderText = "Tipo de equipamento";
-            dataGridViewTickets.Columns[5].HeaderText = "Descrição";
-
-            dataGridViewTickets.Sort(dataGridViewTickets.Columns[0], ListSortDirection.Descending);
+            dataGridViewTickets.DataSource = _Ticket.LoadOpenTickets();
 
             DataGridViewCellStyle style = dataGridViewTickets.ColumnHeadersDefaultCellStyle;
             style.Font = new Font(dataGridViewTickets.Font, FontStyle.Bold);

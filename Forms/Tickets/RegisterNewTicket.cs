@@ -104,27 +104,6 @@ namespace NEXUS.Forms.Tickets
             { 
                 CustomerId = "1";
             }
-            /*
-            string query = $"INSERT INTO tickets (open_date, associated_customer, equipment_brand, equipment_type, equipment_model, description) VALUES ('{DateTime.Today.ToString("yyyy / MM / dd")}',  '{Int32.Parse(CustomerId)}',  '{comboBoxBrand.Text}',  '{comboBoxEquipment.Text}',  '{comboBoxModel.Text}',  '{richTextBoxDescription.Text}')";
-
-            OdbcConnection odbcConnection = new OdbcConnection("DSN=NEXUS");
-            OdbcCommand odbcCommand = new OdbcCommand(query, odbcConnection);
-
-            try
-            {
-                odbcConnection.Open();
-                odbcCommand.ExecuteNonQuery();
-                odbcConnection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Não foi possível inserir o ticket devido ao erro {ex.Message}");
-                return;
-            }
-
-            MessageBox.Show("Ticket inserido");
-            this.Close();
-            */
 
             string equipmentBrand = comboBoxBrand.Text;
             string equipmentType = comboBoxEquipment.Text;

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Odbc;
 using System.Windows.Forms;
+using System.Data;
 
 namespace NEXUS
 {
@@ -29,6 +30,28 @@ namespace NEXUS
                 MessageBox.Show(ex.Message);
                 return;
             }
+        }
+
+        public DataTable LoadOpenTickets()
+        {
+            DataTable dataTable = new DataTable();
+            string query = "SELECT ticket_number AS 'Número ticket', state AS 'Estado', open_date AS 'Data abertura', description AS 'Descrição' FROM tickets WHERE state = 'Aberto' ORDER BY open_date";
+            OdbcDataAdapter dataAdapter = new OdbcDataAdapter(query, connection);
+
+            dataAdapter.Fill(dataTable);
+
+            return dataTable;
+        }
+
+        public DataTable LoadClosedTickets()
+        {
+            DataTable dataTable = new DataTable();
+            string query = "SELECT * FROM tickets WHERE state = 'Fechado'";
+            OdbcDataAdapter dataAdapter = new OdbcDataAdapter(query, connection);
+
+            dataAdapter.Fill(dataTable);
+
+            return dataTable;
         }
     }
 }
