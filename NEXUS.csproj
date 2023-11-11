@@ -266,6 +266,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ticket.cs" />
     <EmbeddedResource Include="Forms\Customers\CustomerFile.resx">
       <DependentUpon>CustomerFile.cs</DependentUpon>
     </EmbeddedResource>

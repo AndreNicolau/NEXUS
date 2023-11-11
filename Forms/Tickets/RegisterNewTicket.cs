@@ -10,6 +10,8 @@ namespace NEXUS.Forms.Tickets
         private string CustomerId;
         private string CustomerName;
 
+        Ticket _Ticket = new Ticket();
+
         public RegisterNewTicket()
         {
             InitializeComponent();
@@ -102,7 +104,7 @@ namespace NEXUS.Forms.Tickets
             { 
                 CustomerId = "1";
             }
-
+            /*
             string query = $"INSERT INTO tickets (open_date, associated_customer, equipment_brand, equipment_type, equipment_model, description) VALUES ('{DateTime.Today.ToString("yyyy / MM / dd")}',  '{Int32.Parse(CustomerId)}',  '{comboBoxBrand.Text}',  '{comboBoxEquipment.Text}',  '{comboBoxModel.Text}',  '{richTextBoxDescription.Text}')";
 
             OdbcConnection odbcConnection = new OdbcConnection("DSN=NEXUS");
@@ -121,6 +123,16 @@ namespace NEXUS.Forms.Tickets
             }
 
             MessageBox.Show("Ticket inserido");
+            this.Close();
+            */
+
+            string equipmentBrand = comboBoxBrand.Text;
+            string equipmentType = comboBoxEquipment.Text;
+            string equipmentModel = comboBoxModel.Text;
+            string description = richTextBoxDescription.Text;
+
+            _Ticket.InsertTicket(CustomerId, equipmentBrand, equipmentType, equipmentModel, description);
+
             this.Close();
         }
 
