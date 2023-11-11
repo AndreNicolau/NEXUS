@@ -209,12 +209,6 @@
     <Compile Include="Forms\Customers\CustomerFile.Designer.cs">
       <DependentUpon>CustomerFile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Customers\CustomerSearch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Customers\CustomerSearch.Designer.cs">
-      <DependentUpon>CustomerSearch.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Customers\CustomersDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,9 +268,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Customers\CustomerFile.resx">
       <DependentUpon>CustomerFile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Customers\CustomerSearch.resx">
-      <DependentUpon>CustomerSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Customers\CustomersDashboard.resx">
       <DependentUpon>CustomersDashboard.cs</DependentUpon>

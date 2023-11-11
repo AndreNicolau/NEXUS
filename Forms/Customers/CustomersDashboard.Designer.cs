@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvClients = new System.Windows.Forms.DataGridView();
-            this.buttonSearch = new System.Windows.Forms.Button();
             this.btnNewClient = new System.Windows.Forms.Button();
             this.buttonOpenCustomerFile = new System.Windows.Forms.Button();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.buttonRefresh = new System.Windows.Forms.Button();
+            this.textBoxSearchValue = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).BeginInit();
             this.topPanel.SuspendLayout();
             this.SuspendLayout();
@@ -48,30 +49,30 @@
             this.dgvClients.AllowUserToDeleteRows = false;
             this.dgvClients.AllowUserToOrderColumns = true;
             this.dgvClients.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
-            this.dgvClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Black;
+            this.dgvClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvClients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvClients.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvClients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClients.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClients.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvClients.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvClients.Location = new System.Drawing.Point(0, 70);
             this.dgvClients.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -80,31 +81,13 @@
             this.dgvClients.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvClients.RowHeadersVisible = false;
             this.dgvClients.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Black;
-            this.dgvClients.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Black;
+            this.dgvClients.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvClients.RowTemplate.Height = 24;
             this.dgvClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClients.Size = new System.Drawing.Size(1280, 650);
             this.dgvClients.TabIndex = 0;
-            // 
-            // buttonSearch
-            // 
-            this.buttonSearch.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.buttonSearch.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSearch.FlatAppearance.BorderSize = 0;
-            this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSearch.ForeColor = System.Drawing.Color.Black;
-            this.buttonSearch.Image = global::NEXUS.Properties.Resources.search_icon_24px;
-            this.buttonSearch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonSearch.Location = new System.Drawing.Point(0, 8);
-            this.buttonSearch.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(95, 55);
-            this.buttonSearch.TabIndex = 1;
-            this.buttonSearch.Text = "Procurar";
-            this.buttonSearch.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonSearch.UseVisualStyleBackColor = false;
-            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            this.dgvClients.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClients_CellContentDoubleClick);
             // 
             // btnNewClient
             // 
@@ -114,7 +97,7 @@
             this.btnNewClient.ForeColor = System.Drawing.Color.Black;
             this.btnNewClient.Image = global::NEXUS.Properties.Resources.user_add_icon_24px;
             this.btnNewClient.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnNewClient.Location = new System.Drawing.Point(255, 8);
+            this.btnNewClient.Location = new System.Drawing.Point(9, 9);
             this.btnNewClient.Margin = new System.Windows.Forms.Padding(0);
             this.btnNewClient.Name = "btnNewClient";
             this.btnNewClient.Size = new System.Drawing.Size(130, 55);
@@ -132,7 +115,7 @@
             this.buttonOpenCustomerFile.ForeColor = System.Drawing.Color.Black;
             this.buttonOpenCustomerFile.Image = global::NEXUS.Properties.Resources.document_icon_24px;
             this.buttonOpenCustomerFile.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonOpenCustomerFile.Location = new System.Drawing.Point(95, 8);
+            this.buttonOpenCustomerFile.Location = new System.Drawing.Point(139, 9);
             this.buttonOpenCustomerFile.Margin = new System.Windows.Forms.Padding(0);
             this.buttonOpenCustomerFile.Name = "buttonOpenCustomerFile";
             this.buttonOpenCustomerFile.Size = new System.Drawing.Size(160, 55);
@@ -145,10 +128,11 @@
             // topPanel
             // 
             this.topPanel.BackColor = System.Drawing.Color.White;
-            this.topPanel.Controls.Add(this.buttonRefresh);
-            this.topPanel.Controls.Add(this.buttonSearch);
+            this.topPanel.Controls.Add(this.textBoxSearchValue);
+            this.topPanel.Controls.Add(this.label1);
             this.topPanel.Controls.Add(this.btnNewClient);
             this.topPanel.Controls.Add(this.buttonOpenCustomerFile);
+            this.topPanel.Controls.Add(this.buttonRefresh);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.topPanel.Location = new System.Drawing.Point(0, 0);
@@ -156,6 +140,17 @@
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1280, 70);
             this.topPanel.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.Image = global::NEXUS.Properties.Resources.search_icon_24px;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Location = new System.Drawing.Point(402, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(114, 55);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Procurar";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // buttonRefresh
             // 
@@ -165,7 +160,7 @@
             this.buttonRefresh.ForeColor = System.Drawing.Color.Black;
             this.buttonRefresh.Image = global::NEXUS.Properties.Resources.refresh_icon_24px;
             this.buttonRefresh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonRefresh.Location = new System.Drawing.Point(385, 8);
+            this.buttonRefresh.Location = new System.Drawing.Point(299, 9);
             this.buttonRefresh.Margin = new System.Windows.Forms.Padding(0);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(100, 55);
@@ -174,6 +169,14 @@
             this.buttonRefresh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonRefresh.UseVisualStyleBackColor = false;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
+            // 
+            // textBoxSearchValue
+            // 
+            this.textBoxSearchValue.Location = new System.Drawing.Point(522, 21);
+            this.textBoxSearchValue.Name = "textBoxSearchValue";
+            this.textBoxSearchValue.Size = new System.Drawing.Size(284, 30);
+            this.textBoxSearchValue.TabIndex = 6;
+            this.textBoxSearchValue.TextChanged += new System.EventHandler(this.textBoxSearchValue_TextChanged);
             // 
             // CustomersDashboard
             // 
@@ -189,16 +192,18 @@
             this.Text = "CustomersDashboard";
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).EndInit();
             this.topPanel.ResumeLayout(false);
+            this.topPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.DataGridView dgvClients;
-        private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Button btnNewClient;
         private System.Windows.Forms.Button buttonOpenCustomerFile;
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.Button buttonRefresh;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxSearchValue;
     }
 }

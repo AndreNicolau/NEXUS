@@ -33,12 +33,6 @@ namespace NEXUS
             customersDashboard.Show();
         }
 
-        private void OpenClientSearch(object sender, EventArgs e)
-        {
-            CustomerSearch clientSearch = new CustomerSearch();
-            clientSearch.Show();
-        }
-
         public void OpenTicketsDashboard()
         {
             TicketsDasboard ticketsDasboard = new TicketsDasboard();

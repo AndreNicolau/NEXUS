@@ -46,7 +46,7 @@ namespace NEXUS
         {
             DataTable dataTable = new DataTable();
 
-            string query = "SELECT customer_id AS 'Número de cliente', customer_name AS Nome, phone_number AS 'Número telemóvel', email AS Email FROM customers";
+            string query = "SELECT customer_id AS 'Número de cliente', customer_name AS Nome, phone_number AS 'Número telemóvel', email AS Email FROM customers ORDER BY customer_name";
             OdbcDataAdapter dataAdapter = new OdbcDataAdapter(query, connection);
 
             try
@@ -77,6 +77,18 @@ namespace NEXUS
 
             CustomerFile customerFile = new CustomerFile(CustomerId, name, phoneNumber, email, taxpayerNumber, address);
             customerFile.Show();
+        }
+
+        public DataTable SearchCustomer(string SearchValue)
+        {
+            DataTable dataTable = new DataTable();
+
+            string query = $"SELECT customer_id as 'Número de cliente', customer_name AS Nome, phone_number AS 'Número telemóvel', email AS 'Email' FROM customers WHERE customer_name LIKE '{SearchValue}%' ORDER BY customer_name";
+
+            OdbcDataAdapter dataAdapter = new OdbcDataAdapter(query, connection);
+            dataAdapter.Fill(dataTable);
+
+            return dataTable;
         }
     }
 }

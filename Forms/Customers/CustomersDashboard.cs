@@ -11,6 +11,8 @@ namespace NEXUS.Forms
 {
     public partial class CustomersDashboard : Form
     {
+        Customer _Customer = new Customer();
+
         public CustomersDashboard()
         {
             InitializeComponent();
@@ -20,10 +22,7 @@ namespace NEXUS.Forms
 
         private void LoadCustomers()
         {
-            Customer customer = new Customer();
-            dgvClients.DataSource = customer.CustomersDataTable();
-
-            dgvClients.Sort(dgvClients.Columns[1], ListSortDirection.Ascending);
+            dgvClients.DataSource = _Customer.CustomersDataTable();
 
             DataGridViewCellStyle style = dgvClients.ColumnHeadersDefaultCellStyle;
             style.Font = new Font(dgvClients.Font, FontStyle.Bold);
@@ -33,8 +32,7 @@ namespace NEXUS.Forms
         {
             string customerId = dgvClients.CurrentRow.Cells[0].Value.ToString();
             
-            Customer customer = new Customer();
-            customer.ViewCustomerFile(customerId);
+            _Customer.ViewCustomerFile(customerId);
         }
 
         private void NewCustomer()
@@ -43,10 +41,10 @@ namespace NEXUS.Forms
             insertCustomer.Show();
         }
 
-        private void buttonSearch_Click(object sender, EventArgs e)
+        private void SearchCustomer()
         {
-            CustomerSearch clientSearch = new CustomerSearch();
-            clientSearch.Show();
+            string searchValue = textBoxSearchValue.Text;
+            dgvClients.DataSource = _Customer.SearchCustomer(searchValue);
         }
 
         private void buttonOpenCustomerFile_Click(object sender, EventArgs e)
@@ -62,6 +60,16 @@ namespace NEXUS.Forms
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
             LoadCustomers();
+        }
+
+        private void dgvClients_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            OpenCustomerFile();
+        }
+
+        private void textBoxSearchValue_TextChanged(object sender, EventArgs e)
+        {
+            SearchCustomer();
         }
     }
 }
