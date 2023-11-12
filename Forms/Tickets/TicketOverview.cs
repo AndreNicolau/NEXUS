@@ -1,12 +1,12 @@
 ﻿using System;
-using System.Data;
-using System.Data.Odbc;
 using System.Windows.Forms;
 
 namespace NEXUS.Forms.Tickets
 {
     public partial class TicketOverview : Form
     {
+        Ticket _Ticket = new Ticket();
+
         public string TicketNumber;
         public string CustomerId;
         public string OpenDate;
@@ -35,15 +35,7 @@ namespace NEXUS.Forms.Tickets
 
         private void LoadTicketActions()
         {
-            string brandQuery = $"SELECT description, date FROM ticket_actions WHERE associated_ticket_number = '{TicketNumber}'";
-
-            OdbcConnection odbcConnection = new OdbcConnection("DSN=NEXUS");
-            OdbcDataAdapter odbcDataAdapter = new OdbcDataAdapter(brandQuery, odbcConnection);
-
-            DataTable dataTable = new DataTable();
-            odbcDataAdapter.Fill(dataTable);
-
-            dataGridViewActions.DataSource = dataTable;
+            dataGridViewActions.DataSource = _Ticket.LoadTicketActions(TicketNumber);
         }
 
         private void UpdateRichTextBox()

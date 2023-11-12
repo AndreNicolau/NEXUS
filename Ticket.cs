@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
 using System.Data.Odbc;
 using System.Windows.Forms;
-using System.Data;
 
 namespace NEXUS
 {
@@ -47,6 +43,17 @@ namespace NEXUS
         {
             DataTable dataTable = new DataTable();
             string query = "SELECT * FROM tickets WHERE state = 'Fechado'";
+            OdbcDataAdapter dataAdapter = new OdbcDataAdapter(query, connection);
+
+            dataAdapter.Fill(dataTable);
+
+            return dataTable;
+        }
+
+        public DataTable LoadTicketActions(string TicketNumber)
+        {
+            DataTable dataTable = new DataTable();
+            string query = $"SELECT description AS 'Descrição', date AS 'Data' FROM ticket_actions WHERE associated_ticket_number = '{TicketNumber}'";
             OdbcDataAdapter dataAdapter = new OdbcDataAdapter(query, connection);
 
             dataAdapter.Fill(dataTable);
