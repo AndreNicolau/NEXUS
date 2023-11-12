@@ -45,6 +45,8 @@
             this.comboBoxBrand = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBoxModel = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxSerialNumber = new System.Windows.Forms.TextBox();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,7 +153,7 @@
             // 
             this.richTextBoxDescription.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBoxDescription.Location = new System.Drawing.Point(12, 211);
+            this.richTextBoxDescription.Location = new System.Drawing.Point(12, 261);
             this.richTextBoxDescription.Name = "richTextBoxDescription";
             this.richTextBoxDescription.Size = new System.Drawing.Size(1224, 213);
             this.richTextBoxDescription.TabIndex = 2;
@@ -160,7 +162,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 181);
+            this.label1.Location = new System.Drawing.Point(12, 231);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 25);
             this.label1.TabIndex = 3;
@@ -247,12 +249,31 @@
             this.comboBoxModel.Sorted = true;
             this.comboBoxModel.TabIndex = 10;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 188);
+            this.label6.Margin = new System.Windows.Forms.Padding(0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(134, 25);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Número série:";
+            // 
+            // textBoxSerialNumber
+            // 
+            this.textBoxSerialNumber.Location = new System.Drawing.Point(149, 185);
+            this.textBoxSerialNumber.Name = "textBoxSerialNumber";
+            this.textBoxSerialNumber.Size = new System.Drawing.Size(343, 30);
+            this.textBoxSerialNumber.TabIndex = 12;
+            // 
             // RegisterNewTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.textBoxSerialNumber);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBoxModel);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -296,5 +317,7 @@
         private System.Windows.Forms.ComboBox comboBoxBrand;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBoxModel;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxSerialNumber;
     }
 }

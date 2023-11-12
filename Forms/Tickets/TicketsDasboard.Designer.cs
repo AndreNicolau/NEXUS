@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new System.Windows.Forms.Panel();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.radioButtonOpened = new System.Windows.Forms.RadioButton();
             this.buttonNewTicket = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.dataGridViewTickets = new System.Windows.Forms.DataGridView();
+            this.radioButtonClosedTickets = new System.Windows.Forms.RadioButton();
             this.topPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).BeginInit();
@@ -47,6 +48,7 @@
             // topPanel
             // 
             this.topPanel.BackColor = System.Drawing.Color.White;
+            this.topPanel.Controls.Add(this.radioButtonClosedTickets);
             this.topPanel.Controls.Add(this.buttonRefresh);
             this.topPanel.Controls.Add(this.radioButtonOpened);
             this.topPanel.Controls.Add(this.buttonNewTicket);
@@ -64,7 +66,7 @@
             this.buttonRefresh.ForeColor = System.Drawing.Color.Black;
             this.buttonRefresh.Image = global::NEXUS.Properties.Resources.refresh_icon_24px;
             this.buttonRefresh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonRefresh.Location = new System.Drawing.Point(176, 8);
+            this.buttonRefresh.Location = new System.Drawing.Point(290, 9);
             this.buttonRefresh.Margin = new System.Windows.Forms.Padding(0);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(100, 55);
@@ -77,6 +79,7 @@
             // radioButtonOpened
             // 
             this.radioButtonOpened.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonOpened.Checked = true;
             this.radioButtonOpened.FlatAppearance.BorderSize = 0;
             this.radioButtonOpened.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButtonOpened.Image = global::NEXUS.Properties.Resources.document_icon_24px;
@@ -90,6 +93,7 @@
             this.radioButtonOpened.Text = "Abertos";
             this.radioButtonOpened.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.radioButtonOpened.UseVisualStyleBackColor = true;
+            this.radioButtonOpened.CheckedChanged += new System.EventHandler(this.radioButtonOpened_CheckedChanged);
             // 
             // buttonNewTicket
             // 
@@ -122,51 +126,68 @@
             this.dataGridViewTickets.AllowUserToDeleteRows = false;
             this.dataGridViewTickets.AllowUserToOrderColumns = true;
             this.dataGridViewTickets.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
-            this.dataGridViewTickets.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Black;
+            this.dataGridViewTickets.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridViewTickets.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewTickets.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewTickets.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTickets.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTickets.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTickets.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTickets.DefaultCellStyle = dataGridViewCellStyle18;
             this.dataGridViewTickets.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewTickets.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewTickets.Name = "dataGridViewTickets";
             this.dataGridViewTickets.ReadOnly = true;
             this.dataGridViewTickets.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTickets.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTickets.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dataGridViewTickets.RowHeadersVisible = false;
             this.dataGridViewTickets.RowHeadersWidth = 51;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Black;
-            this.dataGridViewTickets.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.Black;
+            this.dataGridViewTickets.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.dataGridViewTickets.RowTemplate.Height = 24;
             this.dataGridViewTickets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewTickets.Size = new System.Drawing.Size(1200, 633);
             this.dataGridViewTickets.TabIndex = 0;
             this.dataGridViewTickets.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OverviewTicket);
+            // 
+            // radioButtonClosedTickets
+            // 
+            this.radioButtonClosedTickets.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonClosedTickets.FlatAppearance.BorderSize = 0;
+            this.radioButtonClosedTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButtonClosedTickets.Image = global::NEXUS.Properties.Resources.clear_icon_24px;
+            this.radioButtonClosedTickets.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.radioButtonClosedTickets.Location = new System.Drawing.Point(173, 4);
+            this.radioButtonClosedTickets.Margin = new System.Windows.Forms.Padding(0);
+            this.radioButtonClosedTickets.Name = "radioButtonClosedTickets";
+            this.radioButtonClosedTickets.Size = new System.Drawing.Size(117, 60);
+            this.radioButtonClosedTickets.TabIndex = 6;
+            this.radioButtonClosedTickets.Text = "Fechados";
+            this.radioButtonClosedTickets.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.radioButtonClosedTickets.UseVisualStyleBackColor = true;
+            this.radioButtonClosedTickets.CheckedChanged += new System.EventHandler(this.radioButtonClosedTickets_CheckedChanged);
             // 
             // TicketsDasboard
             // 
@@ -196,5 +217,6 @@
         private System.Windows.Forms.RadioButton radioButtonOpened;
         private System.Windows.Forms.DataGridView dataGridViewTickets;
         private System.Windows.Forms.Button buttonRefresh;
+        private System.Windows.Forms.RadioButton radioButtonClosedTickets;
     }
 }

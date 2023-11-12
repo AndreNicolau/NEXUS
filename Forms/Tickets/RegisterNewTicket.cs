@@ -109,8 +109,9 @@ namespace NEXUS.Forms.Tickets
             string equipmentType = comboBoxEquipment.Text;
             string equipmentModel = comboBoxModel.Text;
             string description = richTextBoxDescription.Text;
+            string serialNumber = textBoxSerialNumber.Text;
 
-            _Ticket.InsertTicket(CustomerId, equipmentBrand, equipmentType, equipmentModel, description);
+            _Ticket.InsertTicket(CustomerId, equipmentBrand, equipmentType, equipmentModel, description, serialNumber);
 
             this.Close();
         }

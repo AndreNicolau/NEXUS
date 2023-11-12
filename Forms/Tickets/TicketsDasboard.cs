@@ -53,10 +53,21 @@ namespace NEXUS.Forms.Tickets
             string brand = dataTable.Rows[0][5].ToString();
             string equipmentType = dataTable.Rows[0][6].ToString();
             string model = dataTable.Rows[0][7].ToString();
+            string serialNumber = dataTable.Rows[0][9].ToString();
 
-            TicketOverview ticketOverview = new TicketOverview(ticketNumber, customerId, openDate, brand, model, equipmentType);
+            TicketOverview ticketOverview = new TicketOverview(ticketNumber, customerId, openDate, brand, model, equipmentType, serialNumber);
             ticketOverview.TopLevel = true;
             ticketOverview.Show();
+        }
+
+        private void radioButtonClosedTickets_CheckedChanged(object sender, EventArgs e)
+        {
+            dataGridViewTickets.DataSource = _Ticket.LoadClosedTickets();
+        }
+
+        private void radioButtonOpened_CheckedChanged(object sender, EventArgs e)
+        {
+            dataGridViewTickets.DataSource = _Ticket.LoadOpenTickets();
         }
     }
 }

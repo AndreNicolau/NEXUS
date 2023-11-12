@@ -333,6 +333,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="NEXUS_logo.ico" />
+    <None Include="Resources\clear_icon_24px.png" />
     <None Include="Resources\delete-user__icon_24px.png" />
     <None Include="Resources\user-remove_icon_24px.png" />
     <None Include="Resources\refresh_icon_24px.png" />

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data;
+using System.Data.Odbc;
 using System.Windows.Forms;
 
 namespace NEXUS.Forms.Tickets
@@ -8,15 +10,8 @@ namespace NEXUS.Forms.Tickets
         Ticket _Ticket = new Ticket();
 
         public string TicketNumber;
-        public string CustomerId;
-        public string OpenDate;
-        public string Brand;
-        public string Model;
-        public string EquipmentType;
 
-        private bool AddingAction = false;
-
-        public TicketOverview(string ticketNumber, string customerId, string openDate, string brand, string model, string equipmentType)
+        public TicketOverview(string ticketNumber, string customerId, string openDate, string brand, string model, string equipmentType, string serialNumber)
         {
             InitializeComponent();
 
@@ -26,9 +21,9 @@ namespace NEXUS.Forms.Tickets
             labelBrand.Text = $"Marca: {brand}";
             labelModel.Text = $"Modelo: {model}";
             labelEquipmentType.Text = $"Tipo de equipamento: {equipmentType}";
+            labelSerialNumber.Text = $"Número de série: {serialNumber}";
 
             TicketNumber = ticketNumber;
-
 
             LoadTicketActions();
         }
@@ -50,25 +45,11 @@ namespace NEXUS.Forms.Tickets
 
         private void AddAction()
         {
-            if (AddingAction == false)
-            {
-                richTextBoxActions.Clear();
-                richTextBoxActions.Focus();
-                buttonAddAction.Text = "Inserir";
-                buttonAddAction.Image = Properties.Resources.disk_icon_24px;
-                dataGridViewActions.Enabled = false;
-                AddingAction = true;
-            }
-            else
-            {
-                LoadTicketActions();
-                buttonAddAction.Text = "Adicionar ação";
-                buttonAddAction.Image = Properties.Resources.add_icon_24px;
-                dataGridViewActions.Enabled = true;
-                dataGridViewActions.Focus();
-                UpdateRichTextBox();
-                AddingAction = false;
-            }
+            buttonInsertAction.Visible = true;
+            buttonAddAction.Enabled = false;
+            richTextBoxActions.ReadOnly = false;
+            richTextBoxActions.Clear();
+            richTextBoxActions.Focus();
         }
 
         private void dataGridViewActions_SelectionChanged(object sender, EventArgs e)
@@ -79,6 +60,24 @@ namespace NEXUS.Forms.Tickets
         private void buttonAddAction_Click(object sender, EventArgs e)
         {
             AddAction();
+        }
+
+        private void buttonInsertAction_Click(object sender, EventArgs e)
+        {
+            string description = richTextBoxActions.Text;
+            _Ticket.InsertAction(TicketNumber, description);
+
+            buttonAddAction.Enabled = true;
+            buttonInsertAction.Visible = false;
+            richTextBoxActions.ReadOnly = true;
+
+            LoadTicketActions();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            _Ticket.CloseTicket(TicketNumber);
+            this.Close();
         }
     }
 }
