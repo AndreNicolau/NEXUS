@@ -31,7 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonCloseTicket = new System.Windows.Forms.Button();
             this.buttonAddAction = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.labelTicketNumber = new System.Windows.Forms.Label();
@@ -41,10 +41,10 @@
             this.labelBrand = new System.Windows.Forms.Label();
             this.labelModel = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelSerialNumber = new System.Windows.Forms.Label();
             this.dataGridViewActions = new System.Windows.Forms.DataGridView();
             this.richTextBoxActions = new System.Windows.Forms.RichTextBox();
             this.buttonInsertAction = new System.Windows.Forms.Button();
-            this.labelSerialNumber = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActions)).BeginInit();
@@ -53,7 +53,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.buttonCloseTicket);
             this.panel1.Controls.Add(this.buttonAddAction);
             this.panel1.Controls.Add(this.buttonClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -62,21 +62,21 @@
             this.panel1.Size = new System.Drawing.Size(1262, 70);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // buttonCloseTicket
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::NEXUS.Properties.Resources.clear_icon_24px;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(251, 5);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 60);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Fechar ticket";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonCloseTicket.FlatAppearance.BorderSize = 0;
+            this.buttonCloseTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCloseTicket.Image = global::NEXUS.Properties.Resources.clear_icon_24px;
+            this.buttonCloseTicket.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonCloseTicket.Location = new System.Drawing.Point(251, 5);
+            this.buttonCloseTicket.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonCloseTicket.Name = "buttonCloseTicket";
+            this.buttonCloseTicket.Size = new System.Drawing.Size(151, 60);
+            this.buttonCloseTicket.TabIndex = 16;
+            this.buttonCloseTicket.Text = "Fechar ticket";
+            this.buttonCloseTicket.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonCloseTicket.UseVisualStyleBackColor = true;
+            this.buttonCloseTicket.Click += new System.EventHandler(this.buttonCloseTicket_Click);
             // 
             // buttonAddAction
             // 
@@ -186,6 +186,16 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1238, 70);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
+            // labelSerialNumber
+            // 
+            this.labelSerialNumber.AutoSize = true;
+            this.labelSerialNumber.Location = new System.Drawing.Point(275, 34);
+            this.labelSerialNumber.Margin = new System.Windows.Forms.Padding(3);
+            this.labelSerialNumber.Name = "labelSerialNumber";
+            this.labelSerialNumber.Size = new System.Drawing.Size(177, 25);
+            this.labelSerialNumber.TabIndex = 7;
+            this.labelSerialNumber.Text = "Número de série: 0";
+            // 
             // dataGridViewActions
             // 
             this.dataGridViewActions.AllowUserToAddRows = false;
@@ -240,16 +250,6 @@
             this.buttonInsertAction.Visible = false;
             this.buttonInsertAction.Click += new System.EventHandler(this.buttonInsertAction_Click);
             // 
-            // labelSerialNumber
-            // 
-            this.labelSerialNumber.AutoSize = true;
-            this.labelSerialNumber.Location = new System.Drawing.Point(275, 34);
-            this.labelSerialNumber.Margin = new System.Windows.Forms.Padding(3);
-            this.labelSerialNumber.Name = "labelSerialNumber";
-            this.labelSerialNumber.Size = new System.Drawing.Size(177, 25);
-            this.labelSerialNumber.TabIndex = 7;
-            this.labelSerialNumber.Text = "Número de série: 0";
-            // 
             // TicketOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -291,7 +291,7 @@
         private System.Windows.Forms.RichTextBox richTextBoxActions;
         private System.Windows.Forms.Button buttonAddAction;
         private System.Windows.Forms.Button buttonInsertAction;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonCloseTicket;
         private System.Windows.Forms.Label labelSerialNumber;
     }
 }

@@ -10,6 +10,7 @@ namespace NEXUS.Forms.Tickets
     public partial class TicketsDasboard : Form
     {
         Ticket _Ticket = new Ticket();
+        string TicketNumber;
 
         public TicketsDasboard()
         {
@@ -36,11 +37,9 @@ namespace NEXUS.Forms.Tickets
             newTicket.Show();
         }
 
-        private void OverviewTicket(object sender, DataGridViewCellEventArgs e)
+        private void OverviewTicket()
         {
-            string ticketNumber = dataGridViewTickets.CurrentRow.Cells[0].Value.ToString();
-
-            string query = $"SELECT * FROM tickets WHERE ticket_number = '{ticketNumber}'";
+            string query = $"SELECT * FROM tickets WHERE ticket_number = '{TicketNumber}'";
 
             OdbcConnection odbcConnection = new OdbcConnection("DSN=NEXUS");
             OdbcDataAdapter dataAdapter = new OdbcDataAdapter(query, odbcConnection);
@@ -55,7 +54,7 @@ namespace NEXUS.Forms.Tickets
             string model = dataTable.Rows[0][7].ToString();
             string serialNumber = dataTable.Rows[0][9].ToString();
 
-            TicketOverview ticketOverview = new TicketOverview(ticketNumber, customerId, openDate, brand, model, equipmentType, serialNumber);
+            TicketOverview ticketOverview = new TicketOverview(TicketNumber, customerId, openDate, brand, model, equipmentType, serialNumber);
             ticketOverview.TopLevel = true;
             ticketOverview.Show();
         }
@@ -68,6 +67,16 @@ namespace NEXUS.Forms.Tickets
         private void radioButtonOpened_CheckedChanged(object sender, EventArgs e)
         {
             dataGridViewTickets.DataSource = _Ticket.LoadOpenTickets();
+        }
+
+        private void dataGridViewTickets_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            OverviewTicket();
+        }
+
+        private void dataGridViewTickets_SelectionChanged(object sender, EventArgs e)
+        {
+            TicketNumber = dataGridViewTickets.CurrentRow.Cells[0].Value.ToString();
         }
     }
 }

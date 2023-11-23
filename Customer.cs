@@ -1,11 +1,7 @@
 ﻿using NEXUS.Forms.Customers;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.Odbc;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NEXUS
@@ -14,7 +10,7 @@ namespace NEXUS
     {
         private OdbcConnection connection = new OdbcConnection("DSN=NEXUS");
 
-        public void InsertNewCustomer(string CustomerName, string PhoneNumber, string Email, string TaxpayerNumber, string Address) 
+        public void InsertNewCustomer(string CustomerName, string PhoneNumber, string Email, string TaxpayerNumber, string Address)
         {
             OdbcCommand command = new OdbcCommand($"INSERT INTO customers (customer_name, phone_number, email, taxpayer_number, address) VALUES ('{CustomerName}', '{PhoneNumber}', '{Email}', '{TaxpayerNumber}', '{Address}')", connection);
 
@@ -22,7 +18,8 @@ namespace NEXUS
             {
                 MessageBox.Show("Erro: É necessário preencher o nome do cliente.");
                 return;
-            } else if (PhoneNumber == string.Empty || Email == string.Empty) 
+            }
+            else if (PhoneNumber == string.Empty || Email == string.Empty)
             {
                 MessageBox.Show("Erro: É necessário que haja uma forma de contacto Telemóvel ou Email.");
                 return;

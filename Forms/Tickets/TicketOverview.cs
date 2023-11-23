@@ -8,7 +8,6 @@ namespace NEXUS.Forms.Tickets
     public partial class TicketOverview : Form
     {
         Ticket _Ticket = new Ticket();
-
         public string TicketNumber;
 
         public TicketOverview(string ticketNumber, string customerId, string openDate, string brand, string model, string equipmentType, string serialNumber)
@@ -24,6 +23,18 @@ namespace NEXUS.Forms.Tickets
             labelSerialNumber.Text = $"Número de série: {serialNumber}";
 
             TicketNumber = ticketNumber;
+
+            bool isTicketOpen = _Ticket.IsTicketOpen(ticketNumber);
+
+            if (isTicketOpen == true)
+            {
+                buttonAddAction.Enabled = true;
+                buttonCloseTicket.Enabled = true;
+            } else
+            {
+                buttonAddAction.Enabled = false;
+                buttonCloseTicket.Enabled = false;
+            }
 
             LoadTicketActions();
         }
@@ -74,7 +85,7 @@ namespace NEXUS.Forms.Tickets
             LoadTicketActions();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonCloseTicket_Click(object sender, EventArgs e)
         {
             _Ticket.CloseTicket(TicketNumber);
             this.Close();

@@ -95,5 +95,29 @@ namespace NEXUS
                 MessageBox.Show(ex.Message);
             }
         }
+
+        public bool IsTicketOpen(string TicketNumber)
+        {
+            OdbcDataAdapter adapter = new OdbcDataAdapter($"SELECT state FROM tickets WHERE ticket_number = '{TicketNumber}'", connection);
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                adapter.Fill(dataTable);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Falha ao verificar se o ticket está aberto! Erro: {ex.Message}");
+            }
+
+            if (dataTable.Rows[0][0].ToString() == "Aberto")
+            {
+                return true;
+            } else
+            {
+                return false;
+            }
+
+        }
     }
 }
