@@ -39,7 +39,7 @@ namespace NEXUS.Forms.Tickets
 
         private void OverviewTicket()
         {
-            string query = $"SELECT * FROM tickets WHERE ticket_number = '{TicketNumber}'";
+            string query = $"SELECT ticket_number AS 'Número ticket', open_date AS 'Data abertura', associated_customer AS 'Número cliente', equipment_brand AS 'Marca', equipment_model AS 'Modelo', equipment_type as 'Tipo equipamento', serial_number as 'Número série' FROM tickets  WHERE ticket_number = '{TicketNumber}'";
 
             OdbcConnection odbcConnection = new OdbcConnection("DSN=NEXUS");
             OdbcDataAdapter dataAdapter = new OdbcDataAdapter(query, odbcConnection);
@@ -47,12 +47,12 @@ namespace NEXUS.Forms.Tickets
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);
 
-            string openDate = dataTable.Rows[0][2].ToString();
-            string customerId = dataTable.Rows[0][4].ToString();
-            string brand = dataTable.Rows[0][5].ToString();
-            string equipmentType = dataTable.Rows[0][6].ToString();
-            string model = dataTable.Rows[0][7].ToString();
-            string serialNumber = dataTable.Rows[0][9].ToString();
+            string openDate = dataTable.Rows[0][1].ToString();
+            string customerId = dataTable.Rows[0][2].ToString();
+            string brand = dataTable.Rows[0][3].ToString();
+            string equipmentType = dataTable.Rows[0][4].ToString();
+            string model = dataTable.Rows[0][5].ToString();
+            string serialNumber = dataTable.Rows[0][6].ToString();
 
             TicketOverview ticketOverview = new TicketOverview(TicketNumber, customerId, openDate, brand, model, equipmentType, serialNumber);
             ticketOverview.TopLevel = true;
