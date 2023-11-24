@@ -44,10 +44,10 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Image = global::NEXUS.Properties.Resources.user_icon_24px;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(166, 222);
+            this.label1.Location = new System.Drawing.Point(141, 221);
             this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 25);
+            this.label1.Size = new System.Drawing.Size(200, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Utilizador";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -58,9 +58,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUsername.BackColor = System.Drawing.Color.White;
             this.txtUsername.ForeColor = System.Drawing.Color.Black;
-            this.txtUsername.Location = new System.Drawing.Point(166, 253);
+            this.txtUsername.Location = new System.Drawing.Point(141, 252);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(151, 30);
+            this.txtUsername.Size = new System.Drawing.Size(200, 30);
             this.txtUsername.TabIndex = 1;
             this.txtUsername.Text = "ANicolau";
             this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Login_KeyDown);
@@ -73,12 +73,12 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Image = global::NEXUS.Properties.Resources.lock_icon_24px;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(166, 289);
+            this.label2.Location = new System.Drawing.Point(141, 288);
             this.label2.Margin = new System.Windows.Forms.Padding(3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 25);
+            this.label2.Size = new System.Drawing.Size(200, 25);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Password";
+            this.label2.Text = "Palavra-passe";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtPassword
@@ -87,9 +87,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassword.BackColor = System.Drawing.Color.White;
             this.txtPassword.ForeColor = System.Drawing.Color.Black;
-            this.txtPassword.Location = new System.Drawing.Point(166, 320);
+            this.txtPassword.Location = new System.Drawing.Point(141, 319);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(151, 30);
+            this.txtPassword.Size = new System.Drawing.Size(200, 30);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.Text = "andre.nicolau";
             this.txtPassword.UseSystemPasswordChar = true;
@@ -105,9 +105,9 @@
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Image = global::NEXUS.Properties.Resources.sign_in_icon_white_24px;
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogin.Location = new System.Drawing.Point(166, 356);
+            this.btnLogin.Location = new System.Drawing.Point(141, 355);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(151, 37);
+            this.btnLogin.Size = new System.Drawing.Size(200, 37);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
