@@ -14,8 +14,10 @@ namespace NEXUS
         public void InsertTicket(string AssociatedCustomer, string EquipmentBrand, string EquipmentType, string EquipmentModel, string Description, string SerialNumber)
         {
             string date = DateTime.Today.ToString("yyyy/MM/dd");
+            // Comando para inserir o ticket
             OdbcCommand command = new OdbcCommand($"INSERT INTO tickets (open_date, associated_customer, equipment_brand, equipment_type, equipment_model, description, serial_number) VALUES ('{date}', '{AssociatedCustomer}', '{EquipmentBrand}', '{EquipmentType}', '{EquipmentModel}', '{Description}', '{SerialNumber}') ", connection);
 
+            // Execução do comando
             try
             {
                 connection.Open();
