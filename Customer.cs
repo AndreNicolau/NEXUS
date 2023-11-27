@@ -8,8 +8,11 @@ namespace NEXUS
 {
     internal class Customer
     {
+
+        // Ligação à base de dados
         private OdbcConnection connection = new OdbcConnection("DSN=NEXUS");
 
+        // Método para inserir um cliente ticket na base de dados
         public void InsertNewCustomer(string CustomerName, string PhoneNumber, string Email, string TaxpayerNumber, string Address)
         {
             OdbcCommand command = new OdbcCommand($"INSERT INTO customers (customer_name, phone_number, email, taxpayer_number, address) VALUES ('{CustomerName}', '{PhoneNumber}', '{Email}', '{TaxpayerNumber}', '{Address}')", connection);
@@ -39,6 +42,7 @@ namespace NEXUS
             }
         }
 
+        // Método para carregar todos os clientes para uma DataTable
         public DataTable CustomersDataTable()
         {
             DataTable dataTable = new DataTable();
@@ -58,6 +62,7 @@ namespace NEXUS
             return dataTable;
         }
 
+        // Método para abrir a ficha de um determinado cliente
         public void ViewCustomerFile(string CustomerId)
         {
             string query = $"SELECT * FROM customers WHERE customer_id = '{CustomerId}'";
@@ -76,6 +81,7 @@ namespace NEXUS
             customerFile.Show();
         }
 
+        // Método para pesquisar clientes
         public DataTable SearchCustomer(string SearchValue)
         {
             DataTable dataTable = new DataTable();
