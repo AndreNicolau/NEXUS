@@ -47,9 +47,12 @@ namespace NEXUS
         {
             DataTable dataTable = new DataTable();
 
-            string query = "SELECT customer_id AS 'Número de cliente', customer_name AS Nome, phone_number AS 'Número telemóvel', email AS Email FROM customers ORDER BY customer_name";
-            OdbcDataAdapter dataAdapter = new OdbcDataAdapter(query, connection);
+            // Comando para selecionar um cliente pelo Id
+            string command = "SELECT customer_id AS 'Número de cliente', customer_name AS Nome, phone_number AS 'Número telemóvel', email AS Email FROM customers ORDER BY customer_name";
+            OdbcDataAdapter dataAdapter = new OdbcDataAdapter(command, connection);
 
+
+            // Execução do comando
             try
             {
                 dataAdapter.Fill(dataTable);
@@ -65,8 +68,8 @@ namespace NEXUS
         // Método para abrir a ficha de um determinado cliente
         public void ViewCustomerFile(string CustomerId)
         {
-            string query = $"SELECT * FROM customers WHERE customer_id = '{CustomerId}'";
-            OdbcDataAdapter dataAdapter = new OdbcDataAdapter(query, connection);
+            string command = $"SELECT * FROM customers WHERE customer_id = '{CustomerId}'";
+            OdbcDataAdapter dataAdapter = new OdbcDataAdapter(command, connection);
             DataTable dataTable = new DataTable();
 
             dataAdapter.Fill(dataTable);
@@ -86,9 +89,10 @@ namespace NEXUS
         {
             DataTable dataTable = new DataTable();
 
-            string query = $"SELECT customer_id as 'Número de cliente', customer_name AS Nome, phone_number AS 'Número telemóvel', email AS 'Email' FROM customers WHERE customer_name LIKE '{SearchValue}%' ORDER BY customer_name";
+            // Comando para selecionar o cliente
+            string command = $"SELECT customer_id as 'Número de cliente', customer_name AS Nome, phone_number AS 'Número telemóvel', email AS 'Email' FROM customers WHERE customer_name LIKE '{SearchValue}%' ORDER BY customer_name";
 
-            OdbcDataAdapter dataAdapter = new OdbcDataAdapter(query, connection);
+            OdbcDataAdapter dataAdapter = new OdbcDataAdapter(command, connection);
             dataAdapter.Fill(dataTable);
 
             return dataTable;
