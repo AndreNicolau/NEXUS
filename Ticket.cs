@@ -90,8 +90,9 @@ namespace NEXUS
         public void CloseTicket(string TicketNumber)
         {
             string closeDate = DateTime.Today.ToString("yyyy/MM/dd");
+            // Comando para fechar o ticket
             OdbcCommand command = new OdbcCommand($"UPDATE tickets SET state = 'Fechado', close_date = '{closeDate}' WHERE ticket_number = '{TicketNumber}'", connection);
-
+            // Execução do comando
             try
             {
                 connection.Open();
