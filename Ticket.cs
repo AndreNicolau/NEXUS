@@ -7,8 +7,10 @@ namespace NEXUS
 {
     internal class Ticket
     {
+        // Ligação à base de dados
         OdbcConnection connection = new OdbcConnection("DSN=NEXUS");
 
+        // Método para inserir um novo ticket na base de dados
         public void InsertTicket(string AssociatedCustomer, string EquipmentBrand, string EquipmentType, string EquipmentModel, string Description, string SerialNumber)
         {
             string date = DateTime.Today.ToString("yyyy/MM/dd");
@@ -28,6 +30,7 @@ namespace NEXUS
             }
         }
 
+        // Método para carregar todos os tickets abertos para uma DataGridView
         public DataTable LoadOpenTickets()
         {
             DataTable dataTable = new DataTable();
@@ -39,6 +42,7 @@ namespace NEXUS
             return dataTable;
         }
 
+        // Método para carregar todos os tickets fechados para uma DataGridView
         public DataTable LoadClosedTickets()
         {
             DataTable dataTable = new DataTable();
@@ -50,6 +54,7 @@ namespace NEXUS
             return dataTable;
         }
 
+        // Método para carregar todos as ações de um ticket específico
         public DataTable LoadTicketActions(string TicketNumber)
         {
             DataTable dataTable = new DataTable();
@@ -61,6 +66,7 @@ namespace NEXUS
             return dataTable;
         }
 
+        // Método para inserir uma ação num ticket específico
         public void InsertAction(string TicketNumber, string Description)
         {
             OdbcCommand command = new OdbcCommand($"INSERT INTO ticket_actions (associated_ticket_number, description, date) VALUES ('{TicketNumber}', '{Description}', '{DateTime.Today.ToString("yyyy/MM/dd")}')", connection);
@@ -78,6 +84,7 @@ namespace NEXUS
             }
         }
 
+        // Método para fechar um ticket específico
         public void CloseTicket(string TicketNumber)
         {
             string closeDate = DateTime.Today.ToString("yyyy/MM/dd");
@@ -96,6 +103,7 @@ namespace NEXUS
             }
         }
 
+        // Método para verificar se o ticket está aberto
         public bool IsTicketOpen(string TicketNumber)
         {
             OdbcDataAdapter adapter = new OdbcDataAdapter($"SELECT state FROM tickets WHERE ticket_number = '{TicketNumber}'", connection);
