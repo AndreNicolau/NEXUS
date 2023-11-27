@@ -60,9 +60,11 @@ namespace NEXUS
         public DataTable LoadTicketActions(string TicketNumber)
         {
             DataTable dataTable = new DataTable();
-            string query = $"SELECT description AS 'Descrição', open_date AS 'Data' FROM tickets WHERE ticket_number = '{TicketNumber}' UNION SELECT description AS 'Descrição', date AS 'Data' FROM ticket_actions WHERE associated_ticket_number = '{TicketNumber}'";
-            OdbcDataAdapter dataAdapter = new OdbcDataAdapter(query, connection);
+            // Comando para selecionar a descrição e as ações do ticket
+            string command = $"SELECT description AS 'Descrição', open_date AS 'Data' FROM tickets WHERE ticket_number = '{TicketNumber}' UNION SELECT description AS 'Descrição', date AS 'Data' FROM ticket_actions WHERE associated_ticket_number = '{TicketNumber}'";
+            OdbcDataAdapter dataAdapter = new OdbcDataAdapter(command, connection);
 
+            // Preenchimento da DataTable
             dataAdapter.Fill(dataTable);
 
             return dataTable;
