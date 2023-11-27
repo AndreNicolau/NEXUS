@@ -31,6 +31,7 @@ namespace NEXUS
                 return;
             }
 
+            // Execução do comando
             try
             {
                 _Connection.Open();
