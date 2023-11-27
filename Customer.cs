@@ -15,8 +15,10 @@ namespace NEXUS
         // Método para inserir um cliente ticket na base de dados
         public void InsertNewCustomer(string CustomerName, string PhoneNumber, string Email, string TaxpayerNumber, string Address)
         {
+            // Comando para inserir o cliente 
             OdbcCommand command = new OdbcCommand($"INSERT INTO customers (customer_name, phone_number, email, taxpayer_number, address) VALUES ('{CustomerName}', '{PhoneNumber}', '{Email}', '{TaxpayerNumber}', '{Address}')", connection);
 
+            // Validação dos dados do cliente
             if (CustomerName == string.Empty)
             {
                 MessageBox.Show("Erro: É necessário preencher o nome do cliente.");
@@ -28,6 +30,8 @@ namespace NEXUS
                 return;
             }
 
+
+            // Execução do comando
             try
             {
                 connection.Open();
