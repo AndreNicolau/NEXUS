@@ -73,8 +73,10 @@ namespace NEXUS
         // Método para inserir uma ação num ticket específico
         public void InsertAction(string TicketNumber, string Description)
         {
+            // Comando para inserir a ação no ticket
             OdbcCommand command = new OdbcCommand($"INSERT INTO ticket_actions (associated_ticket_number, description, date) VALUES ('{TicketNumber}', '{Description}', '{DateTime.Today.ToString("yyyy/MM/dd")}')", connection);
 
+            // Execução do comando
             try
             {
                 connection.Open();
@@ -94,6 +96,7 @@ namespace NEXUS
             string closeDate = DateTime.Today.ToString("yyyy/MM/dd");
             // Comando para fechar o ticket
             OdbcCommand command = new OdbcCommand($"UPDATE tickets SET state = 'Fechado', close_date = '{closeDate}' WHERE ticket_number = '{TicketNumber}'", connection);
+
             // Execução do comando
             try
             {
