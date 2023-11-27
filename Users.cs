@@ -17,12 +17,14 @@ namespace NEXUS
         // Método para inserir um novo utilzador na base de dados
         public void InsertUser(string Username, string Password)
         {
+            // Comando para inserir um novo utilzador
             OdbcCommand command = new OdbcCommand($"INSERT INTO login (username, password) VALUES ({Username}, {Password})", _Connection);
             OdbcDataAdapter adapter = new OdbcDataAdapter($"SELECT * FROM login WHERE username = '{Username}'", _Connection);
             DataTable dataTable = new DataTable();
 
             adapter.Fill(dataTable);
 
+            // Verificação se o utilizador é existente
             if (dataTable.Rows.Count == 1)
             {
                 MessageBox.Show($"O utilizador {Username} já existe na base de dados.");
@@ -47,8 +49,10 @@ namespace NEXUS
         // Método para eliminar um utilizador da base de dados
         public void DeleteUser(string Username)
         {
+            // Comando para eliminar um utilizador
             OdbcCommand command = new OdbcCommand($"DELETE FROM login WHERE username = '{Username}'", _Connection);
 
+            // Execução do comando
             try
             {
                 _Connection.Open();
