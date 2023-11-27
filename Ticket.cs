@@ -108,9 +108,11 @@ namespace NEXUS
         // Método para verificar se o ticket está aberto
         public bool IsTicketOpen(string TicketNumber)
         {
+            // Adaptador para preencer a DataTable
             OdbcDataAdapter adapter = new OdbcDataAdapter($"SELECT state FROM tickets WHERE ticket_number = '{TicketNumber}'", connection);
             DataTable dataTable = new DataTable();
 
+            // Preenchimento da DataTable
             try
             {
                 adapter.Fill(dataTable);
@@ -127,7 +129,6 @@ namespace NEXUS
             {
                 return false;
             }
-
         }
     }
 }
