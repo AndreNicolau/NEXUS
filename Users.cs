@@ -11,9 +11,10 @@ namespace NEXUS
 {
     internal class Users
     {
-
+        // Ligação à base de dados
         OdbcConnection _Connection = new OdbcConnection("DSN=NEXUS");
 
+        // Método para inserir um novo utilzador na base de dados
         public void InsertUser(string Username, string Password)
         {
             OdbcCommand command = new OdbcCommand($"INSERT INTO login (username, password) VALUES ({Username}, {Password})", _Connection);
@@ -43,6 +44,7 @@ namespace NEXUS
             }
         }
 
+        // Método para eliminar um utilizador da base de dados
         public void DeleteUser(string Username)
         {
             OdbcCommand command = new OdbcCommand($"DELETE FROM login WHERE username = '{Username}'", _Connection);
@@ -60,6 +62,7 @@ namespace NEXUS
             }
         }
 
+        // Método para carregar todos os utilizadores para uma DataGridView
         public void LoadUsers(DataGridView UsersDataGridView)
         {
             OdbcDataAdapter dataAdapter = new OdbcDataAdapter("SELECT user_id AS 'Número de utilizador', username AS 'Nome de utilizador', password AS 'Palavra-passe' FROM login", _Connection);
