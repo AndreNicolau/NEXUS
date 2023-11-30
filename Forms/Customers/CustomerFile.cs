@@ -7,6 +7,9 @@ namespace NEXUS.Forms.Customers
 {
     public partial class CustomerFile : Form
     {
+        Customer _Customer = new Customer();
+
+        private string CustomerId;
         private bool editing = false;
 
         public CustomerFile(string customerId, string name, string phoneNumber, string email, string taxPayerNmber, string address)
@@ -14,6 +17,8 @@ namespace NEXUS.Forms.Customers
             InitializeComponent();
 
             labelCustomerId.Text = customerId;
+            CustomerId = customerId;
+
             textBoxName.Text = name;
             textBoxPhoneNumber.Text = phoneNumber;
             textBoxEmail.Text = email;
@@ -33,6 +38,7 @@ namespace NEXUS.Forms.Customers
             buttonCancelClose.Text = "Cancelar";
             buttonEditCustomerData.Enabled = false;
             buttonSave.Enabled = true;
+            buttonDeleteCustomer.Enabled = true;
         }
 
         private void CancelClose()
@@ -102,6 +108,12 @@ namespace NEXUS.Forms.Customers
         private void buttonSave_Click(object sender, EventArgs e)
         {
             SaveChanges();
+        }
+
+        private void buttonDeleteCustomer_Click(object sender, EventArgs e)
+        {
+            _Customer.DeleteCustomer(CustomerId);
+            this.Close();
         }
     }
 }

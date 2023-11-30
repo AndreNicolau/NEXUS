@@ -18,7 +18,7 @@ namespace NEXUS
         public void InsertUser(string Username, string Password)
         {
             // Comando para inserir um novo utilzador
-            OdbcCommand command = new OdbcCommand($"INSERT INTO login (username, password) VALUES ({Username}, {Password})", _Connection);
+            OdbcCommand command = new OdbcCommand($"INSERT INTO login (username, password) VALUES ('{Username}', '{Password}')", _Connection);
             OdbcDataAdapter adapter = new OdbcDataAdapter($"SELECT * FROM login WHERE username = '{Username}'", _Connection);
             DataTable dataTable = new DataTable();
 

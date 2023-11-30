@@ -47,6 +47,7 @@ namespace NEXUS
         private void buttonSave_Click(object sender, EventArgs e)
         {
             _Users.InsertUser(textBoxUsername.Text, textBoxPassword.Text);
+            _Users.LoadUsers(dataGridViewUsers);
         }
 
         private void Settings_FormClosed(object sender, FormClosedEventArgs e)

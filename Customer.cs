@@ -101,5 +101,31 @@ namespace NEXUS
 
             return dataTable;
         }
+
+        // Método para eliminar clientes
+        public void DeleteCustomer(string CustomerId)
+        {
+            OdbcCommand command = new OdbcCommand($"DELETE FROM customers WHERE customer_id = '{CustomerId}'", connection);
+
+            DialogResult result = MessageBox.Show("Tem a certeza que deseja eliminar o cliente?", "Eliminar cliente.", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Não foi possível eliminar o cliente da base de dados! Erro: {ex.Message}");
+                }
+
+                MessageBox.Show("Cliente eliminado!");
+            }
+
+            
+        }
     }
 }

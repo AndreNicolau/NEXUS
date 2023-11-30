@@ -44,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panelTop = new System.Windows.Forms.Panel();
             this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonDeleteCustomer = new System.Windows.Forms.Button();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -157,7 +158,7 @@
             this.buttonCancelClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancelClose.Image = global::NEXUS.Properties.Resources.circle_close_icon_24px;
             this.buttonCancelClose.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonCancelClose.Location = new System.Drawing.Point(106, 5);
+            this.buttonCancelClose.Location = new System.Drawing.Point(367, 5);
             this.buttonCancelClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonCancelClose.Name = "buttonCancelClose";
             this.buttonCancelClose.Size = new System.Drawing.Size(85, 60);
@@ -214,6 +215,7 @@
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.SystemColors.Control;
+            this.panelTop.Controls.Add(this.buttonDeleteCustomer);
             this.panelTop.Controls.Add(this.buttonSave);
             this.panelTop.Controls.Add(this.buttonEditCustomerData);
             this.panelTop.Controls.Add(this.buttonCancelClose);
@@ -230,7 +232,7 @@
             this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSave.Image = global::NEXUS.Properties.Resources.disk_icon_24px;
             this.buttonSave.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonSave.Location = new System.Drawing.Point(199, 5);
+            this.buttonSave.Location = new System.Drawing.Point(106, 5);
             this.buttonSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(85, 60);
@@ -239,6 +241,24 @@
             this.buttonSave.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
+            // buttonDeleteCustomer
+            // 
+            this.buttonDeleteCustomer.Enabled = false;
+            this.buttonDeleteCustomer.FlatAppearance.BorderSize = 0;
+            this.buttonDeleteCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDeleteCustomer.Image = global::NEXUS.Properties.Resources.delete_user__icon_24px;
+            this.buttonDeleteCustomer.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonDeleteCustomer.Location = new System.Drawing.Point(199, 5);
+            this.buttonDeleteCustomer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonDeleteCustomer.Name = "buttonDeleteCustomer";
+            this.buttonDeleteCustomer.Size = new System.Drawing.Size(160, 60);
+            this.buttonDeleteCustomer.TabIndex = 13;
+            this.buttonDeleteCustomer.Tag = "customerData";
+            this.buttonDeleteCustomer.Text = "Eliminar cliente";
+            this.buttonDeleteCustomer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonDeleteCustomer.UseVisualStyleBackColor = true;
+            this.buttonDeleteCustomer.Click += new System.EventHandler(this.buttonDeleteCustomer_Click);
             // 
             // CustomerFile
             // 
@@ -289,5 +309,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Button buttonDeleteCustomer;
     }
 }
