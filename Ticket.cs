@@ -136,10 +136,5 @@ namespace NEXUS
                 return false;
             }
         }
-
-        public void LoadAllTickets()
-        {
-
-        }
     }
 }
