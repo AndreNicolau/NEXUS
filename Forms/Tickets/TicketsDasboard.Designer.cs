@@ -188,7 +188,6 @@
             this.dataGridViewTickets.Size = new System.Drawing.Size(1200, 633);
             this.dataGridViewTickets.TabIndex = 0;
             this.dataGridViewTickets.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTickets_CellContentDoubleClick);
-            this.dataGridViewTickets.SelectionChanged += new System.EventHandler(this.dataGridViewTickets_SelectionChanged);
             // 
             // TicketsDasboard
             // 

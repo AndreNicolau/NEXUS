@@ -11,6 +11,7 @@ namespace NEXUS.Forms.Tickets
     {
         Ticket _Ticket = new Ticket();
         string TicketNumber;
+        OdbcConnection connection = new OdbcConnection("DSN=NEXUS");
 
         public TicketsDasboard()
         {
@@ -71,12 +72,23 @@ namespace NEXUS.Forms.Tickets
 
         private void dataGridViewTickets_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            OverviewTicket();
-        }
-
-        private void dataGridViewTickets_SelectionChanged(object sender, EventArgs e)
-        {
+            //OverviewTicket();
             TicketNumber = dataGridViewTickets.CurrentRow.Cells[0].Value.ToString();
+
+            DataTable dataTable = new DataTable();
+            OdbcDataAdapter adapter = new OdbcDataAdapter($"SELECT ticket_number, associated_customer, open_date, equipment_brand, equipment_model, equipment_type, serial_number FROM tickets WHERE ticket_number = '{TicketNumber}'", connection);
+            adapter.Fill(dataTable);
+
+            
+            string customerId = dataTable.Rows[0][1].ToString();
+            string openDate = dataTable.Rows[0][2].ToString();
+            string brand = dataTable.Rows[0][3].ToString();
+            string model = dataTable.Rows[0][4].ToString();
+            string equipmentType = dataTable.Rows[0][5].ToString();
+            string serialNumber = dataTable.Rows[0][6].ToString();
+
+            TicketOverview ticket = new TicketOverview(TicketNumber, customerId, openDate, brand, model, equipmentType, serialNumber);
+            ticket.Show();
         }
     }
 }
