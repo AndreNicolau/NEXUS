@@ -40,12 +40,11 @@
             this.buttonRemoveEquipment = new System.Windows.Forms.Button();
             this.buttonAddEquipment = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonInsert = new System.Windows.Forms.Button();
             this.dataGridViewModels = new System.Windows.Forms.DataGridView();
             this.comboBoxBrand = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.buttonCancel = new System.Windows.Forms.Button();
-            this.buttonInsert = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewModels)).BeginInit();
@@ -78,7 +77,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.buttonCancel);
             this.panel1.Controls.Add(this.buttonRemoveEquipment);
             this.panel1.Controls.Add(this.buttonAddEquipment);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -134,6 +132,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1280, 650);
             this.panel2.TabIndex = 4;
+            // 
+            // buttonInsert
+            // 
+            this.buttonInsert.BackColor = System.Drawing.Color.White;
+            this.buttonInsert.FlatAppearance.BorderSize = 0;
+            this.buttonInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonInsert.Location = new System.Drawing.Point(48, 260);
+            this.buttonInsert.Name = "buttonInsert";
+            this.buttonInsert.Size = new System.Drawing.Size(191, 34);
+            this.buttonInsert.TabIndex = 7;
+            this.buttonInsert.Text = "Inserir";
+            this.buttonInsert.UseVisualStyleBackColor = false;
+            this.buttonInsert.Click += new System.EventHandler(this.buttonInsert_Click);
             // 
             // dataGridViewModels
             // 
@@ -207,34 +218,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Modelo";
             // 
-            // buttonCancel
-            // 
-            this.buttonCancel.FlatAppearance.BorderSize = 0;
-            this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancel.Image = global::NEXUS.Properties.Resources.circle_close_icon_24px;
-            this.buttonCancel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonCancel.Location = new System.Drawing.Point(221, 7);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(106, 60);
-            this.buttonCancel.TabIndex = 3;
-            this.buttonCancel.Text = "Cancelar";
-            this.buttonCancel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            // 
-            // buttonInsert
-            // 
-            this.buttonInsert.BackColor = System.Drawing.Color.White;
-            this.buttonInsert.FlatAppearance.BorderSize = 0;
-            this.buttonInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonInsert.Location = new System.Drawing.Point(48, 260);
-            this.buttonInsert.Name = "buttonInsert";
-            this.buttonInsert.Size = new System.Drawing.Size(191, 34);
-            this.buttonInsert.TabIndex = 7;
-            this.buttonInsert.Text = "Inserir";
-            this.buttonInsert.UseVisualStyleBackColor = false;
-            this.buttonInsert.Click += new System.EventHandler(this.buttonInsert_Click);
-            // 
             // Equipments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -268,7 +251,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonAddEquipment;
         private System.Windows.Forms.Button buttonRemoveEquipment;
-        private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonInsert;
     }
 }
