@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Data;
 using System.Data.Odbc;
 using System.Windows.Forms;
@@ -49,18 +50,13 @@ namespace NEXUS.Forms.Tickets
             this.Close();
         }
 
-        private void AddAction()
+        private void buttonAddAction_Click(object sender, EventArgs e)
         {
             buttonInsertAction.Visible = true;
             buttonAddAction.Enabled = false;
             richTextBoxActions.ReadOnly = false;
             richTextBoxActions.Clear();
             richTextBoxActions.Focus();
-        }
-
-        private void buttonAddAction_Click(object sender, EventArgs e)
-        {
-            AddAction();
         }
 
         private void buttonInsertAction_Click(object sender, EventArgs e)
@@ -73,6 +69,7 @@ namespace NEXUS.Forms.Tickets
             richTextBoxActions.ReadOnly = true;
 
             LoadTicketActions();
+            dataGridViewActions.Sort(dataGridViewActions.Columns[1], ListSortDirection.Ascending);
         }
 
         private void buttonCloseTicket_Click(object sender, EventArgs e)

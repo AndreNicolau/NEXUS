@@ -13,7 +13,7 @@ namespace NEXUS
         // Método para inserir um novo ticket na base de dados
         public void InsertTicket(string AssociatedCustomer, string EquipmentBrand, string EquipmentType, string EquipmentModel, string Description, string SerialNumber)
         {
-            string date = DateTime.Today.ToString("yyyy/MM/dd");
+            string date = DateTime.Today.ToString("yyyy/MM/dd  HH:mm");
             // Comando para inserir o ticket
             OdbcCommand command = new OdbcCommand($"INSERT INTO tickets (open_date, associated_customer, equipment_brand, equipment_type, equipment_model, description, serial_number) VALUES ('{date}', '{AssociatedCustomer}', '{EquipmentBrand}', '{EquipmentType}', '{EquipmentModel}', '{Description}', '{SerialNumber}') ", connection);
 
@@ -74,7 +74,7 @@ namespace NEXUS
         public void InsertAction(string TicketNumber, string Description)
         {
             // Comando para inserir a ação no ticket
-            OdbcCommand command = new OdbcCommand($"INSERT INTO ticket_actions (associated_ticket_number, description, date) VALUES ('{TicketNumber}', '{Description}', '{DateTime.Today.ToString("yyyy/MM/dd")}')", connection);
+            OdbcCommand command = new OdbcCommand($"INSERT INTO ticket_actions (associated_ticket_number, description, date) VALUES ('{TicketNumber}', '{Description}', '{DateTime.Today.ToString("yyyy/MM/dd  HH:mm")}')", connection);
 
             // Execução do comando
             try
@@ -93,7 +93,7 @@ namespace NEXUS
         // Método para fechar um ticket específico
         public void CloseTicket(string TicketNumber)
         {
-            string closeDate = DateTime.Today.ToString("yyyy/MM/dd");
+            string closeDate = DateTime.Today.ToString("yyyy/MM/dd HH:mm");
             // Comando para fechar o ticket
             OdbcCommand command = new OdbcCommand($"UPDATE tickets SET state = 'Fechado', close_date = '{closeDate}' WHERE ticket_number = '{TicketNumber}'", connection);
 
