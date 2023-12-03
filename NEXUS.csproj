@@ -240,6 +240,13 @@
     <Compile Include="Forms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Equipment.cs" />
+    <Compile Include="Forms\Equipments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Equipments.Designer.cs">
+      <DependentUpon>Equipments.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Equipments.resx">
+      <DependentUpon>Equipments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -350,6 +360,13 @@
     <Content Include="Logo_Nexus.ico" />
     <Content Include="Nexus_Icon.ico" />
     <Content Include="NEXUS_logo.ico" />
+    <None Include="Resources\bin_icon_24px.png" />
+    <None Include="Resources\devices_icon_64px.png" />
+    <None Include="Resources\responsive-design.png" />
+    <None Include="Resources\equipment %281%29.png" />
+    <None Include="Resources\equipment.png" />
+    <None Include="Resources\equipments_icon_24px1.png" />
+    <None Include="Resources\equipments_icon_24px.png" />
     <None Include="Resources\Logo_Nexus.png" />
     <None Include="Resources\clear_icon_24px.png" />
     <None Include="Resources\delete-user__icon_24px.png" />

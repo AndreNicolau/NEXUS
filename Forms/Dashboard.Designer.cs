@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.sidePanel = new System.Windows.Forms.Panel();
+            this.buttonEquipments = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonTickets = new System.Windows.Forms.Button();
             this.buttonClients = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             this.sidePanel.AutoSize = true;
             this.sidePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.sidePanel.BackColor = System.Drawing.SystemColors.Control;
+            this.sidePanel.Controls.Add(this.buttonEquipments);
             this.sidePanel.Controls.Add(this.buttonExit);
             this.sidePanel.Controls.Add(this.buttonTickets);
             this.sidePanel.Controls.Add(this.buttonClients);
@@ -50,6 +52,23 @@
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.Size = new System.Drawing.Size(98, 720);
             this.sidePanel.TabIndex = 40;
+            // 
+            // buttonEquipments
+            // 
+            this.buttonEquipments.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEquipments.FlatAppearance.BorderSize = 0;
+            this.buttonEquipments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEquipments.Image = global::NEXUS.Properties.Resources.devices_icon_64px;
+            this.buttonEquipments.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonEquipments.Location = new System.Drawing.Point(0, 134);
+            this.buttonEquipments.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonEquipments.Name = "buttonEquipments";
+            this.buttonEquipments.Size = new System.Drawing.Size(98, 124);
+            this.buttonEquipments.TabIndex = 36;
+            this.buttonEquipments.Text = "Equipamentos";
+            this.buttonEquipments.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonEquipments.UseVisualStyleBackColor = false;
+            this.buttonEquipments.Click += new System.EventHandler(this.buttonEquipments_Click);
             // 
             // buttonExit
             // 
@@ -75,7 +94,7 @@
             this.buttonTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTickets.Image = global::NEXUS.Properties.Resources.memo_icon_32px;
             this.buttonTickets.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonTickets.Location = new System.Drawing.Point(0, 73);
+            this.buttonTickets.Location = new System.Drawing.Point(0, 67);
             this.buttonTickets.Margin = new System.Windows.Forms.Padding(0);
             this.buttonTickets.Name = "buttonTickets";
             this.buttonTickets.Size = new System.Drawing.Size(98, 67);
@@ -141,5 +160,6 @@
         private System.Windows.Forms.Button buttonClients;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Button buttonTickets;
+        private System.Windows.Forms.Button buttonEquipments;
     }
 }

@@ -83,6 +83,16 @@ namespace NEXUS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bin_icon_24px {
+            get {
+                object obj = ResourceManager.GetObject("bin_icon_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap circle_close_icon_24px {
             get {
                 object obj = ResourceManager.GetObject("circle-close_icon_24px", resourceCulture);
@@ -132,6 +142,16 @@ namespace NEXUS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap devices_icon_64px {
+            get {
+                object obj = ResourceManager.GetObject("devices_icon_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap disk_icon_24px {
             get {
                 object obj = ResourceManager.GetObject("disk_icon_24px", resourceCulture);
@@ -145,6 +165,16 @@ namespace NEXUS.Properties {
         internal static System.Drawing.Bitmap document_icon_24px {
             get {
                 object obj = ResourceManager.GetObject("document_icon_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap equipment__1_ {
+            get {
+                object obj = ResourceManager.GetObject("equipment (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -224,6 +254,16 @@ namespace NEXUS.Properties {
         internal static System.Drawing.Bitmap refresh_icon_24px {
             get {
                 object obj = ResourceManager.GetObject("refresh_icon_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap responsive_design {
+            get {
+                object obj = ResourceManager.GetObject("responsive-design", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

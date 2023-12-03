@@ -59,5 +59,17 @@ namespace NEXUS
         {
             Application.Exit();
         }
+
+        private void buttonEquipments_Click(object sender, EventArgs e)
+        {
+            Equipments equipments = new Equipments();
+            equipments.TopLevel = false;
+
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(equipments);
+
+            equipments.Dock = DockStyle.Fill;
+            equipments.Show();
+        }
     }
 }
