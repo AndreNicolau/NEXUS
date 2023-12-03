@@ -224,7 +224,7 @@
             this.dataGridViewActions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewActions.Size = new System.Drawing.Size(1238, 178);
             this.dataGridViewActions.TabIndex = 8;
-            this.dataGridViewActions.SelectionChanged += new System.EventHandler(this.dataGridViewActions_SelectionChanged);
+            this.dataGridViewActions.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewActions_CellContentClick);
             // 
             // richTextBoxActions
             // 

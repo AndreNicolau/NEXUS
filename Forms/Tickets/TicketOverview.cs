@@ -44,11 +44,6 @@ namespace NEXUS.Forms.Tickets
             dataGridViewActions.DataSource = _Ticket.LoadTicketActions(TicketNumber);
         }
 
-        private void UpdateRichTextBox()
-        {
-            richTextBoxActions.Text = dataGridViewActions.CurrentRow.Cells[0].Value.ToString();
-        }
-
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -61,11 +56,6 @@ namespace NEXUS.Forms.Tickets
             richTextBoxActions.ReadOnly = false;
             richTextBoxActions.Clear();
             richTextBoxActions.Focus();
-        }
-
-        private void dataGridViewActions_SelectionChanged(object sender, EventArgs e)
-        {
-            UpdateRichTextBox();
         }
 
         private void buttonAddAction_Click(object sender, EventArgs e)
@@ -89,6 +79,11 @@ namespace NEXUS.Forms.Tickets
         {
             _Ticket.CloseTicket(TicketNumber);
             this.Close();
+        }
+
+        private void dataGridViewActions_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            richTextBoxActions.Text = dataGridViewActions.SelectedCells[0].Value.ToString();
         }
     }
 }
