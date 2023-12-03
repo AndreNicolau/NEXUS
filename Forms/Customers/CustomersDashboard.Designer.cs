@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvClients = new System.Windows.Forms.DataGridView();
             this.btnNewClient = new System.Windows.Forms.Button();
             this.buttonOpenCustomerFile = new System.Windows.Forms.Button();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.textBoxSearchValue = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonRefresh = new System.Windows.Forms.Button();
-            this.textBoxSearchValue = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).BeginInit();
             this.topPanel.SuspendLayout();
             this.SuspendLayout();
@@ -49,30 +49,30 @@
             this.dgvClients.AllowUserToDeleteRows = false;
             this.dgvClients.AllowUserToOrderColumns = true;
             this.dgvClients.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Black;
-            this.dgvClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
+            this.dgvClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvClients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvClients.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvClients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClients.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClients.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvClients.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvClients.Location = new System.Drawing.Point(0, 70);
             this.dgvClients.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -81,13 +81,14 @@
             this.dgvClients.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvClients.RowHeadersVisible = false;
             this.dgvClients.RowHeadersWidth = 51;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Black;
-            this.dgvClients.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Black;
+            this.dgvClients.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvClients.RowTemplate.Height = 24;
             this.dgvClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClients.Size = new System.Drawing.Size(1280, 650);
             this.dgvClients.TabIndex = 0;
-            this.dgvClients.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClients_CellContentDoubleClick);
+            this.dgvClients.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClients_DoubleClick);
+            this.dgvClients.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClients_DoubleClick);
             // 
             // btnNewClient
             // 
@@ -141,6 +142,14 @@
             this.topPanel.Size = new System.Drawing.Size(1280, 70);
             this.topPanel.TabIndex = 7;
             // 
+            // textBoxSearchValue
+            // 
+            this.textBoxSearchValue.Location = new System.Drawing.Point(522, 21);
+            this.textBoxSearchValue.Name = "textBoxSearchValue";
+            this.textBoxSearchValue.Size = new System.Drawing.Size(284, 30);
+            this.textBoxSearchValue.TabIndex = 6;
+            this.textBoxSearchValue.TextChanged += new System.EventHandler(this.textBoxSearchValue_TextChanged);
+            // 
             // label1
             // 
             this.label1.Image = global::NEXUS.Properties.Resources.search_icon_24px;
@@ -169,14 +178,6 @@
             this.buttonRefresh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonRefresh.UseVisualStyleBackColor = false;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
-            // 
-            // textBoxSearchValue
-            // 
-            this.textBoxSearchValue.Location = new System.Drawing.Point(522, 21);
-            this.textBoxSearchValue.Name = "textBoxSearchValue";
-            this.textBoxSearchValue.Size = new System.Drawing.Size(284, 30);
-            this.textBoxSearchValue.TabIndex = 6;
-            this.textBoxSearchValue.TextChanged += new System.EventHandler(this.textBoxSearchValue_TextChanged);
             // 
             // CustomersDashboard
             // 

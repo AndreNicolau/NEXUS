@@ -71,5 +71,16 @@ namespace NEXUS
         {
             Application.Exit();
         }
+
+        private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxShowPassword.Checked)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+            } else if (!checkBoxShowPassword.Checked)
+            {
+                txtPassword.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

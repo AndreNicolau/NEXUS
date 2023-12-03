@@ -136,5 +136,18 @@ namespace NEXUS
                 return false;
             }
         }
+
+        public DataTable SearchTickets (string SearchValue)
+        {
+            DataTable dataTable = new DataTable();
+
+            // Comando para selecionar o cliente
+            string command = $"SELECT ticket_number AS 'Número ticket', state AS 'Estado', open_date AS 'Data abertura', description AS 'Descrição' FROM tickets WHERE serial_number LIKE '{SearchValue}%'";
+
+            OdbcDataAdapter dataAdapter = new OdbcDataAdapter(command, connection);
+            dataAdapter.Fill(dataTable);
+
+            return dataTable;
+        }
     }
 }

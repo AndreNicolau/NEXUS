@@ -192,6 +192,16 @@ namespace NEXUS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_Nexus {
+            get {
+                object obj = ResourceManager.GetObject("Logo_Nexus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap memo_icon_32px {
             get {
                 object obj = ResourceManager.GetObject("memo_icon_32px", resourceCulture);

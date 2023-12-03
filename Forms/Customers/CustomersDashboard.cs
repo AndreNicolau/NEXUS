@@ -62,7 +62,7 @@ namespace NEXUS.Forms
             LoadCustomers();
         }
 
-        private void dgvClients_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvClients_DoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             OpenCustomerFile();
         }

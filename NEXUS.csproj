@@ -15,7 +15,8 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\andre\Downloads\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -25,10 +26,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -51,7 +52,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>NEXUS_logo.ico</ApplicationIcon>
+    <ApplicationIcon>Nexus_Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>55044ED1D665B4109F6C218EC0E24EECC68F3021</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>NEXUS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Avalonia, Version=11.0.4.0, Culture=neutral, PublicKeyToken=c8d484a7012f9a8b, processorArchitecture=MSIL">
@@ -309,6 +322,7 @@
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
     <None Include=".editorconfig" />
+    <None Include="NEXUS_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -333,7 +347,10 @@
     <None Include="Resources\search1.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Logo_Nexus.ico" />
+    <Content Include="Nexus_Icon.ico" />
     <Content Include="NEXUS_logo.ico" />
+    <None Include="Resources\Logo_Nexus.png" />
     <None Include="Resources\clear_icon_24px.png" />
     <None Include="Resources\delete-user__icon_24px.png" />
     <None Include="Resources\user-remove_icon_24px.png" />

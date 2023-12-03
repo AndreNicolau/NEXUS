@@ -60,17 +60,7 @@ namespace NEXUS.Forms.Tickets
             ticketOverview.Show();
         }
 
-        private void radioButtonClosedTickets_CheckedChanged(object sender, EventArgs e)
-        {
-            dataGridViewTickets.DataSource = _Ticket.LoadClosedTickets();
-        }
-
-        private void radioButtonOpened_CheckedChanged(object sender, EventArgs e)
-        {
-            dataGridViewTickets.DataSource = _Ticket.LoadOpenTickets();
-        }
-
-        private void dataGridViewTickets_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridViewTickets_DoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             //OverviewTicket();
             TicketNumber = dataGridViewTickets.CurrentRow.Cells[0].Value.ToString();
@@ -89,6 +79,21 @@ namespace NEXUS.Forms.Tickets
 
             TicketOverview ticket = new TicketOverview(TicketNumber, customerId, openDate, brand, model, equipmentType, serialNumber);
             ticket.Show();
+        }
+
+        private void buttonClosedTickets_Click(object sender, EventArgs e)
+        {
+            dataGridViewTickets.DataSource = _Ticket.LoadClosedTickets();
+        }
+
+        private void buttonOpenedTickets_Click(object sender, EventArgs e)
+        {
+            dataGridViewTickets.DataSource = _Ticket.LoadOpenTickets();
+        }
+
+        private void textBoxSearchValue_TextChanged(object sender, EventArgs e)
+        {
+            dataGridViewTickets.DataSource = _Ticket.SearchTickets(textBoxSearchValue.Text);
         }
     }
 }

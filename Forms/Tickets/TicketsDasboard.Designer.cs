@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new System.Windows.Forms.Panel();
-            this.radioButtonClosedTickets = new System.Windows.Forms.RadioButton();
+            this.buttonOpenedTickets = new System.Windows.Forms.Button();
+            this.buttonClosedTickets = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
-            this.radioButtonOpened = new System.Windows.Forms.RadioButton();
             this.buttonNewTicket = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.dataGridViewTickets = new System.Windows.Forms.DataGridView();
+            this.textBoxSearchValue = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.topPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).BeginInit();
@@ -48,9 +50,11 @@
             // topPanel
             // 
             this.topPanel.BackColor = System.Drawing.Color.White;
-            this.topPanel.Controls.Add(this.radioButtonClosedTickets);
+            this.topPanel.Controls.Add(this.textBoxSearchValue);
+            this.topPanel.Controls.Add(this.label1);
+            this.topPanel.Controls.Add(this.buttonOpenedTickets);
+            this.topPanel.Controls.Add(this.buttonClosedTickets);
             this.topPanel.Controls.Add(this.buttonRefresh);
-            this.topPanel.Controls.Add(this.radioButtonOpened);
             this.topPanel.Controls.Add(this.buttonNewTicket);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
@@ -58,22 +62,41 @@
             this.topPanel.Size = new System.Drawing.Size(1200, 70);
             this.topPanel.TabIndex = 0;
             // 
-            // radioButtonClosedTickets
+            // buttonOpenedTickets
             // 
-            this.radioButtonClosedTickets.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButtonClosedTickets.FlatAppearance.BorderSize = 0;
-            this.radioButtonClosedTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButtonClosedTickets.Image = global::NEXUS.Properties.Resources.clear_icon_24px;
-            this.radioButtonClosedTickets.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.radioButtonClosedTickets.Location = new System.Drawing.Point(173, 4);
-            this.radioButtonClosedTickets.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButtonClosedTickets.Name = "radioButtonClosedTickets";
-            this.radioButtonClosedTickets.Size = new System.Drawing.Size(117, 60);
-            this.radioButtonClosedTickets.TabIndex = 6;
-            this.radioButtonClosedTickets.Text = "Fechados";
-            this.radioButtonClosedTickets.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.radioButtonClosedTickets.UseVisualStyleBackColor = true;
-            this.radioButtonClosedTickets.CheckedChanged += new System.EventHandler(this.radioButtonClosedTickets_CheckedChanged);
+            this.buttonOpenedTickets.BackColor = System.Drawing.Color.Transparent;
+            this.buttonOpenedTickets.FlatAppearance.BorderSize = 0;
+            this.buttonOpenedTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOpenedTickets.ForeColor = System.Drawing.Color.Black;
+            this.buttonOpenedTickets.Image = global::NEXUS.Properties.Resources.document_icon_24px;
+            this.buttonOpenedTickets.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonOpenedTickets.Location = new System.Drawing.Point(76, 9);
+            this.buttonOpenedTickets.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonOpenedTickets.Name = "buttonOpenedTickets";
+            this.buttonOpenedTickets.Size = new System.Drawing.Size(89, 55);
+            this.buttonOpenedTickets.TabIndex = 8;
+            this.buttonOpenedTickets.Text = "Abertos";
+            this.buttonOpenedTickets.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonOpenedTickets.UseVisualStyleBackColor = false;
+            this.buttonOpenedTickets.Click += new System.EventHandler(this.buttonOpenedTickets_Click);
+            // 
+            // buttonClosedTickets
+            // 
+            this.buttonClosedTickets.BackColor = System.Drawing.Color.Transparent;
+            this.buttonClosedTickets.FlatAppearance.BorderSize = 0;
+            this.buttonClosedTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClosedTickets.ForeColor = System.Drawing.Color.Black;
+            this.buttonClosedTickets.Image = global::NEXUS.Properties.Resources.clear_icon_24px;
+            this.buttonClosedTickets.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonClosedTickets.Location = new System.Drawing.Point(166, 9);
+            this.buttonClosedTickets.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonClosedTickets.Name = "buttonClosedTickets";
+            this.buttonClosedTickets.Size = new System.Drawing.Size(118, 55);
+            this.buttonClosedTickets.TabIndex = 7;
+            this.buttonClosedTickets.Text = "Fechados";
+            this.buttonClosedTickets.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonClosedTickets.UseVisualStyleBackColor = false;
+            this.buttonClosedTickets.Click += new System.EventHandler(this.buttonClosedTickets_Click);
             // 
             // buttonRefresh
             // 
@@ -83,7 +106,7 @@
             this.buttonRefresh.ForeColor = System.Drawing.Color.Black;
             this.buttonRefresh.Image = global::NEXUS.Properties.Resources.refresh_icon_24px;
             this.buttonRefresh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonRefresh.Location = new System.Drawing.Point(290, 9);
+            this.buttonRefresh.Location = new System.Drawing.Point(285, 9);
             this.buttonRefresh.Margin = new System.Windows.Forms.Padding(0);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(100, 55);
@@ -93,32 +116,13 @@
             this.buttonRefresh.UseVisualStyleBackColor = false;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
-            // radioButtonOpened
-            // 
-            this.radioButtonOpened.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButtonOpened.Checked = true;
-            this.radioButtonOpened.FlatAppearance.BorderSize = 0;
-            this.radioButtonOpened.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButtonOpened.Image = global::NEXUS.Properties.Resources.document_icon_24px;
-            this.radioButtonOpened.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.radioButtonOpened.Location = new System.Drawing.Point(78, 5);
-            this.radioButtonOpened.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButtonOpened.Name = "radioButtonOpened";
-            this.radioButtonOpened.Size = new System.Drawing.Size(95, 60);
-            this.radioButtonOpened.TabIndex = 1;
-            this.radioButtonOpened.TabStop = true;
-            this.radioButtonOpened.Text = "Abertos";
-            this.radioButtonOpened.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.radioButtonOpened.UseVisualStyleBackColor = true;
-            this.radioButtonOpened.CheckedChanged += new System.EventHandler(this.radioButtonOpened_CheckedChanged);
-            // 
             // buttonNewTicket
             // 
             this.buttonNewTicket.FlatAppearance.BorderSize = 0;
             this.buttonNewTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNewTicket.Image = global::NEXUS.Properties.Resources.add_icon_24px;
             this.buttonNewTicket.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonNewTicket.Location = new System.Drawing.Point(0, 5);
+            this.buttonNewTicket.Location = new System.Drawing.Point(0, 6);
             this.buttonNewTicket.Margin = new System.Windows.Forms.Padding(0);
             this.buttonNewTicket.Name = "buttonNewTicket";
             this.buttonNewTicket.Size = new System.Drawing.Size(75, 60);
@@ -143,51 +147,71 @@
             this.dataGridViewTickets.AllowUserToDeleteRows = false;
             this.dataGridViewTickets.AllowUserToOrderColumns = true;
             this.dataGridViewTickets.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
-            this.dataGridViewTickets.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Black;
+            this.dataGridViewTickets.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewTickets.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewTickets.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewTickets.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTickets.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTickets.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTickets.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTickets.DefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridViewTickets.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewTickets.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewTickets.Name = "dataGridViewTickets";
             this.dataGridViewTickets.ReadOnly = true;
             this.dataGridViewTickets.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTickets.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTickets.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridViewTickets.RowHeadersVisible = false;
             this.dataGridViewTickets.RowHeadersWidth = 51;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Black;
-            this.dataGridViewTickets.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Black;
+            this.dataGridViewTickets.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridViewTickets.RowTemplate.Height = 24;
             this.dataGridViewTickets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewTickets.Size = new System.Drawing.Size(1200, 633);
             this.dataGridViewTickets.TabIndex = 0;
-            this.dataGridViewTickets.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTickets_CellContentDoubleClick);
+            this.dataGridViewTickets.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTickets_DoubleClick);
+            this.dataGridViewTickets.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTickets_DoubleClick);
+            // 
+            // textBoxSearchValue
+            // 
+            this.textBoxSearchValue.Location = new System.Drawing.Point(501, 21);
+            this.textBoxSearchValue.Name = "textBoxSearchValue";
+            this.textBoxSearchValue.Size = new System.Drawing.Size(284, 30);
+            this.textBoxSearchValue.TabIndex = 10;
+            this.textBoxSearchValue.TextChanged += new System.EventHandler(this.textBoxSearchValue_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.Image = global::NEXUS.Properties.Resources.search_icon_24px;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Location = new System.Drawing.Point(386, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(114, 55);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Procurar";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // TicketsDasboard
             // 
@@ -203,6 +227,7 @@
             this.Name = "TicketsDasboard";
             this.Text = "TicketsDashboard";
             this.topPanel.ResumeLayout(false);
+            this.topPanel.PerformLayout();
             this.mainPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).EndInit();
             this.ResumeLayout(false);
@@ -214,9 +239,11 @@
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.Button buttonNewTicket;
         private System.Windows.Forms.Panel mainPanel;
-        private System.Windows.Forms.RadioButton radioButtonOpened;
         private System.Windows.Forms.DataGridView dataGridViewTickets;
         private System.Windows.Forms.Button buttonRefresh;
-        private System.Windows.Forms.RadioButton radioButtonClosedTickets;
+        private System.Windows.Forms.Button buttonClosedTickets;
+        private System.Windows.Forms.Button buttonOpenedTickets;
+        private System.Windows.Forms.TextBox textBoxSearchValue;
+        private System.Windows.Forms.Label label1;
     }
 }
