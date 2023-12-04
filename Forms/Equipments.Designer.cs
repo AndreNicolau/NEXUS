@@ -191,6 +191,8 @@
             this.dataGridViewModels.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewModels.Size = new System.Drawing.Size(782, 650);
             this.dataGridViewModels.TabIndex = 6;
+            this.dataGridViewModels.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewModels_CellContentClick);
+            this.dataGridViewModels.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewModels_CellContentClick);
             // 
             // comboBoxBrand
             // 

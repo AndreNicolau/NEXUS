@@ -34,6 +34,7 @@ namespace NEXUS.Forms
         {
             string Model = textBoxModel.Text;
             _Equipment.DeleteEquipment(Model);
+            _Equipment.LoadModels(dataGridViewModels);
         }
 
         private void buttonInsert_Click(object sender, EventArgs e)
@@ -50,6 +51,13 @@ namespace NEXUS.Forms
 
             _Equipment.InsertEquipment(Brand, Model, EquipmentType);
             _Equipment.LoadModels(dataGridViewModels);
+        }
+
+        private void dataGridViewModels_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            comboBoxBrand.Text = dataGridViewModels.SelectedCells[0].Value.ToString();
+            textBoxModel.Text = dataGridViewModels.SelectedCells[1].Value.ToString();
+            comboBoxEquipmentType.Text = dataGridViewModels.SelectedCells[2].Value.ToString();
         }
     }
 }

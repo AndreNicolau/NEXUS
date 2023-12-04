@@ -55,16 +55,22 @@
     <ApplicationIcon>Nexus_Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>55044ED1D665B4109F6C218EC0E24EECC68F3021</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>B6CC368C82F8E3BC18C2127C14EE52039C632C17</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>NEXUS_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>NEXUS_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>NEXUS_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Avalonia, Version=11.0.4.0, Culture=neutral, PublicKeyToken=c8d484a7012f9a8b, processorArchitecture=MSIL">
@@ -332,6 +338,7 @@
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
     <None Include=".editorconfig" />
+    <None Include="NEXUS_1_TemporaryKey.pfx" />
     <None Include="NEXUS_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
